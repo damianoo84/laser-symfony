@@ -1,0 +1,5 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^$ public/ [R=302,L]
+# Only public/ may be served. Never expose .env, SQLite, vendor or source files.
+RewriteRule !^public(?:/|$) - [F,END]

@@ -1,0 +1,12 @@
+{% extends 'admin/base.html.twig' %}
+{% block body %}
+<section class="card login-card"><h1>Zmień hasło</h1><p class="sub">Po zapisaniu zaloguj się ponownie. Wszystkie dotychczasowe sesje wygasną.</p>
+{% if error %}<div class="error" role="alert">{{ error }}</div>{% endif %}
+<form method="post" data-dirty-form>
+<input type="hidden" name="_token" value="{{ csrf_token('account') }}">
+<label for="current">Obecne hasło</label><input type="password" id="current" name="current" autocomplete="current-password" required>
+<label for="password">Nowe hasło (min. 12 znaków)</label><input type="password" id="password" name="password" autocomplete="new-password" minlength="12" maxlength="72" required>
+<label for="confirmation">Powtórz nowe hasło</label><input type="password" id="confirmation" name="confirmation" autocomplete="new-password" minlength="12" maxlength="72" required>
+<button class="btn full" type="submit">Zmień hasło i wyloguj</button>
+</form></section>
+{% endblock %}

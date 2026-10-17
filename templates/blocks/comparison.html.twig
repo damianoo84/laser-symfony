@@ -1,0 +1,7 @@
+{% set position = position|default(50) %}
+<div class="ba" role="slider" aria-label="Porównanie przed i po czyszczeniu" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ position }}" tabindex="0">
+  <img src="{{ asset(before|image_path) }}" alt="{{ s['ui.before'] }}" loading="lazy">
+  <div class="after" style="clip-path:inset(0 {{ 100 - position }}% 0 0)"><img src="{{ asset(after|image_path) }}" alt="{{ s['ui.after'] }}" loading="lazy"></div>
+  <div class="handle" style="left:{{ position }}%"><span>↔</span></div>
+  <span class="ba-tag left">{{ s['ui.before'] }}</span><span class="ba-tag right">{{ s['ui.after'] }}</span>
+</div>

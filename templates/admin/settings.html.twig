@@ -1,0 +1,16 @@
+{% extends 'admin/base.html.twig' %}
+{% block body %}
+<div class="page-heading"><div><div class="eyebrow">Twoja strona, Twoje treści</div><h1>Treści i ustawienia</h1><p class="sub">Wybierz sekcję, zmień treść i zapisz. Zmiany są widoczne od razu.</p></div><a class="btn ghost" href="{{ path('home') }}" target="_blank" rel="noopener">Podgląd strony ↗</a></div>
+<section class="card section-picker"><h2>Elementy powtarzalne</h2><p class="help">Tutaj dodasz zdjęcia, slajdy, pozycje menu i cennika. Możesz też zmienić ich kolejność.</p><div class="navchips">{% for key,t in types %}<a href="{{ path('admin_blocks', {type:key}) }}">{{ t.label }}</a>{% endfor %}</div></section>
+<div class="search-box"><label for="setting-search">Znajdź ustawienie</label><input id="setting-search" type="search" placeholder="np. telefon, logo, nagłówek…" data-settings-search></div>
+<form method="post" enctype="multipart/form-data" data-dirty-form>
+  <input type="hidden" name="_token" value="{{ csrf_token('settings') }}">
+  {% for groupName,fields in groups %}
+  <details class="ed settings-group"{% if loop.first %} open{% endif %}>
+    <summary>{{ groupName }} <span class="count">{{ fields|length }} ustawień</span></summary>
+    <div class="body row">{% for f in fields %}{% include 'admin/_field.html.twig' with {prefix:'settings', scope:'settings', f:f, val:settings[f.key] ?? ''} only %}{% endfor %}</div>
+  </details>
+  {% endfor %}
+  <div class="savebar"><span data-save-state>Zmiany zapisujesz jednym przyciskiem.</span><button class="btn" type="submit">Zapisz ustawienia</button></div>
+</form>
+{% endblock %}

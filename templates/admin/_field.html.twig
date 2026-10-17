@@ -1,0 +1,26 @@
+{% set id = (prefix ~ '_' ~ (scope|default('new')) ~ '_' ~ f.key)|replace({'.':'_', '[':'_', ']':'_'}) %}
+{% set value = val is iterable ? '' : val %}
+<div class="field {{ f.type == 'textarea' ? 'wide' }}" data-search="{{ f.label|lower }} {{ f.key|lower }}">
+{% if f.type == 'checkbox' %}
+  <label class="chk" for="{{ id }}"><input type="checkbox" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="1"{% if value %} checked{% endif %}> {{ f.label }}</label>
+{% else %}
+  <label for="{{ id }}">{{ f.label }}</label>
+  {% if f.type == 'textarea' %}
+    <textarea id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" rows="3" maxlength="20000">{{ value }}</textarea>
+    <small class="help">Maks. 20 000 znaków. Możesz użyć &lt;b&gt;pogrubienia&lt;/b&gt;, &lt;em&gt;kursywy&lt;/em&gt; i &lt;br&gt;.</small>
+  {% elseif f.type == 'select' %}
+    <select id="{{ id }}" name="{{ prefix }}[{{ f.key }}]">{% for key,label in f.choices %}<option value="{{ key }}"{% if value == key %} selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+  {% elseif f.type == 'number' %}
+    <input type="number" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value is same as('') ? f.min|default(0) : value }}" min="{{ f.min|default(0) }}" max="{{ f.max|default(1000000) }}" step="1" required>
+  {% elseif f.type == 'image' %}
+    {% if value %}<div class="img-prev"><img src="{{ asset(value) }}" alt="Obecne zdjęcie: {{ f.label }}" loading="lazy"></div>{% endif %}
+    <input type="text" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" placeholder="https://… lub wgraj plik poniżej" maxlength="20000">
+    <label class="help" for="{{ id }}_upload">Wgraj nowe zdjęcie (zastąpi podany adres)</label>
+    <input type="file" id="{{ id }}_upload" name="{{ prefix }}[{{ f.key }}]" accept="image/jpeg,image/png,image/webp,image/gif" data-image-upload>
+    <small class="help">JPG, PNG, WebP, GIF. Maks. 5 MB lub limit PHP. Aby usunąć zdjęcie, wyczyść adres.</small>
+  {% else %}
+    <input type="{{ f.type == 'email' ? 'email' : 'text' }}" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" maxlength="20000"{% if f.type == 'url' %} placeholder="https://… lub #sekcja"{% endif %}>
+  {% endif %}
+{% endif %}
+{% if f.help|default('') %}<small class="help">{{ f.help }}</small>{% endif %}
+</div>

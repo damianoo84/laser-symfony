@@ -1,0 +1,22 @@
+{% extends 'admin/base.html.twig' %}
+{% block body %}
+<div class="eyebrow">Kontakt z klientami</div><h1>Zapytania <span class="count">{{ count }}</span></h1>
+<p class="sub">Zapytania są zawsze zapisywane w bazie. Powiadomienia trafiają na adres z ustawień kontaktu lub listy odbiorców. Usuwaj dane po zakończeniu obsługi zgodnie z polityką prywatności.</p>
+<div class="{{ smtp.ready ? 'flash' : 'error' }}" role="status" style="margin-top:1rem">{{ smtp.message }} <a href="{{ path('admin_settings') }}">Zmień adresy odbiorców →</a></div>
+{% for inquiry in inquiries %}
+<details class="ed">
+<summary><span>{{ inquiry.name }} — {{ inquiry.subject ?: 'Zapytanie o wycenę' }}{% if not inquiry.read %} <span class="badge">Nowe</span>{% endif %}</span><span class="count">{{ inquiry.createdAt|date('d.m.Y H:i') }}</span></summary>
+<div class="body"><p><b>Telefon:</b> <a href="tel:{{ inquiry.phone|replace({' ':'','(':'',')':'','-':''}) }}">{{ inquiry.phone }}</a></p><p class="message">{{ inquiry.message }}</p><p class="help">Klient wyraził zgodę na kontakt w celu odpowiedzi na zapytanie.</p>
+<p class="help"><b>Powiadomienie e-mail:</b>
+{% if inquiry.notificationStatus == 'sent' %}Przekazano do SMTP {{ inquiry.notificationSentAt|date('d.m.Y H:i') }}. Odbiorcy: {{ inquiry.notificationRecipients }}.
+{% elseif inquiry.notificationStatus == 'failed' %}Błąd wysyłki. Wiadomość pozostaje w panelu; po sprawdzeniu SMTP możesz ponowić próbę.
+{% elseif inquiry.notificationStatus == 'disabled' %}Nie wysłano — wysyłka SMTP jest wyłączona lub konfiguracja jest niepełna.
+{% else %}Nie wysłano (np. zapytanie sprzed uruchomienia SMTP).{% endif %}
+</p>
+{% if inquiry.notificationStatus != 'sent' %}<form method="post" action="{{ path('admin_inquiry_action',{id:inquiry.id}) }}"><input type="hidden" name="_token" value="{{ csrf_token('inquiry_' ~ inquiry.id) }}"><input type="hidden" name="_action" value="send"><button class="btn ghost" type="submit">Wyślij powiadomienie e-mail</button></form>{% endif %}
+<div class="ed-actions"><form method="post" action="{{ path('admin_inquiry_action',{id:inquiry.id}) }}"><input type="hidden" name="_token" value="{{ csrf_token('inquiry_' ~ inquiry.id) }}"><input type="hidden" name="_action" value="read"><button type="submit"{% if inquiry.read %} disabled{% endif %}>Oznacz jako przeczytane</button></form>
+<form method="post" action="{{ path('admin_inquiry_action',{id:inquiry.id}) }}" data-confirm="Usunąć wiadomość wraz z danymi klienta?"><input type="hidden" name="_token" value="{{ csrf_token('inquiry_' ~ inquiry.id) }}"><input type="hidden" name="_action" value="delete"><button class="danger" type="submit">Usuń zapytanie</button></form></div>
+</div></details>
+{% else %}<div class="card empty" style="margin-top:1rem">Brak zapytań. Wiadomości z formularza na stronie będą pojawiały się tutaj.</div>{% endfor %}
+{% if pages > 1 %}<nav class="pagination" aria-label="Strony zapytań">{% if page > 1 %}<a href="{{ path('admin_inquiries',{page:page-1}) }}">← Poprzednia</a>{% endif %}<span>{{ page }} / {{ pages }}</span>{% if page < pages %}<a href="{{ path('admin_inquiries',{page:page+1}) }}">Następna →</a>{% endif %}</nav>{% endif %}
+{% endblock %}

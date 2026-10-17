@@ -1,0 +1,35 @@
+{% extends 'admin/base.html.twig' %}
+{% block body %}
+<a class="back" href="{{ path('admin_settings') }}">← Wszystkie ustawienia</a>
+<div class="page-heading"><div><div class="eyebrow">Elementy strony</div><h1>{{ types[type].label }} <span class="count">{{ blocks|length }}</span></h1><p class="sub">Rozwiń element, aby go edytować. Kolejność na liście odpowiada kolejności na stronie.</p></div><a class="btn" href="#add-new" data-open-add>＋ Dodaj element</a></div>
+<nav class="navchips" aria-label="Rodzaje elementów">{% for key,t in types %}<a href="{{ path('admin_blocks',{type:key}) }}" class="{{ key == type ? 'on' }}">{{ t.label }}</a>{% endfor %}</nav>
+{% for block in blocks %}
+{% set editing = submitted and submitted.action == 'edit' and submitted.id == block.id %}
+<details class="ed"{% if editing %} open{% endif %}>
+  <summary><span><span class="order">{{ loop.index }}</span> {{ (block.get('title') ?: block.get('name') ?: block.get('label') ?: block.get('q') ?: block.get('cap') ?: block.get('text') ?: block.get('value') ?: 'Element #' ~ block.id)|striptags|slice(0,85) }}</span><span class="edit-hint">Edytuj ▾</span></summary>
+  <div class="body">
+    <form method="post" enctype="multipart/form-data" data-dirty-form>
+      <input type="hidden" name="_action" value="edit"><input type="hidden" name="_id" value="{{ block.id }}"><input type="hidden" name="_token" value="{{ csrf_token('blocks_' ~ type) }}">
+      <div class="row">{% for f in types[type].fields %}{% include 'admin/_field.html.twig' with {prefix:'fields',scope:block.id,f:f,val:editing ? submitted.fields[f.key]|default('') : block.data[f.key]|default('')} only %}{% endfor %}</div>
+      <button class="btn" type="submit">Zapisz zmiany</button>
+    </form>
+    <div class="ed-actions">
+      {% for action,label in {up:'↑ Wyżej',down:'↓ Niżej',delete:'Usuń element'} %}
+      <form method="post"{% if action == 'delete' %} data-confirm="Czy na pewno usunąć ten element? Tej operacji nie można cofnąć."{% endif %}>
+        <input type="hidden" name="_action" value="{{ action }}"><input type="hidden" name="_id" value="{{ block.id }}"><input type="hidden" name="_token" value="{{ csrf_token('blocks_' ~ type) }}">
+        <button class="{{ action == 'delete' ? 'danger' }}" type="submit"{% if (action == 'up' and loop.parent.loop.first) or (action == 'down' and loop.parent.loop.last) %} disabled{% endif %}>{{ label }}</button>
+      </form>
+      {% endfor %}
+    </div>
+  </div>
+</details>
+{% else %}<div class="card empty">Nie ma jeszcze elementów w tej sekcji. Dodaj pierwszy poniżej.</div>{% endfor %}
+<details class="ed" id="add-new"{% if blocks is empty or (submitted and submitted.action == 'add') %} open{% endif %}>
+  <summary>＋ Dodaj nowy element</summary>
+  <div class="body"><form method="post" enctype="multipart/form-data" data-dirty-form>
+    <input type="hidden" name="_action" value="add"><input type="hidden" name="_token" value="{{ csrf_token('blocks_' ~ type) }}">
+    <div class="row">{% for f in types[type].fields %}{% include 'admin/_field.html.twig' with {prefix:'fields',scope:'new',f:f,val:submitted and submitted.action == 'add' ? submitted.fields[f.key]|default('') : ''} only %}{% endfor %}</div>
+    <button class="btn" type="submit">Dodaj element</button>
+  </form></div>
+</details>
+{% endblock %}

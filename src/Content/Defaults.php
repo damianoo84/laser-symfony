@@ -1,0 +1,242 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Content;
+
+/**
+ * Domyślna treść strony — port z laser-strona/js/content-default.js.
+ */
+class Defaults
+{
+    /**
+     * @return array{settings:array<string,string>,blocks:array<string,array<int,array<string,mixed>>>}
+     */
+    public static function data(): array
+    {
+        return [
+            'settings' => [
+                'site.name' => 'LAZER',
+                'site.tagline' => 'OCZYSZCZANIE LASEROWE',
+                'site.logoText' => 'L',
+                'site.logo' => '',
+                'site.title' => 'Oczyszczanie laserowe — drewno, cegła, kamień, beton, metal | LAZER Limanowa',
+                'site.description' => 'Mobilne czyszczenie laserowe metalu, drewna, kamienia, cegły i betonu. Małopolska i cała Polska. Darmowa wycena.',
+                'site.topbar' => 'Mobilnie u klienta • Darmowa wycena w 24 h',
+                'site.heading' => 'Mobilne czyszczenie laserowe — LAZER Limanowa',
+                'motion.mode' => 'full',
+                'motion.sliderSeconds' => '7',
+                'motion.autoplay' => '1',
+                'mail.recipients' => '',
+                'footer.title' => 'LAZER — oczyszczanie laserowe',
+                'footer.copyright' => 'oczyszczanielaserowe.pl',
+                'comparisonHead.kicker' => 'Efekty pracy',
+                'comparisonHead.title' => 'Porównaj powierzchnię przed i po czyszczeniu',
+                'comparisonCta' => 'Zapytaj o wycenę →',
+                'appsCtaHref' => '#kontakt',
+                'cennikCtaHref' => '#kontakt',
+                'comparisonCtaHref' => '#kontakt',
+                // kontakt
+                'contact.phone' => '+48 501 965 485',
+                'contact.phoneHref' => 'tel:+48501965485',
+                'contact.email' => 'lazer@oczyszczanielaserowe.pl',
+                'contact.company' => 'LAZER Mateusz Śliwa',
+                'contact.address' => 'Lipowe 182, 34-600 Limanowa',
+                'contact.nip' => '7372216875',
+                'contact.regon' => '382244387',
+                'contact.hours' => 'pon–sob 8:00–18:00',
+                'contact.area' => 'Małopolska i cała Polska',
+                // intro
+                'intro.kicker' => 'O nas',
+                'intro.title' => 'Nasza firma świadczy <b>usługi czyszczenia laserowego</b>',
+                'intro.p1' => '<b>LAZER Mateusz Śliwa</b> — oferujemy kompleksowe czyszczenie laserowe <b>metalu, drewna, kamienia, cegły i betonu</b>. Baza w Limanowej (Małopolska), pracujemy mobilnie w całym kraju.',
+                'intro.p2' => 'Współpracujemy z klientami indywidualnymi i firmami. Zaufaj nam i pozbądź się rdzy, farby, nalotu czy sadzy — szybko i dokładnie, bez chemii i bez uszkodzeń.',
+                'intro.cta1' => 'Nasza oferta →',
+                'intro.cta1href' => '#oferta',
+                'intro.cta2' => 'O nas',
+                'intro.cta2href' => '#o-nas',
+                'intro.baBefore' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg',
+                'intro.baAfter' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg',
+                'intro.baNote' => 'Przesuń suwak, aby zobaczyć efekt. Prawdziwe realizacje — sekcja Galeria.',
+                // technologia
+                'tech.kicker' => 'Technologia',
+                'tech.title' => 'Jak działa <b>czyszczenie laserowe?</b>',
+                'tech.p1' => 'Wiązka lasera odparowuje (ablacja) zanieczyszczenie z powierzchni — do postaci gazowej. Usuwa <b>do 98% zabrudzeń</b>: lakiery, farby, rdzę, oleje, nagary i naloty.',
+                'tech.p2' => 'Z wielowarstwowych powłok zdejmiemy np. tylko wierzchnią warstwę, <b>nie uszkadzając podkładu ani materiału bazowego</b>. Bez ścierniwa i chemii — można czyścić bez demontażu, także przy elementach ruchomych maszyn.',
+                'tech.benefitsTitle' => '✔ Zalety czyszczenia laserowego',
+                'tech.img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg',
+                // nagłówki sekcji
+                'offerHead.kicker' => 'Oferta',
+                'offerHead.title' => 'Co można <b>czyścić laserem?</b>',
+                'appsHead.kicker' => 'Zastosowania',
+                'appsHead.title' => 'Gdzie sprawdza się laser?',
+                'appsCta' => 'Sprawdź też inne zastosowania →',
+                'stepsHead.kicker' => 'Jak to działa',
+                'stepsHead.title' => 'Wycena w 24 h — w 4 krokach',
+                'cennikHead.kicker' => 'Cennik',
+                'cennikHead.title' => 'Ile kosztuje <b>czyszczenie laserem?</b>',
+                'pricingNote' => 'Podane ceny mają charakter orientacyjny. <b>Cena roboczogodziny 200–400 zł</b> w zależności od rodzaju i charakterystyki zlecenia. Do każdego zlecenia podchodzimy indywidualnie.',
+                'cennikCta' => 'Poproś o wycenę →',
+                'galeriaHead.kicker' => 'Galeria',
+                'galeriaHead.title' => 'Nasze realizacje',
+                'galeriaHead.p' => 'Zobacz efekty naszej pracy. Kliknij zdjęcie, aby je powiększyć.',
+                'aboutHead.kicker' => 'O nas • Referencje',
+                'aboutHead.title' => 'LAZER z Limanowej',
+                'aboutP' => 'Firma <b>LAZER Mateusz Śliwa</b> świadczy mobilne usługi czyszczenia laserowego. Do każdego klienta podchodzimy indywidualnie, dostosowując się do jego potrzeb.',
+                'faqHead.kicker' => 'Wiedza • FAQ',
+                'faqHead.title' => 'Częste pytania',
+                'contactHead.kicker' => 'Kontakt',
+                'contactHead.title' => 'Serdecznie zapraszamy do kontaktu',
+                'contactHead.p' => 'Do każdego klienta podchodzimy indywidualnie.',
+                'contactNote' => 'Klienci indywidualni i firmy — Małopolska i cała Polska.',
+                'formOk' => 'Dziękujemy! Zapytanie zostało zapisane. Skontaktujemy się z Tobą w sprawie wyceny.',
+                'footerTagline' => 'Mobilne czyszczenie laserowe metalu, drewna, kamienia, cegły i betonu. Małopolska i cała Polska.',
+            ] + SettingFields::interfaceDefaults() + array_fill_keys(array_map(static fn (string $id): string => 'section.' . $id . '.visible', array_keys(SettingFields::sections())), '1'),
+            'blocks' => [
+                'navLink' => [
+                    ['label' => 'Strona główna', 'href' => '#start'],
+                    ['label' => 'O nas', 'href' => '#o-nas'],
+                    ['label' => 'Oferta', 'href' => '#oferta'],
+                    ['label' => 'Zastosowania', 'href' => '#zastosowania'],
+                    ['label' => 'Galeria', 'href' => '#galeria'],
+                    ['label' => 'Cennik', 'href' => '#cennik'],
+                    ['label' => 'Kontakt', 'href' => '#kontakt'],
+                ],
+                'slide' => [
+                    [
+                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2023/04/slider_laserowe_czyszczenie_kamienia.png',
+                        'eyebrow' => 'Laser w konserwacji zabytków',
+                        'title' => 'Restauracja zabytkowych obiektów z wykorzystaniem lasera czyszczącego',
+                        'text' => 'Rzeźby, portale, ołtarze, polichromie i złocenia. Selektywne czyszczenie w porozumieniu z konserwatorem zabytków.',
+                        'cta1' => 'Dowiedz się więcej →',
+                        'cta1href' => '#kontakt',
+                        'cta2' => '📞 501 965 485',
+                        'cta2href' => 'tel:+48501965485',
+                    ],
+                    [
+                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2024/04/slider_konstrukcjestalowe1_1920.png',
+                        'eyebrow' => 'Przemysł • konstrukcje • maszyny',
+                        'title' => 'Czyszczenie laserem konstrukcji stalowych, instalacji przemysłowych i linii produkcyjnych',
+                        'text' => 'Rdza, farby i inne zabrudzenia — bez demontażu, bez chemii, z krótszym przestojem.',
+                        'cta1' => 'Zobacz cennik →',
+                        'cta1href' => '#cennik',
+                        'cta2' => 'Realizacje →',
+                        'cta2href' => '#galeria',
+                    ],
+                    [
+                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2024/04/slider_metal_1920.png',
+                        'eyebrow' => 'Metal • aluminium • stal kwasoodporna',
+                        'title' => 'Przemysłowe czyszczenie laserem metali',
+                        'text' => 'Aluminium, stal czarna i kwasoodporna, formy wtryskowe, konstrukcje stalowe, elementy blacharki samochodowej.',
+                        'cta1' => 'Zobacz realizacje →',
+                        'cta1href' => '#galeria',
+                        'cta2' => 'Wycena gratis →',
+                        'cta2href' => '#kontakt',
+                    ],
+                ],
+                'strip' => [
+                    ['value' => 'Metal'],
+                    ['value' => 'Drewno'],
+                    ['value' => 'Kamień'],
+                    ['value' => 'Cegła i beton'],
+                    ['value' => 'Aluminium'],
+                    ['value' => 'Zabytki'],
+                    ['value' => 'Przemysł'],
+                    ['value' => 'Rolnictwo'],
+                    ['value' => 'Gastronomia'],
+                    ['value' => 'Motoryzacja'],
+                ],
+                'introStat' => [
+                    ['v' => 300, 'suffix' => '+', 'label' => 'realizacji'],
+                    ['v' => 24, 'suffix' => ' h', 'label' => 'odpowiedź z wyceną'],
+                    ['v' => 7, 'suffix' => '', 'label' => 'rodzajów materiałów'],
+                ],
+                'offer' => [
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'name' => 'METAL', 'desc' => 'Rdza, farby, zgorzelina, powłoki proszkowe i PVD. Stal, aluminium, formy, maszyny.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-scaled.jpg', 'name' => 'DREWNO', 'desc' => 'Selektywne, bezinwazyjne usuwanie lakierów i zabrudzeń bez naruszania struktury.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'name' => 'KAMIEŃ', 'desc' => 'Piaskowiec i inne kamienie — zabrudzenia niebiologiczne, pomniki, elewacje.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105454-scaled.jpg', 'name' => 'CEGŁA I BETON', 'desc' => 'Elewacje ceglane i klinkierowe: sadza, farby, graffiti, naloty atmosferyczne.', 'link' => 'Dowiedz się więcej >'],
+                ],
+                'icon' => [
+                    ['ico' => '🛡️', 'text' => 'Nie uszkadza powierzchni'],
+                    ['ico' => '🎯', 'text' => 'Selektywnie usuwa warstwy'],
+                    ['ico' => '🌬️', 'text' => 'Bez oparów i pyłu'],
+                    ['ico' => '♻️', 'text' => 'Nie generuje odpadów'],
+                ],
+                'techStat' => [
+                    ['big' => '300+', 'small' => 'domy, firmy, zabytki'],
+                    ['big' => '24 h', 'small' => 'odpowiedź z wyceną'],
+                ],
+                'techBenefit' => [
+                    ['value' => 'Najskuteczniejsza obecnie metoda na rynku'],
+                    ['value' => 'Selektywne, nieinwazyjne: farby, rdza, oleje, nagary'],
+                    ['value' => 'Cicho, bez pyłu, bez chemii — ekologicznie'],
+                    ['value' => 'Zastępuje piaskowanie, sodowanie, suchy lód i chemię'],
+                    ['value' => 'Lepsza przyczepność nowych powłok, dłuższa trwałość'],
+                ],
+                'app' => [
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'kicker' => 'Restauracja i konserwacja', 'name' => 'Zabytki', 'desc' => 'Drewno / kamień, ołtarze, rzeźby'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'kicker' => 'Konserwacja', 'name' => 'Przemysł', 'desc' => 'Konstrukcje, maszyny, formy'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_124727-scaled.jpg', 'kicker' => 'Renowacje', 'name' => 'Motoryzacja', 'desc' => 'Lakiery, rdza, detale'],
+                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251201_184610-scaled.jpg', 'kicker' => 'Utrzymanie', 'name' => 'Produkcja i dom', 'desc' => 'Taśmy, piece, kostka, tarasy'],
+                ],
+                'appMore' => [
+                    ['ico' => '🏗️', 'name' => 'Budownictwo', 'desc' => 'Elewacje, stal, beton — przygotowanie pod malowanie.'],
+                    ['ico' => '🚜', 'name' => 'Rolnictwo', 'desc' => 'Podzespoły maszyn bez rozbierania.'],
+                    ['ico' => '🍞', 'name' => 'Gastronomia', 'desc' => 'Formy, piece, nagary bez agresywnej chemii.'],
+                ],
+                'step' => [
+                    ['num' => '01', 'title' => 'Wyślij zdjęcia', 'desc' => '2–3 zdjęcia telefonem, SMS-em lub mailem.'],
+                    ['num' => '02', 'title' => 'Darmowa wycena', 'desc' => 'Oddzwaniamy z ceną i terminem.'],
+                    ['num' => '03', 'title' => 'Czyszczenie u Ciebie', 'desc' => 'Przyjeżdżamy z laserem, czysto i bez pyłu.'],
+                    ['num' => '04', 'title' => 'Płacisz za efekt', 'desc' => 'Dokumentacja przed / po do akt.'],
+                ],
+                'pricing' => [
+                    ['name' => 'Stal węglowa', 'price' => 'od 45 zł/m²'],
+                    ['name' => 'Stal nierdzewna', 'price' => 'od 110 zł/m²'],
+                    ['name' => 'Aluminium', 'price' => 'od 100 zł/m²'],
+                    ['name' => 'Drewno', 'price' => 'od 60 zł/m²'],
+                    ['name' => 'Kamień', 'price' => 'od 70 zł/m²'],
+                    ['name' => 'Cegła', 'price' => 'od 50 zł/m²'],
+                    ['name' => 'Beton', 'price' => 'od 80 zł/m²'],
+                    ['name' => 'Roboczogodzina', 'price' => '200–400 zł'],
+                ],
+                'gallery' => [
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-300x169.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'alt' => 'Stal — odrdzewianie', 'cap' => 'Stal — odrdzewianie'],
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg', 'alt' => 'Detal — przed / po', 'cap' => 'Detal — przed / po'],
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-169x300.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-scaled.jpg', 'alt' => 'Drewno — renowacja', 'cap' => 'Drewno — renowacja'],
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-225x300.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'alt' => 'Cegła — elewacja', 'cap' => 'Cegła — elewacja'],
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251104_130814-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251104_130814-scaled.jpg', 'alt' => 'Maszyna — bez demontażu', 'cap' => 'Maszyna — bez demontażu'],
+                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251004_103720-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251004_103720-scaled.jpg', 'alt' => 'Beton — posadzka', 'cap' => 'Beton — posadzka'],
+                ],
+                'review' => [
+                    ['stars' => 5, 'text' => 'Cegła po graffiti jak nowa, bez skuwania. Wycena z dnia na dzień.', 'author' => 'Marek, Kraków'],
+                    ['stars' => 5, 'text' => 'Belki dębowe odzyskały kolor. Zero pyłu w domu.', 'author' => 'Anna, Limanowa'],
+                ],
+                'faq' => [
+                    ['q' => 'Czy laser niszczy powierzchnię?', 'a' => 'Nie. Metoda selektywna i bezkontaktowa — usuwa tylko zabrudzenie.', 'open' => true],
+                    ['q' => 'Ile to kosztuje?', 'a' => '45–110 zł/m² zależnie od materiału, detale 200–400 zł/h. Wycena gratis po zdjęciach.', 'open' => false],
+                    ['q' => 'Czy dojeżdżacie?', 'a' => 'Tak — Małopolska i cała Polska.', 'open' => false],
+                    ['q' => 'Czy to ekologiczne?', 'a' => 'Tak — bez chemii, pyłu i odpadów do utylizacji.', 'open' => false],
+                ],
+                'knowledge' => [
+                    ['title' => 'Ablacja laserowa', 'desc' => 'Na czym polega odparowanie powłoki?'],
+                    ['title' => 'Laser vs piaskowanie', 'desc' => 'Kiedy laser wygrywa?'],
+                ],
+                'contactCard' => [
+                    ['ico' => '✉️', 'name' => 'Napisz', 'kind' => 'mail'],
+                    ['ico' => '📞', 'name' => 'Zadzwoń', 'kind' => 'tel'],
+                    ['ico' => '📝', 'name' => 'Formularz', 'kind' => 'form'],
+                ],
+                'footerLink' => [
+                    ['label' => 'Oferta', 'href' => '#oferta'],
+                    ['label' => 'Zastosowania', 'href' => '#zastosowania'],
+                    ['label' => 'Galeria', 'href' => '#galeria'],
+                    ['label' => 'Cennik', 'href' => '#cennik'],
+                    ['label' => 'O nas', 'href' => '#o-nas'],
+                    ['label' => 'Kontakt', 'href' => '#kontakt'],
+                ],
+            ],
+        ];
+    }
+}

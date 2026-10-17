@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>{% block title %}Panel administratora — LAZER CMS{% endblock %}</title>
+  <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+  <script src="{{ asset('js/admin.js') }}" defer></script>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="{{ path('admin_settings') }}">LAZER <span>Panel treści</span></a>
+  <nav aria-label="Panel administracyjny">
+    {% if app.request.attributes.get('_route') != 'admin_login' %}
+      <a href="{{ path('admin_settings') }}" {{ app.request.attributes.get('_route') == 'admin_settings' ? 'aria-current="page"'|raw }}>Treści i ustawienia</a>
+      <a href="{{ path('admin_inquiries') }}">Zapytania klientów</a>
+      <a href="{{ path('admin_account') }}">Zmień hasło</a>
+    {% endif %}
+    <a href="{{ path('home') }}" target="_blank" rel="noopener">Podgląd strony ↗</a>
+    {% if app.request.attributes.get('_route') != 'admin_login' %}
+      <form method="post" action="{{ path('admin_logout') }}"><input type="hidden" name="_token" value="{{ csrf_token('logout') }}"><button class="nav-button" type="submit">Wyloguj</button></form>
+    {% endif %}
+  </nav>
+</header>
+<main class="wrap" id="main">
+  {% for msg in app.flashes('ok') %}<div class="flash" role="status">✓ {{ msg }}</div>{% endfor %}
+  {% for msg in app.flashes('error') %}<div class="error" role="alert">{{ msg }}</div>{% endfor %}
+  {% block body %}{% endblock %}
+</main>
+</body>
+</html>

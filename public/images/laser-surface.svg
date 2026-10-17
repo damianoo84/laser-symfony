@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#182b40"/><stop offset=".5" stop-color="#4b6475"/><stop offset="1" stop-color="#0d1729"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#ffe2a3" stop-opacity=".9"/><stop offset=".2" stop-color="#ff8b32" stop-opacity=".6"/><stop offset="1" stop-color="#ff8b32" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="75" height="75" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><path d="M0 0H75V75" stroke="#c2d3dd" stroke-opacity=".14"/><path d="M0 12H75M0 24H75M0 36H75M0 48H75M0 60H75" stroke="#c2d3dd" stroke-opacity=".04"/></pattern>
+  </defs>
+  <path fill="url(#metal)" d="M0 0h1600v1000H0z"/><path fill="url(#grid)" d="M0 0h1600v1000H0z"/>
+  <path d="M700-100 1200 1100M1000-100l500 1200" stroke="#dbe5ec" stroke-opacity=".09" stroke-width="120"/>
+  <ellipse cx="1180" cy="510" rx="420" ry="420" fill="url(#glow)"/>
+  <path d="m1440-100-380 1200" stroke="#ff8c42" stroke-opacity=".5" stroke-width="8"/>
+  <path d="m1440-100-380 1200" stroke="#fff0bf" stroke-width="2"/>
+  <g stroke="#ffc971" stroke-linecap="round"><path d="m1200 510 90-32M1210 525l130 12M1195 535l80 65M1180 520l-10 100M1190 500l35-120"/><path d="m1230 470 40-50m-15 140 70 35m-105-125 75-8" stroke-opacity=".5"/></g>
+</svg>

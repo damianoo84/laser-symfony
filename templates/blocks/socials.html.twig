@@ -1,0 +1,1 @@
+{% if b['socialLink']|default([]) %}<div class="socials">{% for social in b['socialLink'] %}<a href="{{ social.get('href')|safe_link }}" aria-label="{{ social.get('label') }}" target="_blank" rel="noopener noreferrer">{{ social.get('icon') ?: social.get('label') }}</a>{% endfor %}</div>{% endif %}

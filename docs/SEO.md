@@ -83,6 +83,13 @@
 
 ## Zdjęcia dodawane przez panel
 
+**Dodatkowa naprawa zdjęć:** proporcje, nieostre miniatury i błędne przypisania
+poprawiono w kolejnej aktualizacji opisanej w [`NAPRAWA-GRAFIK.md`](NAPRAWA-GRAFIK.md).
+Po pobraniu kodu najpierw wyczyść cache produkcji, a potem uruchom
+`app:images:repair --apply --env=prod --no-debug`. Nie importuj ponownie całej bazy.
+Aktualnie w projekcie jest 17 JPG i 39 wariantów WebP; powyższe pomiary dotyczą
+pierwszej partii 15 zdjęć.
+
 Oryginały nadal trafiają do dotychczasowych podkatalogów `public/uploads/`,
 a baza przechowuje rzeczywistą lokalną ścieżkę. Nie ma podmiany adresów starej strony.
 Jeśli PHP dla WWW ma GD z obsługą WebP oraz EXIF, warianty powstają przy wgrywaniu JPG/PNG.

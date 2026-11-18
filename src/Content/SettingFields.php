@@ -59,6 +59,8 @@ class SettingFields
                 ['key' => 'intro.cta2href', 'label' => 'Przycisk 2 — link', 'type' => 'url'],
                 ['key' => 'intro.baBefore', 'label' => 'Zdjęcie PRZED (URL lub plik)', 'type' => 'image'],
                 ['key' => 'intro.baAfter', 'label' => 'Zdjęcie PO (URL lub plik)', 'type' => 'image'],
+                ['key' => 'intro.image', 'label' => 'Zdjęcie sekcji (gdy brak pary PRZED/PO)', 'type' => 'image'],
+                ['key' => 'intro.imageAlt', 'label' => 'Opis zdjęcia sekcji', 'type' => 'text'],
                 ['key' => 'intro.baNote', 'label' => 'Podpis pod suwakiem PRZED/PO', 'type' => 'text'],
             ],
             'Technologia' => [
@@ -68,6 +70,7 @@ class SettingFields
                 ['key' => 'tech.p2', 'label' => 'Akapit 2', 'type' => 'textarea'],
                 ['key' => 'tech.benefitsTitle', 'label' => 'Tytuł listy zalet', 'type' => 'text'],
                 ['key' => 'tech.img', 'label' => 'Zdjęcie (URL lub plik)', 'type' => 'image'],
+                ['key' => 'tech.imgAlt', 'label' => 'Opis zdjęcia technologii', 'type' => 'text'],
             ],
             'Nagłówki sekcji' => [
                 ['key' => 'offerHead.kicker', 'label' => 'Oferta — kicker', 'type' => 'text'],

@@ -127,8 +127,8 @@ class BlockTypes
             'gallery' => [
                 'label' => 'Zdjęcie galerii',
                 'fields' => [
-                    ['key' => 'src', 'label' => 'Miniaturka', 'type' => 'image'],
-                    ['key' => 'full', 'label' => 'Pełne zdjęcie (powiększenie)', 'type' => 'image'],
+                    ['key' => 'src', 'label' => 'Zdjęcie galerii (duży plik)', 'type' => 'image', 'help' => 'Wgraj zdjęcie o szerokości co najmniej 1200 px. Strona dobierze mniejszy wariant do ekranu; nie wgrywaj miniatury 150–300 px.'],
+                    ['key' => 'full', 'label' => 'Osobne zdjęcie do powiększenia (opcjonalnie)', 'type' => 'image', 'help' => 'Puste pole = powiększenie zdjęcia galerii.'],
                     ['key' => 'alt', 'label' => 'Alt (opis dla Google)', 'type' => 'text'],
                     ['key' => 'cap', 'label' => 'Podpis na zdjęciu', 'type' => 'text'],
                 ],

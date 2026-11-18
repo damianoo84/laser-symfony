@@ -84,13 +84,28 @@ try {
       broken: Array.from(document.querySelectorAll('img[src]')).filter(img=>!img.naturalWidth).map(img=>img.src),
       hero: document.querySelector('.slide.is-active .slide-photo').currentSrc,
       schema: JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent)['@graph'].length,
-      overflow: document.documentElement.scrollWidth > innerWidth + 1
+      overflow: document.documentElement.scrollWidth > innerWidth + 1,
+      distorted: Array.from(document.querySelectorAll('img.rounded')).filter(img=>{
+        const expected=Number(img.getAttribute('width'))/Number(img.getAttribute('height'));
+        return Math.abs(img.clientWidth/img.clientHeight-expected)/expected > 0.015;
+      }).map(img=>img.src)
     })`);
     assert(result.h1 === 1 && result.visibleH1, `${name}: one visible H1`);
     assert(result.broken.length === 0, `${name}: all images decoded (${JSON.stringify(result.broken)})`);
     assert(result.hero.endsWith('.webp'), `${name}: browser selected responsive WebP`);
     assert(result.schema >= 3 && !!result.canonical, `${name}: canonical and JSON-LD present`);
     assert(!result.overflow, `${name}: no horizontal overflow`);
+    assert(result.distorted.length===0, `${name}: natural photo proportions (${result.distorted.join(', ')})`);
+    const undersized = await evaluate(`(async()=>{
+      const results=await Promise.all(Array.from(document.querySelectorAll('.gallery img')).map(async img=>{
+        const bitmap=await createImageBitmap(await (await fetch(img.currentSrc)).blob());
+        const small=bitmap.width+1<img.clientWidth*devicePixelRatio;
+        bitmap.close();
+        return small?img.currentSrc:null;
+      }));
+      return results.filter(Boolean);
+    })()`);
+    assert(undersized.length===0, `${name}: gallery uses sharp, sufficiently large variants (${undersized.join(', ')})`);
     await evaluate(`Promise.race([
       Promise.all(Array.from(document.querySelectorAll('.slide.is-active h2, .slide.is-active .cta-row')).flatMap(element=>element.getAnimations().map(animation=>animation.finished.catch(()=>{})))),
       new Promise(resolve=>setTimeout(resolve,2500))

@@ -1,6 +1,12 @@
 # Zdjęcia w projekcie Symfony
 
-Zdjęcia i miniatury strony są w `public/uploads/site/` (15 plików JPG).
+**Aktualizacja:** naprawa proporcji, podpisów i miniatur jest opisana w
+[`NAPRAWA-GRAFIK.md`](NAPRAWA-GRAFIK.md). Przy aktualizacji działającej strony
+użyj podanego tam polecenia `app:images:repair`, zamiast ponownie importować bazę.
+Poniższy opis eksportu dotyczy pierwszego przeniesienia zdjęć ze starej strony.
+
+Zdjęcia i miniatury strony są w `public/uploads/site/` (początkowo 15 plików JPG,
+następnie dodano dwa właściwe zdjęcia drewna i metalowych okuć).
 Odzyskano je z kopii starej strony, z `wp-content/uploads/2026/02/`.
 Skopiowano wyłącznie używane pliki, bez kodu, konfiguracji ani bazy WordPressa.
 Pliki są identyczne z kopią źródłową (sprawdzone SHA-256).
@@ -73,12 +79,11 @@ Zastąpiono je następującymi zdjęciami z własnego backupu:
 
 1. `20251104_130814-scaled.jpg` — detal kamienny;
 2. `20251201_184610-scaled.jpg` — wnętrze obiektu;
-3. `20251215_105448-scaled.jpg` — ceglana elewacja.
+3. `20250305_122423-scaled.jpg` — drewniane drzwi z metalowymi okuciami (po naprawie przypisań).
 
-Można je zmienić w panelu: **Elementy powtarzalne → Slider**. Zdjęcia zastępcze
-nie przedstawiają konstrukcji przemysłowych ani metalu; dobierz docelowe fotografie
-do nagłówków. Dotychczasowych podpisów i tekstów nie zmieniano — część podpisów
-galerii i oferty również nie odpowiada odzyskanym zdjęciom i wymaga przeglądu.
+Można je zmienić w panelu: **Elementy powtarzalne → Slider**. W aktualizacji naprawiono
+rozpoznane domyślne podpisy i nagłówki, aby pasowały do rzeczywistych zdjęć. Własne
+treści, które nie odpowiadają wzorcom naprawy, wymagają ręcznego przeglądu w panelu.
 
 Pełna lista kopiowanych plików jest widoczna w `public/uploads/site/`.
 Katalog `public/uploads/site/` jest objęty Gitem, pozostałe uploady nadal są ignorowane.

@@ -87,6 +87,7 @@ final class CmsTest extends WebTestCase
         $before = $em->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore']);
         $beforePath = 'uploads/site/20251215_105454-scaled.jpg';
         $before->setValue($beforePath);
+        $em->getRepository(Setting::class)->findOneBy(['key' => 'intro.baAfter'])->setValue('uploads/site/20251202_113931-scaled.jpg');
         $slide = $em->getRepository(Block::class)->findOneBy(['type' => 'slide'], ['sort' => 'ASC']);
         $slide->setData(array_replace($slide->getData(), ['img' => 'uploads/site/20251104_130814-scaled.jpg']));
         $gallery = $em->getRepository(Block::class)->findOneBy(['type' => 'gallery'], ['sort' => 'ASC']);
@@ -99,7 +100,8 @@ final class CmsTest extends WebTestCase
         $this->browser->request('GET', '/');
         self::assertResponseIsSuccessful();
         self::assertSelectorExists('.slide-photo[src="/uploads/site/20251104_130814-scaled.jpg"]');
-        self::assertSelectorExists('.ba > picture > img[src="/uploads/site/20251215_105454-scaled.jpg"]');
+        self::assertSelectorExists('.ba .after img[src="/uploads/site/20251215_105454-scaled.jpg"][alt="PRZED"]');
+        self::assertSelectorExists('.ba > picture > img[src="/uploads/site/20251202_113931-scaled.jpg"][alt="PO"]');
         self::assertSelectorExists('.gallery img[src="/uploads/site/20251215_105448-300x169.jpg"][data-full="/uploads/site/20251215_105454-scaled.jpg"]');
         self::assertStringNotContainsString('wp-content', $this->browser->getResponse()->getContent());
         self::assertSame($beforePath, self::getContainer()->get(EntityManagerInterface::class)->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore'])->getValue());
@@ -123,6 +125,12 @@ final class CmsTest extends WebTestCase
         self::assertSelectorExists('.slide.is-active picture source[type="image/webp"][srcset]');
         self::assertSelectorExists('.slide.is-active img[width][height][fetchpriority="high"][loading="eager"]');
         self::assertSelectorExists('.offer-card img[loading="lazy"][width][height]');
+        self::assertSelectorCount(0, '#intro .ba');
+        self::assertSelectorExists('#intro img[src="/uploads/site/20250218_110112-scaled.jpg"]');
+        foreach ($crawler->filter('.gallery img') as $image) {
+            self::assertGreaterThanOrEqual(1200, (int) $image->getAttribute('width'));
+        }
+        self::assertSelectorExists('link[rel="stylesheet"][href^="/css/style.css?v="]');
         $schema = json_decode($crawler->filter('script[type="application/ld+json"]')->text(), true, 512, JSON_THROW_ON_ERROR);
         self::assertSame('https://schema.org', $schema['@context']);
         self::assertSame('LocalBusiness', $schema['@graph'][0]['@type']);

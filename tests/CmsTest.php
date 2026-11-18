@@ -18,6 +18,7 @@ use Symfony\Component\Lock\Store\FlockStore;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\MailerInterface;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\DBAL\Platforms\MySQLPlatform;
 use Doctrine\ORM\Tools\SchemaTool;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -230,6 +231,13 @@ final class CmsTest extends WebTestCase
         $this->browser->request('POST', '/admin/blocks/pricing', ['_action' => 'delete', '_id' => $id, '_token' => $token]);
         self::assertResponseRedirects();
         self::assertNull(self::getContainer()->get(EntityManagerInterface::class)->find(Block::class, $id));
+    }
+
+    public function testInquiryReadColumnIsQuotedForMySql(): void
+    {
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        $metadata = $em->getClassMetadata(Inquiry::class);
+        self::assertSame('`read`', $em->getConfiguration()->getQuoteStrategy()->getColumnName('read', $metadata, new MySQLPlatform()));
     }
 
     public function testContactActuallyPersistsAndCanBeReadAndRemoved(): void

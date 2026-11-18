@@ -28,7 +28,7 @@ class Inquiry
     #[ORM\Column(type: 'datetime_immutable')]
     private \DateTimeImmutable $createdAt;
 
-    #[ORM\Column(type: 'boolean')]
+    #[ORM\Column(name: '`read`', type: 'boolean')]
     private bool $read = false;
 
     #[ORM\Column(type: 'boolean')]

@@ -12,6 +12,7 @@
         <ini name="display_errors" value="1" />
         <ini name="error_reporting" value="-1" />
         <server name="APP_ENV" value="test" force="true" />
+        <server name="SITE_URL" value="https://laser.example/" force="true" />
         <server name="KERNEL_CLASS" value="App\Kernel" />
         <server name="DATABASE_URL" value="sqlite:///%kernel.project_dir%/var/test.db" force="true" />
         <server name="ADMIN_USER" value="admin" force="true" />

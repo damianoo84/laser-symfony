@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 final class ImageUploader
 {
-    public function __construct(#[Autowire('%kernel.project_dir%')] private string $projectDir)
+    public function __construct(#[Autowire('%kernel.project_dir%')] private string $projectDir, private ImageFiles $images)
     {
     }
 
@@ -32,6 +32,8 @@ final class ImageUploader
         }
         $name = bin2hex(random_bytes(16)) . '.' . $extensions[$info['mime']];
         $file->move($directory, $name);
-        return 'uploads/' . $group . '/' . $name;
+        $path = 'uploads/' . $group . '/' . $name;
+        $this->images->optimize($path);
+        return $path;
     }
 }

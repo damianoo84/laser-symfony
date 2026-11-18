@@ -64,6 +64,7 @@ class BlockTypes
                 'label' => 'Karta oferty',
                 'fields' => [
                     ['key' => 'img', 'label' => 'Zdjęcie karty', 'type' => 'image'],
+                    ['key' => 'img_alt', 'label' => 'Opis zdjęcia (ALT; opisz to, co faktycznie widać)', 'type' => 'text'],
                     ['key' => 'name', 'label' => 'Nazwa (np. METAL)', 'type' => 'text'],
                     ['key' => 'desc', 'label' => 'Opis', 'type' => 'textarea'],
                     ['key' => 'link', 'label' => 'Tekst linku "Dowiedz się więcej"', 'type' => 'text'],
@@ -94,6 +95,7 @@ class BlockTypes
                 'label' => 'Karta zastosowania',
                 'fields' => [
                     ['key' => 'img', 'label' => 'Zdjęcie karty', 'type' => 'image'],
+                    ['key' => 'img_alt', 'label' => 'Opis zdjęcia (ALT; opisz to, co faktycznie widać)', 'type' => 'text'],
                     ['key' => 'kicker', 'label' => 'Kategoria', 'type' => 'text'],
                     ['key' => 'name', 'label' => 'Nazwa', 'type' => 'text'],
                     ['key' => 'desc', 'label' => 'Opis', 'type' => 'text'],

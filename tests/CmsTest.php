@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use App\Command\SeedCommand;
+use App\Command\UpgradeSeoCommand;
 use App\Content\BlockTypes;
 use App\Entity\Block;
 use App\Entity\Inquiry;
@@ -98,7 +99,7 @@ final class CmsTest extends WebTestCase
         $this->browser->request('GET', '/');
         self::assertResponseIsSuccessful();
         self::assertSelectorExists('.slide-photo[src="/uploads/site/20251104_130814-scaled.jpg"]');
-        self::assertSelectorExists('.ba > img[src="/uploads/site/20251215_105454-scaled.jpg"]');
+        self::assertSelectorExists('.ba > picture > img[src="/uploads/site/20251215_105454-scaled.jpg"]');
         self::assertSelectorExists('.gallery img[src="/uploads/site/20251215_105448-300x169.jpg"][data-full="/uploads/site/20251215_105454-scaled.jpg"]');
         self::assertStringNotContainsString('wp-content', $this->browser->getResponse()->getContent());
         self::assertSame($beforePath, self::getContainer()->get(EntityManagerInterface::class)->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore'])->getValue());
@@ -108,6 +109,52 @@ final class CmsTest extends WebTestCase
         $this->browser->submitForm('Zapisz ustawienia', ['settings[intro.baBefore]' => $beforePath]);
         self::assertResponseRedirects();
         self::assertSame($beforePath, self::getContainer()->get(EntityManagerInterface::class)->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore'])->getValue());
+    }
+
+    public function testSeoMetadataSitemapAndLocalIndexingProtection(): void
+    {
+        $crawler = $this->browser->request('GET', '/?utm_source=test');
+        self::assertResponseIsSuccessful();
+        self::assertSelectorExists('link[rel="canonical"][href="https://laser.example/"]');
+        self::assertSelectorExists('meta[property="og:url"][content="https://laser.example/"]');
+        self::assertSelectorExists('meta[property="og:image"][content^="https://laser.example/uploads/"]');
+        self::assertSelectorExists('meta[name="robots"][content="noindex, nofollow"]');
+        self::assertSelectorExists('.page-heading h1');
+        self::assertSelectorExists('.slide.is-active picture source[type="image/webp"][srcset]');
+        self::assertSelectorExists('.slide.is-active img[width][height][fetchpriority="high"][loading="eager"]');
+        self::assertSelectorExists('.offer-card img[loading="lazy"][width][height]');
+        $schema = json_decode($crawler->filter('script[type="application/ld+json"]')->text(), true, 512, JSON_THROW_ON_ERROR);
+        self::assertSame('https://schema.org', $schema['@context']);
+        self::assertSame('LocalBusiness', $schema['@graph'][0]['@type']);
+        self::assertSame('https://laser.example/', $schema['@graph'][0]['url']);
+
+        $this->browser->request('GET', '/robots.txt');
+        self::assertResponseIsSuccessful();
+        self::assertResponseHeaderSame('Content-Type', 'text/plain; charset=UTF-8');
+        self::assertStringContainsString('Disallow: /', $this->browser->getResponse()->getContent());
+        $this->browser->request('GET', '/sitemap.xml');
+        self::assertResponseIsSuccessful();
+        self::assertResponseHeaderSame('Content-Type', 'application/xml; charset=UTF-8');
+        $xml = simplexml_load_string($this->browser->getResponse()->getContent());
+        self::assertCount(1, $xml->url);
+        self::assertSame('https://laser.example/', (string) $xml->url->loc);
+        self::assertStringNotContainsString('/admin', $this->browser->getResponse()->getContent());
+    }
+
+    public function testSeoUpgradeIsIdempotentAndPreservesCustomMetadata(): void
+    {
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        $repository = $em->getRepository(Setting::class);
+        $repository->findOneBy(['key' => 'site.title'])->setValue('Mój własny tytuł SEO');
+        $repository->findOneBy(['key' => 'site.heading'])->setValue('Mobilne czyszczenie laserowe — LAZER Limanowa');
+        $em->flush();
+        $command = new UpgradeSeoCommand($em);
+        self::assertSame(0, $command->run(new ArrayInput([]), new NullOutput()));
+        self::assertSame('Mój własny tytuł SEO', $repository->findOneBy(['key' => 'site.title'])->getValue());
+        self::assertSame('Czyszczenie laserowe — Limanowa i Małopolska', $repository->findOneBy(['key' => 'site.heading'])->getValue());
+        $before = $repository->findOneBy(['key' => 'site.heading'])->getValue();
+        self::assertSame(0, $command->run(new ArrayInput([]), new NullOutput()));
+        self::assertSame($before, $repository->findOneBy(['key' => 'site.heading'])->getValue());
     }
 
     public function testMotionControlsPersistAndValidate(): void

@@ -5,7 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ s['site.title'] }}{% endblock %}</title>
 <meta name="description" content="{{ s['site.description'] }}">
-<script type="application/ld+json">{{ {'@context':'https://schema.org','@type':'LocalBusiness','name':s['contact.company'],'address':s['contact.address'],'telephone':s['contact.phone'],'email':s['contact.email'],'areaServed':s['contact.area']}|json_encode(15)|raw }}</script>
+<meta name="robots" content="{{ seo.robots }}">
+<link rel="canonical" href="{{ seo.canonical }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="{{ s['site.name'] }}">
+<meta property="og:title" content="{{ s['site.title'] }}">
+<meta property="og:description" content="{{ s['site.description'] }}">
+<meta property="og:url" content="{{ seo.canonical }}">
+<meta name="twitter:card" content="{{ seo.image ? 'summary_large_image' : 'summary' }}">
+<meta name="twitter:title" content="{{ s['site.title'] }}">
+<meta name="twitter:description" content="{{ s['site.description'] }}">
+{% if seo.image %}<meta property="og:image" content="{{ seo.image }}">
+<meta property="og:image:alt" content="{{ seo.imageAlt }}">
+<meta name="twitter:image" content="{{ seo.image }}">
+<meta name="twitter:image:alt" content="{{ seo.imageAlt }}">{% endif %}
+<script type="application/ld+json">{{ seo.schema|json_encode(15)|raw }}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
@@ -24,7 +39,7 @@
 </div></div>
 <header class="site" id="siteHeader"><div class="container nav">
   <a class="brand" href="#start" aria-label="{{ s['site.name'] }} — strona główna">
-    {% if s['site.logo'] %}<img class="brand-logo" src="{{ asset(s['site.logo']|image_path) }}" alt="{{ s['site.name'] }}">{% else %}<span class="logo" aria-hidden="true">{{ s['site.logoText'] }}</span>{% endif %}
+    {% if s['site.logo'] %}{% include 'blocks/image.html.twig' with {imagePath:s['site.logo'],alt:s['site.name'],imageClass:'brand-logo',loading:'eager',sizes:'48px'} only %}{% else %}<span class="logo" aria-hidden="true">{{ s['site.logoText'] }}</span>{% endif %}
     <span class="brand-t">{{ s['site.name'] }}<small>{{ s['site.tagline'] }}</small></span>
   </a>
   <nav class="links" id="navLinks" aria-label="Nawigacja główna">
@@ -33,7 +48,7 @@
   </nav>
   <button class="burger" id="burger" aria-label="Otwórz menu" aria-controls="navLinks" aria-expanded="false">☰</button>
 </div></header>
-<main id="start" tabindex="-1"><h1 class="sr-only">{{ s['site.heading'] }}</h1>{% block body %}{% endblock %}</main>
+<main id="start" tabindex="-1"><div class="page-heading"><div class="container"><h1>{{ s['site.heading'] }}</h1></div></div>{% block body %}{% endblock %}</main>
 <footer id="footer"><div class="container">
   <div class="foot-grid">
     <div><b style="color:#fff">{{ s['footer.title'] }}</b><div class="mini">{{ s['footerTagline']|content_html }}</div>{% include 'blocks/socials.html.twig' %}</div>

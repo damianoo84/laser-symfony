@@ -5,9 +5,23 @@
   var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   var reduceMotion = motionPreference.matches || document.body.dataset.motion === 'none';
 
-  // A broken external photograph must never leave an empty hero. No CMS data is overwritten.
+  function useOriginal(photo) {
+    var picture = photo.closest('picture');
+    var sources = picture ? $$('source', picture) : [];
+    if (!sources.length) return false;
+    sources.forEach(function (source) { source.remove(); });
+    photo.src = photo.getAttribute('src');
+    return true;
+  }
+  $$('.responsive-picture > img:not(.slide-photo)').forEach(function (photo) {
+    photo.addEventListener('error', function () { useOriginal(photo); });
+    if (photo.complete && !photo.naturalWidth) useOriginal(photo);
+  });
+
+  // A missing variant falls back to the original; a broken hero then uses its placeholder.
   $$('.slide-photo').forEach(function (photo) {
     function fallback() {
+      if (useOriginal(photo)) return;
       if (photo.dataset.fallback && photo.src !== new URL(photo.dataset.fallback, location.href).href) {
         photo.src = photo.dataset.fallback;
         delete photo.dataset.fallback;

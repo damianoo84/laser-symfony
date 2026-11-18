@@ -8,6 +8,7 @@ use App\Repository\BlockRepository;
 use App\Repository\SettingRepository;
 use App\Entity\Inquiry;
 use App\Mail\InquiryNotifier;
+use App\Seo\PageMetadata;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +20,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home', methods: ['GET', 'POST'])]
-    public function index(Request $request, SettingRepository $settings, BlockRepository $blocks, EntityManagerInterface $em, #[Autowire(service: 'limiter.contact')] RateLimiterFactory $contactLimiter, InquiryNotifier $notifier): Response
+    public function index(Request $request, SettingRepository $settings, BlockRepository $blocks, EntityManagerInterface $em, #[Autowire(service: 'limiter.contact')] RateLimiterFactory $contactLimiter, InquiryNotifier $notifier, PageMetadata $metadata): Response
     {
         $error = '';
         $values = [];
@@ -62,9 +63,12 @@ class HomeController extends AbstractController
                 }
             }
         }
+        $pageSettings = $settings->findAllAsMap();
+        $pageBlocks = $blocks->findAllGrouped();
         return $this->render('home/index.html.twig', [
-            's' => $settings->findAllAsMap(),
-            'b' => $blocks->findAllGrouped(),
+            's' => $pageSettings,
+            'b' => $pageBlocks,
+            'seo' => $metadata->home($pageSettings, $pageBlocks, $request),
             'contactError' => $error, 'contactValues' => $values,
         ], new Response(status: $status));
     }

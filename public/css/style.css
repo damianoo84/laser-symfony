@@ -11,6 +11,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
+.responsive-picture{display:contents}
 a{color:inherit}
 .container{width:min(var(--max),92%);margin:0 auto}
 .narrow{max-width:800px}
@@ -40,6 +41,8 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);ba
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding:3.4rem 0 2.8rem}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.4);color:#fde68a;padding:.35rem .85rem;border-radius:999px;font-size:.8rem;font-weight:700}
 h1{font-family:var(--disp);font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.08;margin:.9rem 0}
+.page-heading{padding:1.25rem 0;background:var(--bg2);border-bottom:1px solid var(--line)}
+.page-heading h1{font-size:clamp(1.35rem,3vw,2rem);line-height:1.25;margin:0}
 h1 .grad{background:linear-gradient(90deg,#fbbf24,#ea580c 55%,#38bdf8);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{color:#c3cbdf;font-size:1.07rem;max-width:34rem}
 .lead strong{color:#fff}
@@ -203,7 +206,7 @@ footer{background:#070c1b;color:#94a3b8;padding:1.6rem 0 5.5rem}
 @media(max-width:920px){.slide{min-height:560px}}
 .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .offer-card{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
-.offer-card .ph{height:190px;background-size:cover;background-position:center}
+.offer-card .ph{width:100%;height:190px;object-fit:cover;background-size:cover;background-position:center}
 .offer-card .tx{padding:1.1rem}
 .offer-card h3{margin:.2rem 0 .4rem;letter-spacing:.04em}
 .offer-card a.more{color:var(--accent);font-weight:800;text-decoration:none}
@@ -211,7 +214,7 @@ footer{background:#070c1b;color:#94a3b8;padding:1.6rem 0 5.5rem}
 .icon4 .card{padding:1.5rem 1rem}
 .app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .app-card{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;position:relative}
-.app-card .ph{height:200px;background-size:cover;background-position:center}
+.app-card .ph{width:100%;height:200px;object-fit:cover;background-size:cover;background-position:center}
 .app-card .tx{padding:1rem 1.1rem}
 .triple{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
 .triple .card{text-align:center}

@@ -1,0 +1,5 @@
+{% set image = image_info(imagePath) %}
+{% if image.src %}<picture class="responsive-picture">
+  {% if image.srcset %}<source type="image/webp" srcset="{{ image.srcset }}" sizes="{{ sizes|default('100vw') }}">{% endif %}
+  <img src="{{ image.src }}" alt="{{ alt|default('') }}"{% if imageClass|default('') %} class="{{ imageClass }}"{% endif %}{% if image.width and image.height %} width="{{ image.width }}" height="{{ image.height }}"{% endif %} loading="{{ loading|default('lazy') }}" decoding="async"{% if priority|default(false) %} fetchpriority="high"{% endif %}{% if fallback is defined %} data-fallback="{{ fallback }}" data-placeholder="{{ asset('images/laser-surface.svg') }}"{% endif %}{% if full|default('') %} data-full="{{ full }}"{% endif %}>
+</picture>{% endif %}

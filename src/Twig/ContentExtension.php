@@ -5,11 +5,22 @@ declare(strict_types=1);
 namespace App\Twig;
 
 use App\Content\ContentValidator;
+use App\Content\ImageFiles;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
+use Twig\TwigFunction;
 
 final class ContentExtension extends AbstractExtension
 {
+    public function __construct(private ImageFiles $images)
+    {
+    }
+
+    public function getFunctions(): array
+    {
+        return [new TwigFunction('image_info', [$this->images, 'info'])];
+    }
+
     public function getFilters(): array
     {
         return [

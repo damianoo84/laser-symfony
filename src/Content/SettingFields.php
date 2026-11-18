@@ -22,6 +22,8 @@ class SettingFields
                 ['key' => 'site.logo', 'label' => 'Logo (opcjonalne zdjęcie)', 'type' => 'image'],
                 ['key' => 'site.title', 'label' => 'Tytuł strony w wyszukiwarce', 'type' => 'text'],
                 ['key' => 'site.description', 'label' => 'Opis strony w wyszukiwarce', 'type' => 'text'],
+                ['key' => 'seo.image', 'label' => 'Zdjęcie podglądu linku (Google i media społecznościowe)', 'type' => 'image', 'help' => 'Najlepiej własne poziome zdjęcie. Jest używane również w danych firmy dla wyszukiwarek.'],
+                ['key' => 'seo.imageAlt', 'label' => 'Opis zdjęcia podglądu linku', 'type' => 'text'],
                 ['key' => 'site.topbar', 'label' => 'Tekst w górnym pasku', 'type' => 'text'],
                 ['key' => 'site.heading', 'label' => 'Główny nagłówek strony (H1)', 'type' => 'text'],
                 ['key' => 'footer.title', 'label' => 'Nazwa w stopce', 'type' => 'text'],

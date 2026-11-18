@@ -178,7 +178,7 @@ footer{background:#070c1b;color:#94a3b8;padding:1.6rem 0 5.5rem}
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
-/* === v2: slider, dropdown, karty ze zdjęciem (jak czyscimylaserami.pl) === */
+/* === v2: slider, dropdown, karty ze zdjęciem === */
 .has-drop{position:relative}
 .drop{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:.5rem;display:none;z-index:80}
 .has-drop:hover .drop,.has-drop:focus-within .drop{display:block}

@@ -80,6 +80,36 @@ final class CmsTest extends WebTestCase
         }
     }
 
+    public function testDatabasePhotosRenderTheirStoredLocalPaths(): void
+    {
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        $before = $em->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore']);
+        $beforePath = 'uploads/site/20251215_105454-scaled.jpg';
+        $before->setValue($beforePath);
+        $slide = $em->getRepository(Block::class)->findOneBy(['type' => 'slide'], ['sort' => 'ASC']);
+        $slide->setData(array_replace($slide->getData(), ['img' => 'uploads/site/20251104_130814-scaled.jpg']));
+        $gallery = $em->getRepository(Block::class)->findOneBy(['type' => 'gallery'], ['sort' => 'ASC']);
+        $gallery->setData(array_replace($gallery->getData(), [
+            'src' => 'uploads/site/20251215_105448-300x169.jpg',
+            'full' => $beforePath,
+        ]));
+        $em->flush();
+
+        $this->browser->request('GET', '/');
+        self::assertResponseIsSuccessful();
+        self::assertSelectorExists('.slide-photo[src="/uploads/site/20251104_130814-scaled.jpg"]');
+        self::assertSelectorExists('.ba > img[src="/uploads/site/20251215_105454-scaled.jpg"]');
+        self::assertSelectorExists('.gallery img[src="/uploads/site/20251215_105448-300x169.jpg"][data-full="/uploads/site/20251215_105454-scaled.jpg"]');
+        self::assertStringNotContainsString('wp-content', $this->browser->getResponse()->getContent());
+        self::assertSame($beforePath, self::getContainer()->get(EntityManagerInterface::class)->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore'])->getValue());
+
+        $this->login();
+        self::assertSelectorExists('.img-prev img[src="/uploads/site/20251215_105454-scaled.jpg"]');
+        $this->browser->submitForm('Zapisz ustawienia', ['settings[intro.baBefore]' => $beforePath]);
+        self::assertResponseRedirects();
+        self::assertSame($beforePath, self::getContainer()->get(EntityManagerInterface::class)->getRepository(Setting::class)->findOneBy(['key' => 'intro.baBefore'])->getValue());
+    }
+
     public function testMotionControlsPersistAndValidate(): void
     {
         $this->login();

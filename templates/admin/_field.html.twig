@@ -13,7 +13,7 @@
   {% elseif f.type == 'number' %}
     <input type="number" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value is same as('') ? f.min|default(0) : value }}" min="{{ f.min|default(0) }}" max="{{ f.max|default(1000000) }}" step="1" required>
   {% elseif f.type == 'image' %}
-    {% if value %}<div class="img-prev"><img src="{{ asset(value) }}" alt="Obecne zdjęcie: {{ f.label }}" loading="lazy"></div>{% endif %}
+    {% if value %}<div class="img-prev"><img src="{{ asset(value|image_path) }}" alt="Obecne zdjęcie: {{ f.label }}" loading="lazy"></div>{% endif %}
     <input type="text" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" placeholder="https://… lub wgraj plik poniżej" maxlength="20000">
     <label class="help" for="{{ id }}_upload">Wgraj nowe zdjęcie (zastąpi podany adres)</label>
     <input type="file" id="{{ id }}_upload" name="{{ prefix }}[{{ f.key }}]" accept="image/jpeg,image/png,image/webp,image/gif" data-image-upload>

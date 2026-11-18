@@ -55,8 +55,8 @@ class Defaults
                 'intro.cta1href' => '#oferta',
                 'intro.cta2' => 'O nas',
                 'intro.cta2href' => '#o-nas',
-                'intro.baBefore' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg',
-                'intro.baAfter' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg',
+                'intro.baBefore' => 'uploads/site/20251215_105448-scaled.jpg',
+                'intro.baAfter' => 'uploads/site/20251202_113931-scaled.jpg',
                 'intro.baNote' => 'Przesuń suwak, aby zobaczyć efekt. Prawdziwe realizacje — sekcja Galeria.',
                 // technologia
                 'tech.kicker' => 'Technologia',
@@ -64,7 +64,7 @@ class Defaults
                 'tech.p1' => 'Wiązka lasera odparowuje (ablacja) zanieczyszczenie z powierzchni — do postaci gazowej. Usuwa <b>do 98% zabrudzeń</b>: lakiery, farby, rdzę, oleje, nagary i naloty.',
                 'tech.p2' => 'Z wielowarstwowych powłok zdejmiemy np. tylko wierzchnią warstwę, <b>nie uszkadzając podkładu ani materiału bazowego</b>. Bez ścierniwa i chemii — można czyścić bez demontażu, także przy elementach ruchomych maszyn.',
                 'tech.benefitsTitle' => '✔ Zalety czyszczenia laserowego',
-                'tech.img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg',
+                'tech.img' => 'uploads/site/20251202_113931-scaled.jpg',
                 // nagłówki sekcji
                 'offerHead.kicker' => 'Oferta',
                 'offerHead.title' => 'Co można <b>czyścić laserem?</b>',
@@ -104,7 +104,7 @@ class Defaults
                 ],
                 'slide' => [
                     [
-                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2023/04/slider_laserowe_czyszczenie_kamienia.png',
+                        'img' => 'uploads/site/20251104_130814-scaled.jpg',
                         'eyebrow' => 'Laser w konserwacji zabytków',
                         'title' => 'Restauracja zabytkowych obiektów z wykorzystaniem lasera czyszczącego',
                         'text' => 'Rzeźby, portale, ołtarze, polichromie i złocenia. Selektywne czyszczenie w porozumieniu z konserwatorem zabytków.',
@@ -114,7 +114,7 @@ class Defaults
                         'cta2href' => 'tel:+48501965485',
                     ],
                     [
-                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2024/04/slider_konstrukcjestalowe1_1920.png',
+                        'img' => 'uploads/site/20251201_184610-scaled.jpg',
                         'eyebrow' => 'Przemysł • konstrukcje • maszyny',
                         'title' => 'Czyszczenie laserem konstrukcji stalowych, instalacji przemysłowych i linii produkcyjnych',
                         'text' => 'Rdza, farby i inne zabrudzenia — bez demontażu, bez chemii, z krótszym przestojem.',
@@ -124,7 +124,7 @@ class Defaults
                         'cta2href' => '#galeria',
                     ],
                     [
-                        'img' => 'https://czyscimylaserami.pl/wp-content/uploads/2024/04/slider_metal_1920.png',
+                        'img' => 'uploads/site/20251215_105448-scaled.jpg',
                         'eyebrow' => 'Metal • aluminium • stal kwasoodporna',
                         'title' => 'Przemysłowe czyszczenie laserem metali',
                         'text' => 'Aluminium, stal czarna i kwasoodporna, formy wtryskowe, konstrukcje stalowe, elementy blacharki samochodowej.',
@@ -152,10 +152,10 @@ class Defaults
                     ['v' => 7, 'suffix' => '', 'label' => 'rodzajów materiałów'],
                 ],
                 'offer' => [
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'name' => 'METAL', 'desc' => 'Rdza, farby, zgorzelina, powłoki proszkowe i PVD. Stal, aluminium, formy, maszyny.', 'link' => 'Dowiedz się więcej >'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-scaled.jpg', 'name' => 'DREWNO', 'desc' => 'Selektywne, bezinwazyjne usuwanie lakierów i zabrudzeń bez naruszania struktury.', 'link' => 'Dowiedz się więcej >'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'name' => 'KAMIEŃ', 'desc' => 'Piaskowiec i inne kamienie — zabrudzenia niebiologiczne, pomniki, elewacje.', 'link' => 'Dowiedz się więcej >'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105454-scaled.jpg', 'name' => 'CEGŁA I BETON', 'desc' => 'Elewacje ceglane i klinkierowe: sadza, farby, graffiti, naloty atmosferyczne.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'uploads/site/20251215_105448-scaled.jpg', 'name' => 'METAL', 'desc' => 'Rdza, farby, zgorzelina, powłoki proszkowe i PVD. Stal, aluminium, formy, maszyny.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'uploads/site/20251215_143710-scaled.jpg', 'name' => 'DREWNO', 'desc' => 'Selektywne, bezinwazyjne usuwanie lakierów i zabrudzeń bez naruszania struktury.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'uploads/site/20251122_144653-scaled.jpg', 'name' => 'KAMIEŃ', 'desc' => 'Piaskowiec i inne kamienie — zabrudzenia niebiologiczne, pomniki, elewacje.', 'link' => 'Dowiedz się więcej >'],
+                    ['img' => 'uploads/site/20251215_105454-scaled.jpg', 'name' => 'CEGŁA I BETON', 'desc' => 'Elewacje ceglane i klinkierowe: sadza, farby, graffiti, naloty atmosferyczne.', 'link' => 'Dowiedz się więcej >'],
                 ],
                 'icon' => [
                     ['ico' => '🛡️', 'text' => 'Nie uszkadza powierzchni'],
@@ -175,10 +175,10 @@ class Defaults
                     ['value' => 'Lepsza przyczepność nowych powłok, dłuższa trwałość'],
                 ],
                 'app' => [
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'kicker' => 'Restauracja i konserwacja', 'name' => 'Zabytki', 'desc' => 'Drewno / kamień, ołtarze, rzeźby'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'kicker' => 'Konserwacja', 'name' => 'Przemysł', 'desc' => 'Konstrukcje, maszyny, formy'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_124727-scaled.jpg', 'kicker' => 'Renowacje', 'name' => 'Motoryzacja', 'desc' => 'Lakiery, rdza, detale'],
-                    ['img' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251201_184610-scaled.jpg', 'kicker' => 'Utrzymanie', 'name' => 'Produkcja i dom', 'desc' => 'Taśmy, piece, kostka, tarasy'],
+                    ['img' => 'uploads/site/20251122_144653-scaled.jpg', 'kicker' => 'Restauracja i konserwacja', 'name' => 'Zabytki', 'desc' => 'Drewno / kamień, ołtarze, rzeźby'],
+                    ['img' => 'uploads/site/20251215_105448-scaled.jpg', 'kicker' => 'Konserwacja', 'name' => 'Przemysł', 'desc' => 'Konstrukcje, maszyny, formy'],
+                    ['img' => 'uploads/site/20251215_124727-scaled.jpg', 'kicker' => 'Renowacje', 'name' => 'Motoryzacja', 'desc' => 'Lakiery, rdza, detale'],
+                    ['img' => 'uploads/site/20251201_184610-scaled.jpg', 'kicker' => 'Utrzymanie', 'name' => 'Produkcja i dom', 'desc' => 'Taśmy, piece, kostka, tarasy'],
                 ],
                 'appMore' => [
                     ['ico' => '🏗️', 'name' => 'Budownictwo', 'desc' => 'Elewacje, stal, beton — przygotowanie pod malowanie.'],
@@ -202,12 +202,12 @@ class Defaults
                     ['name' => 'Roboczogodzina', 'price' => '200–400 zł'],
                 ],
                 'gallery' => [
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-300x169.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_105448-scaled.jpg', 'alt' => 'Stal — odrdzewianie', 'cap' => 'Stal — odrdzewianie'],
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251202_113931-scaled.jpg', 'alt' => 'Detal — przed / po', 'cap' => 'Detal — przed / po'],
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-169x300.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251215_143710-scaled.jpg', 'alt' => 'Drewno — renowacja', 'cap' => 'Drewno — renowacja'],
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-225x300.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251122_144653-scaled.jpg', 'alt' => 'Cegła — elewacja', 'cap' => 'Cegła — elewacja'],
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251104_130814-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251104_130814-scaled.jpg', 'alt' => 'Maszyna — bez demontażu', 'cap' => 'Maszyna — bez demontażu'],
-                    ['src' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251004_103720-300x225.jpg', 'full' => 'https://oczyszczanielaserowe.pl/wp-content/uploads/2026/02/20251004_103720-scaled.jpg', 'alt' => 'Beton — posadzka', 'cap' => 'Beton — posadzka'],
+                    ['src' => 'uploads/site/20251215_105448-300x169.jpg', 'full' => 'uploads/site/20251215_105448-scaled.jpg', 'alt' => 'Stal — odrdzewianie', 'cap' => 'Stal — odrdzewianie'],
+                    ['src' => 'uploads/site/20251202_113931-300x225.jpg', 'full' => 'uploads/site/20251202_113931-scaled.jpg', 'alt' => 'Detal — przed / po', 'cap' => 'Detal — przed / po'],
+                    ['src' => 'uploads/site/20251215_143710-169x300.jpg', 'full' => 'uploads/site/20251215_143710-scaled.jpg', 'alt' => 'Drewno — renowacja', 'cap' => 'Drewno — renowacja'],
+                    ['src' => 'uploads/site/20251122_144653-225x300.jpg', 'full' => 'uploads/site/20251122_144653-scaled.jpg', 'alt' => 'Cegła — elewacja', 'cap' => 'Cegła — elewacja'],
+                    ['src' => 'uploads/site/20251104_130814-300x225.jpg', 'full' => 'uploads/site/20251104_130814-scaled.jpg', 'alt' => 'Maszyna — bez demontażu', 'cap' => 'Maszyna — bez demontażu'],
+                    ['src' => 'uploads/site/20251004_103720-300x225.jpg', 'full' => 'uploads/site/20251004_103720-scaled.jpg', 'alt' => 'Beton — posadzka', 'cap' => 'Beton — posadzka'],
                 ],
                 'review' => [
                     ['stars' => 5, 'text' => 'Cegła po graffiti jak nowa, bez skuwania. Wycena z dnia na dzień.', 'author' => 'Marek, Kraków'],

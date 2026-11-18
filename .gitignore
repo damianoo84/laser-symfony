@@ -19,3 +19,4 @@
 /auth.json
 /public/uploads/*
 !/public/uploads/.htaccess
+!/public/uploads/site/

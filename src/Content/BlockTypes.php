@@ -92,7 +92,7 @@ class BlockTypes
                 ],
             ],
             'app' => [
-                'label' => 'Karta zastosowania',
+                'label' => 'Karta zastosowania — układ zapasowy',
                 'fields' => [
                     ['key' => 'img', 'label' => 'Zdjęcie karty', 'type' => 'image'],
                     ['key' => 'img_alt', 'label' => 'Opis zdjęcia (ALT; opisz to, co faktycznie widać)', 'type' => 'text'],
@@ -102,7 +102,7 @@ class BlockTypes
                 ],
             ],
             'appMore' => [
-                'label' => 'Dodatkowe zastosowanie',
+                'label' => 'Dodatkowe zastosowanie — układ zapasowy',
                 'fields' => [
                     ['key' => 'ico', 'label' => 'Emoji', 'type' => 'text'],
                     ['key' => 'name', 'label' => 'Nazwa', 'type' => 'text'],
@@ -134,12 +134,16 @@ class BlockTypes
                 ],
             ],
             'archiveArticle' => [
-                'label' => 'Pełne opisy usług i firmy',
+                'label' => 'Opisy firmy, oferty i zastosowań',
                 'fields' => [
                     ['key' => 'title', 'label' => 'Tytuł rozwijanego opisu', 'type' => 'text'],
                     ['key' => 'section', 'label' => 'Sekcja na stronie', 'type' => 'select', 'choices' => ['intro' => 'Wprowadzenie', 'oferta' => 'Oferta', 'tech' => 'Technologia', 'zastosowania' => 'Zastosowania', 'cennik' => 'Cennik', 'galeria' => 'Galeria', 'o-nas' => 'O nas', 'kontakt' => 'Kontakt']],
                     ['key' => 'anchor', 'label' => 'Identyfikator opisu', 'type' => 'anchor', 'required' => true, 'help' => 'Np. opis-drewna. Używaj prefiksu opis- lub wp-, małych liter bez polskich znaków i myślników.'],
                     ['key' => 'body', 'label' => 'Pełna treść (akapity, listy, pogrubienia)', 'type' => 'textarea'],
+                    ['key' => 'presentation', 'label' => 'Sposób wyświetlania', 'type' => 'select', 'default' => 'auto', 'choices' => ['auto' => 'Automatycznie według sekcji i importu', 'company' => 'Główny tekst O nas', 'introMore' => 'O nas — pod przyciskiem Więcej (bez grafik)', 'offer' => 'Oferta — przełączany opis', 'application' => 'Zastosowania — przełączany opis', 'extra' => 'Osobna rozwijana belka', 'hidden' => 'Ukryty na stronie'], 'help' => 'Automatycznie: importowany opis firmy trafia do O nas, a powielone materiały galerii, cennika i kontaktu są ukryte.'],
+                    ['key' => 'shortTitle', 'label' => 'Krótka nazwa przycisku wyboru (opcjonalnie)', 'type' => 'text'],
+                    ['key' => 'image', 'label' => 'Zdjęcie kafla zastosowania', 'type' => 'image', 'help' => 'Puste pole używa przypisanego zdjęcia z odzyskanego archiwum. Możesz wgrać własne.'],
+                    ['key' => 'imageAlt', 'label' => 'Opis zdjęcia kafla zastosowania', 'type' => 'text'],
                 ],
             ],
             'archiveMedia' => [
@@ -170,7 +174,7 @@ class BlockTypes
                 ],
             ],
             'knowledge' => [
-                'label' => 'Kafelek Wiedza',
+                'label' => 'Kafelek Wiedza — archiwalny, niewyświetlany',
                 'fields' => [
                     ['key' => 'title', 'label' => 'Tytuł', 'type' => 'text'],
                     ['key' => 'desc', 'label' => 'Opis', 'type' => 'text'],

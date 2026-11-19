@@ -9,6 +9,7 @@ use App\Repository\SettingRepository;
 use App\Entity\Inquiry;
 use App\Mail\InquiryNotifier;
 use App\Seo\PageMetadata;
+use App\Content\HomeLayout;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,7 +21,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home', methods: ['GET', 'POST'])]
-    public function index(Request $request, SettingRepository $settings, BlockRepository $blocks, EntityManagerInterface $em, #[Autowire(service: 'limiter.contact')] RateLimiterFactory $contactLimiter, InquiryNotifier $notifier, PageMetadata $metadata): Response
+    public function index(Request $request, SettingRepository $settings, BlockRepository $blocks, EntityManagerInterface $em, #[Autowire(service: 'limiter.contact')] RateLimiterFactory $contactLimiter, InquiryNotifier $notifier, PageMetadata $metadata, HomeLayout $layout): Response
     {
         $error = '';
         $values = [];
@@ -69,6 +70,7 @@ class HomeController extends AbstractController
             's' => $pageSettings,
             'b' => $pageBlocks,
             'seo' => $metadata->home($pageSettings, $pageBlocks, $request),
+            'layout' => $layout->build($pageSettings, $pageBlocks),
             'contactError' => $error, 'contactValues' => $values,
         ], new Response(status: $status));
     }

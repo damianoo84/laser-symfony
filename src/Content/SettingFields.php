@@ -51,12 +51,12 @@ class SettingFields
             'O nas — sekcja główna' => [
                 ['key' => 'intro.kicker', 'label' => 'Odznaka (kicker)', 'type' => 'text'],
                 ['key' => 'intro.title', 'label' => 'Nagłówek', 'type' => 'textarea'],
-                ['key' => 'intro.p1', 'label' => 'Akapit 1', 'type' => 'textarea'],
-                ['key' => 'intro.p2', 'label' => 'Akapit 2', 'type' => 'textarea'],
+                ['key' => 'intro.p1', 'label' => 'Akapit 1 — tekst zapasowy', 'type' => 'textarea', 'help' => 'Po imporcie tekst główny edytujesz w Opisy firmy, oferty i zastosowań → O firmie LAZER. Te akapity są używane, gdy nie ma opisu oznaczonego jako Główny tekst O nas.'],
+                ['key' => 'intro.p2', 'label' => 'Akapit 2 — tekst zapasowy', 'type' => 'textarea'],
                 ['key' => 'intro.cta1', 'label' => 'Przycisk 1 — tekst', 'type' => 'text'],
                 ['key' => 'intro.cta1href', 'label' => 'Przycisk 1 — link', 'type' => 'url'],
-                ['key' => 'intro.cta2', 'label' => 'Przycisk 2 — tekst', 'type' => 'text'],
-                ['key' => 'intro.cta2href', 'label' => 'Przycisk 2 — link', 'type' => 'url'],
+                ['key' => 'intro.moreLabel', 'label' => 'Przycisk rozwijania opisu', 'type' => 'text'],
+                ['key' => 'intro.lessLabel', 'label' => 'Przycisk zwijania opisu', 'type' => 'text'],
                 ['key' => 'intro.baBefore', 'label' => 'Zdjęcie PRZED (URL lub plik)', 'type' => 'image'],
                 ['key' => 'intro.baAfter', 'label' => 'Zdjęcie PO (URL lub plik)', 'type' => 'image'],
                 ['key' => 'intro.image', 'label' => 'Zdjęcie sekcji (gdy brak pary PRZED/PO)', 'type' => 'image'],
@@ -75,6 +75,8 @@ class SettingFields
             'Nagłówki sekcji' => [
                 ['key' => 'offerHead.kicker', 'label' => 'Oferta — kicker', 'type' => 'text'],
                 ['key' => 'offerHead.title', 'label' => 'Oferta — nagłówek', 'type' => 'textarea'],
+                ['key' => 'offer.metalLabel', 'label' => 'Oferta — nazwa zakładki metalu', 'type' => 'text'],
+                ['key' => 'offer.metalTitle', 'label' => 'Oferta — tytuł opisu metalu (treść z opisu Przemysł)', 'type' => 'text'],
                 ['key' => 'appsHead.kicker', 'label' => 'Zastosowania — kicker', 'type' => 'text'],
                 ['key' => 'appsHead.title', 'label' => 'Zastosowania — nagłówek', 'type' => 'textarea'],
                 ['key' => 'appsCta', 'label' => 'Zastosowania — przycisk', 'type' => 'text'],
@@ -142,6 +144,12 @@ class SettingFields
         return [
             'ui.call' => 'Zadzwoń', 'ui.quote' => 'Wycena gratis', 'ui.materials' => 'Czyścimy m.in.:',
             'ui.galleryMore' => 'Pokaż więcej zdjęć',
+            'intro.moreLabel' => 'Więcej', 'intro.lessLabel' => 'Mniej',
+            'offer.metalLabel' => 'Metal', 'offer.metalTitle' => 'Czyszczenie laserowe metalu',
+            'ui.galleryPrevious' => 'Poprzednie zdjęcie', 'ui.galleryNext' => 'Następne zdjęcie',
+            'ui.galleryClose' => 'Zamknij galerię', 'ui.galleryPhoto' => 'Zdjęcie',
+            'ui.galleryError' => 'Nie udało się wczytać zdjęcia. Przejdź do następnego.',
+            'ui.readMore' => 'Dowiedz się więcej →',
             'ui.before' => 'PRZED', 'ui.after' => 'PO', 'ui.priceName' => 'Materiał / usługa', 'ui.priceValue' => 'Cena',
             'ui.write' => 'Napisz →', 'ui.formHint' => 'Opisz powierzchnię, a przygotujemy wycenę.',
             'ui.openForm' => 'Przejdź do formularza →', 'ui.map' => 'Mapa dojazdu',
@@ -157,7 +165,8 @@ class SettingFields
     private static function interfaceFields(): array
     {
         $labels = ['ui.call' => 'Przycisk telefonu', 'ui.quote' => 'Przycisk wyceny', 'ui.materials' => 'Wstęp paska materiałów', 'ui.before' => 'Podpis PRZED', 'ui.after' => 'Podpis PO', 'ui.priceName' => 'Kolumna: usługa', 'ui.priceValue' => 'Kolumna: cena', 'ui.write' => 'Przycisk e-mail', 'ui.formHint' => 'Opis karty formularza', 'ui.openForm' => 'Przycisk otwarcia formularza', 'ui.map' => 'Przycisk mapy', 'ui.name' => 'Pole: imię', 'ui.phone' => 'Pole: telefon', 'ui.subject' => 'Pole: temat', 'ui.message' => 'Pole: wiadomość', 'ui.namePlaceholder' => 'Podpowiedź: imię', 'ui.phonePlaceholder' => 'Podpowiedź: telefon', 'ui.subjectPlaceholder' => 'Podpowiedź: temat', 'ui.messagePlaceholder' => 'Podpowiedź: wiadomość', 'ui.consent' => 'Treść zgody kontaktowej', 'ui.submit' => 'Przycisk wysyłania', 'ui.required' => 'Informacja o wymaganych polach', 'ui.footerLinks' => 'Tytuł linków stopki', 'ui.contact' => 'Tytuł kontaktu w stopce', 'ui.backTop' => 'Link do góry'];
-        $labels['ui.galleryMore'] = 'Przycisk kolejnych zdjęć galerii';
+        $labels += ['ui.galleryPrevious' => 'Galeria — poprzednie zdjęcie', 'ui.galleryNext' => 'Galeria — następne zdjęcie', 'ui.galleryClose' => 'Galeria — zamknięcie', 'ui.galleryPhoto' => 'Galeria — etykieta licznika', 'ui.galleryError' => 'Galeria — błąd zdjęcia'];
+        $labels['ui.readMore'] = 'Przycisk opisu w kaflach zastosowań';
         return array_map(static fn (string $key, string $label): array => ['key' => $key, 'label' => $label, 'type' => 'text'], array_keys($labels), array_values($labels));
     }
 

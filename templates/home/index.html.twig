@@ -27,15 +27,21 @@
 {% if s['section.strip.visible'] %}<div class="strip marquee"><div class="marquee-in"><span>{{ s['ui.materials'] }}</span>{% for item in b['strip']|default([]) %}<strong>{{ item.get('value') }}</strong><i aria-hidden="true">•</i>{% endfor %}</div></div>{% endif %}
 {% if s['section.intro.visible'] %}
 <section id="intro"><div class="container grid2">
-  <div class="reveal"><div class="kicker">{{ s['intro.kicker'] }}</div><h2>{{ s['intro.title']|content_html }}</h2><div class="prose">{{ s['intro.p1']|content_html }}</div><div class="prose">{{ s['intro.p2']|content_html }}</div>
-    <div class="cta-row"><a class="btn btn-primary" href="{{ s['intro.cta1href']|safe_link }}">{{ s['intro.cta1'] }}</a><a class="btn btn-ghost" href="{{ s['intro.cta2href']|safe_link }}">{{ s['intro.cta2'] }}</a></div>
+  <div class="reveal"><div class="kicker">{{ s['intro.kicker'] }}</div><h2>{{ s['intro.title']|content_html }}</h2>
+    {% if layout.company %}{% for company in layout.company %}<div class="prose" id="{{ company.anchor }}">{{ company.body|content_html }}</div>{% endfor %}
+    {% else %}<div class="prose">{{ s['intro.p1']|content_html }}</div><div class="prose">{{ s['intro.p2']|content_html }}</div>{% endif %}
+    {% if layout.introMore %}<details class="intro-more" id="intro-more"><summary><span class="when-closed">{{ s['intro.moreLabel'] }}</span><span class="when-open">{{ s['intro.lessLabel'] }}</span></summary>
+      {% for more in layout.introMore %}<div class="prose" id="{{ more.anchor }}">{{ more.body|content_html }}</div>{% endfor %}
+    </details>{% endif %}
+    <div class="cta-row"><a class="btn btn-primary" href="{{ s['intro.cta1href']|safe_link }}">{{ s['intro.cta1'] }}</a></div>
     <div class="grid3">{% for st in b['introStat']|default([]) %}<div class="card stat"><b data-count="{{ st.get('v') }}">{{ st.get('v') }}</b>{{ st.get('suffix') }}<br><span class="mini">{{ st.get('label') }}</span></div>{% endfor %}</div>
   </div>
   <div class="reveal">{% if s['intro.baBefore'] and s['intro.baAfter'] %}{% include 'blocks/comparison.html.twig' with {before:s['intro.baBefore'],after:s['intro.baAfter']} %}{% elseif s['intro.image'] %}{% include 'blocks/image.html.twig' with {imagePath:s['intro.image'],alt:s['intro.imageAlt'],imageClass:'rounded',sizes:'(max-width: 920px) 92vw, 580px'} only %}{% endif %}<p class="mini">{{ s['intro.baNote'] }}</p></div>
 </div>{% include 'blocks/articles.html.twig' with {section:'intro'} %}</section>{% endif %}
 {% if s['section.oferta.visible'] %}
 <section id="oferta" class="tinted"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['offerHead.kicker'] }}</div><h2>{{ s['offerHead.title']|content_html }}</h2></div>
-  <div class="offer-grid">{% for o in b['offer']|default([]) %}<article class="offer-card reveal">{% include 'blocks/image.html.twig' with {imagePath:o.get('img'),alt:o.get('img_alt'),imageClass:'ph',sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 280px'} only %}<div class="tx"><h3>{{ o.get('name') }}</h3><p class="mini">{{ o.get('desc') }}</p><a class="more" href="{{ (o.get('href') ?: '#kontakt')|safe_link }}">{{ o.get('link') }}</a></div></article>{% endfor %}</div>
+  <div class="offer-grid">{% for o in b['offer']|default([]) %}<article class="offer-card reveal">{% include 'blocks/image.html.twig' with {imagePath:o.get('img'),alt:o.get('img_alt'),imageClass:'ph',sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 280px'} only %}<div class="tx"><h3>{{ o.get('name') }}</h3><p class="mini">{{ o.get('desc') }}</p><a class="more card-link" data-topic-trigger href="{{ (layout.offerLinks[o.id]|default(o.get('href')) ?: '#kontakt')|safe_link }}" aria-label="{{ o.get('link') }} — {{ o.get('name') }}">{{ o.get('link') }}</a></div></article>{% endfor %}</div>
+  {% include 'blocks/topics.html.twig' with {topics:layout.offers,label:s['offerHead.kicker'],switcherId:'offer-descriptions'} %}
   <div class="icon4 section-gap">{% for ic in b['icon']|default([]) %}<div class="card reveal"><div class="ico" aria-hidden="true">{{ ic.get('ico') }}</div><b>{{ ic.get('text') }}</b></div>{% endfor %}</div>
 </div>{% include 'blocks/articles.html.twig' with {section:'oferta'} %}</section>{% endif %}
 {% if s['section.tech.visible'] %}
@@ -45,7 +51,8 @@
 <section id="zastosowania" class="tinted">
   <div class="container">
     <div class="sec-head reveal"><div class="kicker">{{ s['appsHead.kicker'] }}</div><h2>{{ s['appsHead.title']|content_html }}</h2></div>
-    <div class="app-grid">
+    {% if layout.applications %}{% include 'blocks/topics.html.twig' with {topics:layout.applications,label:s['appsHead.kicker'],switcherId:'application-descriptions',choices:true} %}
+    {% else %}<div class="app-grid">
       {% for a in b['app']|default([]) %}
       <article class="app-card reveal">
         {% include 'blocks/image.html.twig' with {imagePath:a.get('img'),alt:a.get('img_alt'),imageClass:'ph',sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 280px'} only %}
@@ -54,7 +61,7 @@
       {% endfor %}
     </div>
     <p><a class="btn btn-ghost" href="{{ s['appsCtaHref']|safe_link }}">{{ s['appsCta'] }}</a></p>
-    <div class="grid3">{% for am in b['appMore']|default([]) %}<div class="card reveal"><div class="ico">{{ am.get('ico') }}</div><h3>{{ am.get('name') }}</h3><p>{{ am.get('desc')|content_html }}</p></div>{% endfor %}</div>
+    <div class="grid3">{% for am in b['appMore']|default([]) %}<div class="card reveal"><div class="ico">{{ am.get('ico') }}</div><h3>{{ am.get('name') }}</h3><p>{{ am.get('desc')|content_html }}</p></div>{% endfor %}</div>{% endif %}
   </div>
   {% include 'blocks/articles.html.twig' with {section:'zastosowania'} %}
 </section>{% endif %}
@@ -86,9 +93,15 @@
   </div>
 </section>{% endif %}
 {% if s['section.galeria.visible'] %}
-<section id="galeria"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['galeriaHead.kicker'] }}</div><h2>{{ s['galeriaHead.title']|content_html }}</h2><p>{{ s['galeriaHead.p'] }}</p></div><div class="gallery" data-gallery>{% for g in b['gallery']|default([]) %}<figure class="g-item reveal"><button type="button" class="gallery-open" aria-label="Powiększ: {{ g.get('alt') }}">{% include 'blocks/image.html.twig' with {imagePath:g.get('src'),alt:g.get('alt'),full:asset((g.get('full') ?: g.get('src'))|image_path),sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 380px'} only %}</button>{% if g.get('cap') %}<figcaption>{{ g.get('cap') }}</figcaption>{% endif %}</figure>{% endfor %}</div><button type="button" class="btn btn-ghost section-gap" data-gallery-more hidden>{{ s['ui.galleryMore'] }}</button></div>{% include 'blocks/articles.html.twig' with {section:'galeria'} %}</section>{% endif %}
+<section id="galeria"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['galeriaHead.kicker'] }}</div><h2>{{ s['galeriaHead.title']|content_html }}</h2><p>{{ s['galeriaHead.p'] }}</p></div>
+  <div class="gallery" data-gallery>{% for g in b['gallery']|default([]) %}
+    {% set full = asset((g.get('full') ?: g.get('src'))|image_path) %}
+    {% if loop.index <= 6 %}<figure class="g-item reveal"><button type="button" class="gallery-open" data-gallery-item data-full="{{ full }}" data-alt="{{ g.get('alt') }}" data-caption="{{ g.get('cap') }}" aria-label="Powiększ: {{ g.get('alt') }}">{% include 'blocks/image.html.twig' with {imagePath:g.get('src'),alt:g.get('alt'),full:full,sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 380px'} only %}</button>{% if g.get('cap') %}<figcaption>{{ g.get('cap') }}</figcaption>{% endif %}</figure>
+    {% else %}<a href="{{ full }}" data-gallery-item data-full="{{ full }}" data-alt="{{ g.get('alt') }}" data-caption="{{ g.get('cap') }}" hidden tabindex="-1">{{ g.get('alt') }}</a>{% endif %}
+  {% endfor %}</div>
+</div>{% include 'blocks/articles.html.twig' with {section:'galeria'} %}</section>{% endif %}
 {% if s['section.o-nas.visible'] %}
-<section id="o-nas" class="tinted"><div class="container grid2"><div class="reveal"><div class="kicker">{{ s['aboutHead.kicker'] }}</div><h2>{{ s['aboutHead.title']|content_html }}</h2><div class="prose">{{ s['aboutP']|content_html }}</div>{% for r in b['review']|default([]) %}<div class="card review"><span aria-label="{{ r.get('stars') }} na 5 gwiazdek">{% for i in 1..(r.get('stars','5')) %}⭐{% endfor %}</span><p>„{{ r.get('text')|striptags }}”</p><b>— {{ r.get('author') }}</b></div>{% endfor %}</div><div class="faq reveal"><div class="kicker">{{ s['faqHead.kicker'] }}</div><h2>{{ s['faqHead.title']|content_html }}</h2>{% for f in b['faq']|default([]) %}<details{% if f.get('open') %} open{% endif %}><summary>{{ f.get('q') }}</summary><div>{{ f.get('a')|content_html }}</div></details>{% endfor %}<div class="grid2 section-gap">{% for k in b['knowledge']|default([]) %}<div class="card"><b>{{ k.get('title') }}</b><p class="mini">{{ k.get('desc') }}</p></div>{% endfor %}</div></div></div>{% include 'blocks/articles.html.twig' with {section:'o-nas'} %}</section>{% endif %}
+{% include 'blocks/reviews-faq.html.twig' %}{% endif %}
 {% if s['section.kontakt.visible'] %}
 <section id="kontakt" class="contact-sec"><div class="container"><div class="sec-head light reveal"><div class="kicker">{{ s['contactHead.kicker'] }}</div><h2>{{ s['contactHead.title']|content_html }}</h2><p>{{ s['contactHead.p'] }}</p></div>
 <div class="triple">{% for c in b['contactCard']|default([]) %}<div class="card reveal"><div class="ico">{{ c.get('ico') }}</div><h3>{{ c.get('name') }}</h3>{% if c.get('kind') == 'mail' %}<p><a href="mailto:{{ s['contact.email'] }}">{{ s['contact.email'] }}</a></p><a class="btn btn-ghost btn-sm" href="mailto:{{ s['contact.email'] }}">{{ s['ui.write'] }}</a>{% elseif c.get('kind') == 'tel' %}<p><a href="{{ s['contact.phoneHref']|safe_link }}">{{ s['contact.phone'] }}</a></p><a class="btn btn-primary btn-sm" href="{{ s['contact.phoneHref']|safe_link }}">{{ s['ui.call'] }}</a>{% else %}<p class="mini">{{ s['ui.formHint'] }}</p><a class="btn btn-ghost btn-sm" href="#qform">{{ s['ui.openForm'] }}</a>{% endif %}</div>{% endfor %}</div>

@@ -1,0 +1,8 @@
+<section id="o-nas" class="tinted"><div class="container grid2">
+  <div class="reveal"><div class="kicker">{{ s['aboutHead.kicker'] }}</div><h2>{{ s['aboutHead.title']|content_html }}</h2><div class="prose">{{ s['aboutP']|content_html }}</div>
+    {% for r in b['review']|default([]) %}<div class="card review"><span aria-label="{{ r.get('stars') }} na 5 gwiazdek">{% for i in 1..(r.get('stars','5')) %}⭐{% endfor %}</span><p>„{{ r.get('text')|striptags }}”</p><b>— {{ r.get('author') }}</b></div>{% endfor %}
+  </div>
+  <div class="faq reveal"><div class="kicker">{{ s['faqHead.kicker'] }}</div><h2>{{ s['faqHead.title']|content_html }}</h2>
+    {% for f in b['faq']|default([]) %}<details{% if f.get('open') %} open{% endif %}><summary>{{ f.get('q') }}</summary><div>{{ f.get('a')|content_html }}</div></details>{% endfor %}
+  </div>
+</div>{% include 'blocks/articles.html.twig' with {section:'o-nas'} %}</section>

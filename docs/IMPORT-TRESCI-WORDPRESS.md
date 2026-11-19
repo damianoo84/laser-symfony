@@ -1,5 +1,12 @@
 # Pełne treści, media WordPressa i mobilny pasek kontaktu
 
+**Aktualny sposób prezentacji:** po kolejnych poprawkach opisy Oferty i Zastosowań
+są przełączane w jednym panelu, pełny tekst firmy jest w pierwszym O nas, a galeria
+ma sześć miniatur z przeglądaniem reszty w podglądzie slajdów. Powielone belki są
+ukryte, nie skasowane z CMS. Szczegóły: [`UKLAD-SEKCJI.md`](UKLAD-SEKCJI.md).
+Poniższy opis importu pozostaje aktualny, ale opis wcześniejszych rozwijanych belek
+i przycisku rozszerzania galerii jest historyczny.
+
 ## Zakres i sposób prezentacji
 
 Źródłem są publiczne strony bazy `komsat_gz0h1` z prefiksem `xno8_`, z dostarczonego

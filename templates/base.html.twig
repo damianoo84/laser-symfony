@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<noscript><style>[data-start-collapsed][hidden],[data-topic-content][hidden]{display:block!important}</style></noscript>
 <title>{% block title %}{{ s['site.title'] }}{% endblock %}</title>
 <meta name="description" content="{{ s['site.description'] }}">
 <meta name="robots" content="{{ seo.robots }}">
@@ -43,7 +44,7 @@
     <span class="brand-t">{{ s['site.name'] }}<small>{{ s['site.tagline'] }}</small></span>
   </a>
   <nav class="links" id="navLinks" aria-label="Nawigacja główna">
-    {% for link in b['navLink']|default([]) %}<a href="{{ link.get('href')|safe_link }}" data-nav>{{ link.get('label') }}</a>{% endfor %}
+    {% for link in b['navLink']|default([]) %}<a href="{{ (link.get('href') == '#o-nas' and link.get('label')|lower == 'o nas' ? '#intro' : link.get('href'))|safe_link }}" data-nav>{{ link.get('label') }}</a>{% endfor %}
     <a class="btn btn-primary btn-sm" href="{{ s['contact.phoneHref']|safe_link }}">📞 {{ s['ui.call'] }}</a>
   </nav>
   <button class="burger" id="burger" aria-label="Otwórz menu" aria-controls="navLinks" aria-expanded="false">☰</button>
@@ -52,13 +53,21 @@
 <footer id="footer"><div class="container">
   <div class="foot-grid">
     <div><b style="color:#fff">{{ s['footer.title'] }}</b><div class="mini">{{ s['footerTagline']|content_html }}</div>{% include 'blocks/socials.html.twig' %}</div>
-    <div><h4>{{ s['ui.footerLinks'] }}</h4><ul>{% for link in b['footerLink']|default([]) %}<li><a href="{{ link.get('href')|safe_link }}">{{ link.get('label') }}</a></li>{% endfor %}</ul></div>
+    <div><h4>{{ s['ui.footerLinks'] }}</h4><ul>{% for link in b['footerLink']|default([]) %}<li><a href="{{ (link.get('href') == '#o-nas' and link.get('label')|lower == 'o nas' ? '#intro' : link.get('href'))|safe_link }}">{{ link.get('label') }}</a></li>{% endfor %}</ul></div>
     <div><h4>{{ s['ui.contact'] }}</h4><p class="mini"><strong>{{ s['contact.company'] }}</strong><br>{{ s['contact.address'] }}<br>NIP: {{ s['contact.nip'] }}<br><a href="{{ s['contact.phoneHref']|safe_link }}">{{ s['contact.phone'] }}</a><br><a href="mailto:{{ s['contact.email'] }}">{{ s['contact.email'] }}</a></p></div>
   </div>
   <div class="foot" style="margin-top:1.2rem;border-top:1px solid #1e293b;padding-top:1rem"><span>© {{ 'now'|date('Y') }} {{ s['footer.copyright'] }}</span><span><a href="#start">{{ s['ui.backTop'] }}</a> • <a href="{{ path('admin_login') }}">Panel admina</a></span></div>
 </div></footer>
 <button id="toTop" aria-label="Do góry">↑</button>
 <nav class="mobile-cta" aria-label="Szybki kontakt" hidden><a class="call" href="{{ s['contact.phoneHref']|safe_link }}">📞 {{ s['ui.call'] }}</a><a class="quote" href="#kontakt">{{ s['ui.quote'] }}</a></nav>
-<dialog class="lightbox" id="lightbox" aria-label="Podgląd zdjęcia"><button type="button" aria-label="Zamknij podgląd">✕</button><img id="lbImg" alt=""></dialog>
+<dialog class="lightbox" id="lightbox" aria-label="{{ s['galeriaHead.title'] }}">
+  <button type="button" data-gallery-close aria-label="{{ s['ui.galleryClose'] }}">✕</button>
+  <div class="lightbox-shell"><figure><img id="lbImg" alt=""><figcaption id="gallery-caption"></figcaption></figure>
+    <div class="gallery-controls"><button type="button" class="gallery-nav" data-gallery-prev aria-label="{{ s['ui.galleryPrevious'] }}">‹</button>
+      <p role="status" aria-live="polite" data-gallery-counter data-label="{{ s['ui.galleryPhoto'] }}" data-error="{{ s['ui.galleryError'] }}"></p>
+      <button type="button" class="gallery-nav" data-gallery-next aria-label="{{ s['ui.galleryNext'] }}">›</button>
+    </div>
+  </div>
+</dialog>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{% if topics %}<div class="content-switcher section-gap" data-content-switcher aria-label="{{ label }}"{% if not choices|default(false) %} data-start-collapsed hidden{% endif %}>
+  {% if choices|default(false) %}<div class="app-grid application-choices">
+    {% for topic in topics %}<article class="app-card">
+      {% if topic.image %}{% include 'blocks/image.html.twig' with {imagePath:topic.image,alt:topic.imageAlt,imageClass:'ph',sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 380px'} only %}{% endif %}
+      <div class="tx"><h3>{{ topic.label }}</h3><a class="more card-link" href="#{{ topic.anchor }}" data-topic-trigger aria-label="{{ s['ui.readMore'] }} — {{ topic.label }}">{{ s['ui.readMore'] }}</a></div>
+    </article>{% endfor %}
+  </div>{% endif %}
+  <div class="topic-content section-gap" id="{{ switcherId }}" data-topic-content hidden>
+    {% for topic in topics %}<article class="topic-panel" id="{{ topic.anchor }}" data-topic-panel data-topic-group="{{ topic.group }}" aria-labelledby="heading-{{ topic.anchor }}">
+      <h3 id="heading-{{ topic.anchor }}">{{ topic.title }}</h3><div class="prose">{{ topic.body|content_html }}</div>
+      {% include 'blocks/article-media.html.twig' with {mediaItems:topic.media,videosOnly:true} %}
+    </article>{% endfor %}
+  </div>
+</div>{% endif %}

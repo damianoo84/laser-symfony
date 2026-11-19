@@ -179,10 +179,25 @@ final class CmsTest extends WebTestCase
         self::assertSelectorExists('#oferta #wp-drewno');
         self::assertSelectorExists('#oferta #wp-beton');
         self::assertSelectorExists('#zastosowania #wp-zastosowanie-rolnictwo');
-        self::assertSelectorExists('#o-nas #wp-onas');
+        self::assertSelectorCount(0, '#o-nas #wp-onas');
         self::assertSelectorCount(4, '.archive-media video[controls][preload="none"]');
-        self::assertSelectorCount(69, '.gallery .g-item');
-        self::assertSelectorExists('[data-gallery-more]');
+        self::assertSelectorCount(6, '.gallery .g-item');
+        self::assertSelectorCount(69, '[data-gallery-item]');
+        self::assertSelectorCount(0, '[data-gallery-more]');
+        self::assertSelectorExists('#lightbox [data-gallery-next]');
+        self::assertSelectorExists('#intro #wp-onas');
+        self::assertSelectorExists('#intro details.intro-more #wp-uslugi');
+        self::assertSelectorCount(0, '[data-topic-tab]');
+        self::assertSelectorExists('#offer-descriptions[hidden]');
+        self::assertSelectorExists('#application-descriptions[hidden]');
+        self::assertSelectorCount(6, '#zastosowania .application-choices .app-card img');
+        self::assertSelectorCount(6, '#zastosowania [data-topic-trigger]');
+        self::assertStringNotContainsString('Ablacja laserowa', $this->browser->getResponse()->getContent());
+        self::assertStringNotContainsString('Laser vs piaskowanie', $this->browser->getResponse()->getContent());
+        self::assertSelectorCount(0, '#intro .cta-row a[href="#o-nas"]');
+        foreach (['Materiały graficzne galerii', 'O firmie LAZER — pełny opis', 'Szczegóły wyceny i cennika', 'Dane firmy i informacje kontaktowe'] as $removedTitle) {
+            self::assertStringNotContainsString($removedTitle, $this->browser->getResponse()->getContent());
+        }
         $this->login();
         $this->browser->request('GET', '/admin/blocks/archiveArticle');
         self::assertResponseIsSuccessful();
@@ -196,7 +211,7 @@ final class CmsTest extends WebTestCase
         $this->browser->submit($form);
         self::assertResponseRedirects();
         $this->browser->request('GET', '/');
-        self::assertSelectorTextContains('.archive-content', 'Mój zmieniony pełny opis.');
+        self::assertSelectorTextContains('#intro', 'Mój zmieniony pełny opis.');
         $em = self::getContainer()->get(EntityManagerInterface::class);
         self::assertSame($key, $em->find(Block::class, $id)->get('_import_key'));
         $this->browser->request('GET', '/admin/blocks/archiveMedia');

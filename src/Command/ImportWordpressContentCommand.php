@@ -72,7 +72,7 @@ final class ImportWordpressContentCommand extends Command
                     // Article references are verified against the manifest below, not a static dropdown.
                     $data[$field['key']] = $type === 'archiveMedia' && $field['key'] === 'article'
                         ? $entry['data']['article']
-                        : ContentValidator::field($field, $entry['data'][$field['key']] ?? '');
+                        : ContentValidator::field($field, $entry['data'][$field['key']] ?? ($field['default'] ?? ''));
                 }
                 $data['_import_key'] = $entry['key'];
                 $sort[$type] = ($sort[$type] ?? 0) + 1;

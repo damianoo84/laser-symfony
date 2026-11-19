@@ -1,0 +1,9 @@
+{% for media in mediaItems %}
+  {% set file = media.get('file')|media_path %}
+  {% set video = file matches '/\\.(mp4|webm)$/i' %}
+  {% if file and (not videosOnly|default(false) or video) %}<figure class="archive-media">
+    {% if video %}<video controls preload="none" playsinline{% if media.get('poster') %} poster="{{ asset(media.get('poster')|image_path) }}"{% endif %} aria-label="{{ media.get('title') }}"><source src="{{ asset(file) }}" type="{{ file ends with '.webm' ? 'video/webm' : 'video/mp4' }}"></video>
+    {% else %}{% include 'blocks/image.html.twig' with {imagePath:file,alt:media.get('alt'),sizes:'(max-width: 920px) 92vw, 1100px'} only %}{% endif %}
+    {% if media.get('caption') %}<figcaption class="mini">{{ media.get('caption')|content_html }}</figcaption>{% endif %}
+  </figure>{% endif %}
+{% endfor %}

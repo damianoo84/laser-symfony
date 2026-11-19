@@ -1,17 +1,9 @@
-{% set articles = b['archiveArticle']|default([])|filter(article => article.get('section') == section) %}
+{% set articles = layout.extras|filter(article => article.section == section) %}
 {% if articles %}<div class="container{% if section == 'cennik' %} narrow{% endif %} archive-content">
 {% for article in articles %}
-<div class="faq content-articles"><details id="{{ article.get('anchor') }}">
-  <summary>{{ article.get('title') }}</summary>
-  <div class="prose">{{ article.get('body')|content_html }}</div>
-  {% for media in b['archiveMedia']|default([]) %}{% if media.get('article') == article.get('anchor') %}
-    {% set file = media.get('file')|media_path %}
-    {% if file %}<figure class="archive-media">
-      {% if file matches '/\\.(mp4|webm)$/i' %}
-      <video controls preload="none" playsinline{% if media.get('poster') %} poster="{{ asset(media.get('poster')|image_path) }}"{% endif %} aria-label="{{ media.get('title') }}"><source src="{{ asset(file) }}" type="{{ file ends with '.webm' ? 'video/webm' : 'video/mp4' }}"></video>
-      {% else %}{% include 'blocks/image.html.twig' with {imagePath:file,alt:media.get('alt'),sizes:'(max-width: 920px) 92vw, 1100px'} only %}{% endif %}
-      {% if media.get('caption') %}<figcaption class="mini">{{ media.get('caption')|content_html }}</figcaption>{% endif %}
-    </figure>{% endif %}
-  {% endif %}{% endfor %}
+<div class="faq content-articles"><details id="{{ article.anchor }}">
+  <summary>{{ article.title }}</summary>
+  <div class="prose">{{ article.body|content_html }}</div>
+  {% include 'blocks/article-media.html.twig' with {mediaItems:article.media} %}
 </details></div>
 {% endfor %}</div>{% endif %}

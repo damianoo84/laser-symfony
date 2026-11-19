@@ -119,23 +119,66 @@ try {
       new Promise(resolve=>setTimeout(resolve,2500))
     ])`);
     await screenshot(name);
-    const imported = await evaluate('document.querySelectorAll(".content-articles details").length');
+    const imported = await evaluate('document.querySelectorAll("[data-content-switcher]").length');
     if (imported && (name === 'desktop' || name === 'mobile')) {
-      assert(imported >= 15, `${name}: recovered descriptions are present`);
-      const gallery = await evaluate(`({total:document.querySelectorAll('.gallery .g-item').length,visible:document.querySelectorAll('.gallery .g-item:not([hidden])').length})`);
-      assert(gallery.total>=69&&gallery.visible===6, `${name}: all recovered photos exist but only six show initially`);
-      await evaluate('document.querySelector("[data-gallery-more]").click()');
-      assert(await evaluate('document.querySelectorAll(".gallery .g-item:not([hidden])").length===12'), `${name}: gallery reveals the next six images`);
-      await evaluate(`(()=>{const button=document.querySelector('[data-gallery-more]');while(!button.hidden)button.click();})()`);
-      assert(await evaluate('document.querySelectorAll(".gallery .g-item:not([hidden])").length===document.querySelectorAll(".gallery .g-item").length'), `${name}: every recovered photo can be revealed`);
+      assert(imported===2, `${name}: Offer and Applications each use one shared content panel`);
+      assert(await evaluate(`document.querySelector('#offer-descriptions').hidden&&document.querySelector('#application-descriptions').hidden&&!document.querySelector('[data-topic-tab]')`), `${name}: descriptions start hidden and there are no extra small tabs`);
+      assert(await evaluate(`document.querySelector('#intro #wp-onas').textContent.includes('Dolnego Śląska')&&!document.querySelector('#intro-more').open&&!document.querySelector('#intro-more img')`), `${name}: company text is in About and More starts collapsed without logos`);
+      await evaluate(`document.querySelector('#intro-more summary').click()`);
+      assert(await evaluate('document.querySelector("#intro-more").open'), `${name}: More expands the service text in place`);
+      await evaluate(`document.querySelector('#intro-more summary').click()`);
+      await evaluate(`document.querySelector('#oferta .offer-card img').scrollIntoView({block:'center',behavior:'instant'})`);
+      await settle();
+      const offerPoint=await evaluate(`(()=>{const r=document.querySelector('#oferta .offer-card img').getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);
+      await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...offerPoint});
+      await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...offerPoint});
+      await settle();
+      assert(await evaluate(`!document.querySelector('#offer-descriptions').hidden`), `${name}: clicking the large offer photo opens its description`);
       await evaluate(`document.querySelector('a[href="#wp-drewno"]').click()`);
       await settle();
-      assert(await evaluate('document.querySelector("#wp-drewno").open'), `${name}: offer link opens the full description`);
+      assert(await evaluate(`!document.querySelector('#wp-drewno').hidden&&document.querySelectorAll('#oferta [data-topic-panel]:not([hidden])').length===1`), `${name}: offer selection shows exactly one description`);
       await evaluate('document.querySelector("#wp-drewno").scrollIntoView({block:"start",behavior:"instant"})');
       await settle();
       await screenshot(name+'-recovered-description');
-      await evaluate(`document.querySelector('#wp-drewno').open=false;document.querySelector('a[href="#wp-drewno"]').click()`);
-      assert(await evaluate('document.querySelector("#wp-drewno").open'), `${name}: repeated description link still opens a manually closed panel`);
+      await evaluate(`document.querySelector('#oferta .offer-card a[href="#wp-cegla"]').click()`);
+      assert(await evaluate(`!document.querySelector('#wp-beton').hidden&&!document.querySelector('#wp-cegla').hidden&&document.querySelector('#wp-drewno').hidden`), `${name}: the combined brick/concrete card shows both texts in the shared panel`);
+      await evaluate(`document.querySelector('#oferta .offer-card a[href="#wp-drewno"]').focus()`);
+      await send('Input.dispatchKeyEvent',{type:'rawKeyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,nativeVirtualKeyCode:13});
+      await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,nativeVirtualKeyCode:13});
+      assert(await evaluate(`!document.querySelector('#wp-drewno').hidden&&document.querySelector('#wp-cegla').hidden`), `${name}: large offer cards support keyboard activation`);
+      const applications=await evaluate(`(()=>{const links=Array.from(document.querySelectorAll('#zastosowania [data-topic-trigger]'));const labels=links.map(link=>link.closest('.app-card').querySelector('h3').textContent);let valid=true;links.forEach(link=>{link.click();const visible=Array.from(document.querySelectorAll('#zastosowania [data-topic-panel]')).filter(panel=>!panel.hidden);valid=valid&&visible.length===1&&visible[0].id===link.hash.slice(1);});return{labels,valid,photos:document.querySelectorAll('#zastosowania .application-choices img').length};})()`);
+      assert(applications.valid&&applications.labels.length===6&&applications.photos===6&&applications.labels.includes('Przemysł')&&applications.labels.includes('Zabytki / Sztuka'), `${name}: all six photographed application cards switch one panel`);
+      const gallery=await evaluate(`({total:document.querySelectorAll('[data-gallery-item]').length,thumbnails:document.querySelectorAll('.gallery .g-item').length,more:!!document.querySelector('[data-gallery-more]')})`);
+      assert(gallery.total>=69&&gallery.thumbnails===6&&!gallery.more, `${name}: six thumbnails give access to the entire slideshow`);
+      await evaluate(`document.querySelector('.gallery-open').click()`);
+      await evaluate(`document.querySelector('#lbImg').decode()`);
+      await evaluate(`for(let i=0;i<6;i++)document.querySelector('[data-gallery-next]').click()`);
+      await evaluate(`document.querySelector('#lbImg').decode()`);
+      assert(await evaluate(`document.querySelector('[data-gallery-counter]').textContent.includes('7 / ')&&document.querySelector('#lbImg').naturalWidth>0`), `${name}: gallery navigates beyond the first six photos`);
+      await screenshot(name+'-gallery-slides');
+      await send('Input.dispatchKeyEvent',{type:'keyDown',key:'End',code:'End'});
+      await send('Input.dispatchKeyEvent',{type:'keyUp',key:'End',code:'End'});
+      await evaluate(`document.querySelector('#lbImg').decode()`);
+      assert(await evaluate(`(()=>{const count=document.querySelectorAll('[data-gallery-item]').length;return document.querySelector('[data-gallery-counter]').textContent.endsWith(count+' / '+count);})()`), `${name}: keyboard reaches the final photo`);
+      await evaluate(`document.querySelector('[data-gallery-next]').click()`);
+      await evaluate(`document.querySelector('#lbImg').decode()`);
+      assert(await evaluate(`document.querySelector('[data-gallery-counter]').textContent.includes('1 / ')`), `${name}: gallery wraps back to the first photo`);
+      if (name==='mobile') {
+        const rect=await evaluate(`(()=>{const r=document.querySelector('#lbImg').getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height};})()`);
+        const y=rect.y+rect.height/2;
+        await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:rect.x+rect.width*.8,y,id:1}]});
+        await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:rect.x+rect.width*.5,y,id:1}]});
+        await settle();
+        await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:rect.x+rect.width*.2,y,id:1}]});
+        await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+        await settle();
+        await evaluate(`document.querySelector('#lbImg').decode()`);
+        assert(await evaluate(`document.querySelector('[data-gallery-counter]').textContent.includes('2 / ')`), `${name}: swiping the photo changes the slide`);
+      }
+      await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape'});
+      await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape'});
+      await settle();
+      assert(await evaluate(`!document.querySelector('#lightbox').open&&document.body.style.overflow!=='hidden'`), `${name}: Escape closes the slideshow and restores scrolling`);
       const movies = await evaluate(`Promise.all(Array.from(document.querySelectorAll('.archive-media video')).map(video=>new Promise((resolve,reject)=>{
         const timer=setTimeout(()=>reject(new Error('Video metadata timeout: '+video.querySelector('source').src)),15000);
         video.addEventListener('loadedmetadata',()=>{clearTimeout(timer);resolve({width:video.videoWidth,height:video.videoHeight,duration:video.duration,controls:video.controls,autoplay:video.autoplay});},{once:true});
@@ -143,7 +186,7 @@ try {
         video.preload='metadata';video.load();
       })))`);
       assert(movies.length===4&&movies.every(video=>video.width>0&&video.height>0&&video.duration>0&&video.controls&&!video.autoplay), `${name}: all four local videos decode and have manual controls`);
-      await evaluate('document.querySelectorAll(".content-articles details").forEach(details=>details.open=false);document.activeElement.blur();window.scrollTo({top:0,behavior:"instant"})');
+      await evaluate('document.querySelectorAll("details").forEach(details=>details.open=false);document.activeElement.blur();window.scrollTo({top:0,behavior:"instant"})');
       await settle();
     }
     await settle();

@@ -6,6 +6,8 @@ namespace App\Tests;
 
 use App\Command\SeedCommand;
 use App\Command\UpgradeSeoCommand;
+use App\Command\ImportWordpressContentCommand;
+use App\Content\WordpressContent;
 use App\Content\BlockTypes;
 use App\Entity\Block;
 use App\Entity\Inquiry;
@@ -69,6 +71,7 @@ final class CmsTest extends WebTestCase
         $this->browser->request('GET', '/');
         self::assertResponseIsSuccessful();
         self::assertSelectorCount(1, 'h1');
+        self::assertSelectorExists('nav.mobile-cta[aria-label="Szybki kontakt"][hidden]');
         self::assertSelectorExists('#qform input[name="_token"]');
         $this->login();
         foreach (array_keys(BlockTypes::types()) as $type) {
@@ -164,6 +167,44 @@ final class CmsTest extends WebTestCase
         $before = $repository->findOneBy(['key' => 'site.heading'])->getValue();
         self::assertSame(0, $command->run(new ArrayInput([]), new NullOutput()));
         self::assertSame($before, $repository->findOneBy(['key' => 'site.heading'])->getValue());
+    }
+
+    public function testImportedContentAndMediaAreEditableInAdminAndRenderInExistingSections(): void
+    {
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        $command = new ImportWordpressContentCommand($em->getConnection(), new WordpressContent(dirname(__DIR__)), dirname(__DIR__));
+        self::assertSame(0, $command->run(new ArrayInput(['--apply' => true]), new NullOutput()));
+        $this->browser->request('GET', '/');
+        self::assertResponseIsSuccessful();
+        self::assertSelectorExists('#oferta #wp-drewno');
+        self::assertSelectorExists('#oferta #wp-beton');
+        self::assertSelectorExists('#zastosowania #wp-zastosowanie-rolnictwo');
+        self::assertSelectorExists('#o-nas #wp-onas');
+        self::assertSelectorCount(4, '.archive-media video[controls][preload="none"]');
+        self::assertSelectorCount(69, '.gallery .g-item');
+        self::assertSelectorExists('[data-gallery-more]');
+        $this->login();
+        $this->browser->request('GET', '/admin/blocks/archiveArticle');
+        self::assertResponseIsSuccessful();
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        $article = $em->getRepository(Block::class)->findOneBy(['type' => 'archiveArticle']);
+        $id = $article->getId();
+        $key = $article->get('_import_key');
+        $crawler = $this->browser->getCrawler();
+        $form = $crawler->filter('input[name="_id"][value="' . $id . '"]')->first()->ancestors()->filter('form')->first()->form();
+        $form['fields[body]'] = '<p>Mój zmieniony pełny opis.</p>';
+        $this->browser->submit($form);
+        self::assertResponseRedirects();
+        $this->browser->request('GET', '/');
+        self::assertSelectorTextContains('.archive-content', 'Mój zmieniony pełny opis.');
+        $em = self::getContainer()->get(EntityManagerInterface::class);
+        self::assertSame($key, $em->find(Block::class, $id)->get('_import_key'));
+        $this->browser->request('GET', '/admin/blocks/archiveMedia');
+        self::assertResponseIsSuccessful();
+        self::assertSelectorExists('input[type="file"][accept*="video/mp4"]');
+        self::assertSelectorExists('select option[value="wp-drewno"]');
+        $this->browser->request('GET', '/drewno');
+        self::assertResponseRedirects('/#wp-drewno', 301);
     }
 
     public function testMotionControlsPersistAndValidate(): void

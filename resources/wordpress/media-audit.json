@@ -1,0 +1,457 @@
+{
+  "sourceDatabase": "komsat_gz0h1",
+  "registeredAttachments": 129,
+  "registeredFilesFound": 129,
+  "referencedMediaUrls": 68,
+  "referencedMediaFound": 63,
+  "missingReferences": [
+    {
+      "source": "2026/02/20250829_093956-scaled.jpg",
+      "pages": [
+        "643"
+      ],
+      "reason": "Brak oryginału i wariantów w dostarczonym backupie; nie wstawiono zamiennika."
+    },
+    {
+      "source": "2026/02/20250826_173202-scaled.jpg",
+      "pages": [
+        "643"
+      ],
+      "reason": "Brak oryginału i wariantów w dostarczonym backupie; nie wstawiono zamiennika."
+    },
+    {
+      "source": "2026/02/20250731_110550-scaled.jpg",
+      "pages": [
+        "643"
+      ],
+      "reason": "Brak oryginału i wariantów w dostarczonym backupie; nie wstawiono zamiennika."
+    },
+    {
+      "source": "2026/02/20250731_102654-scaled.jpg",
+      "pages": [
+        "643"
+      ],
+      "reason": "Brak oryginału i wariantów w dostarczonym backupie; nie wstawiono zamiennika."
+    },
+    {
+      "source": "2026/02/20250730_114749-scaled.jpg",
+      "pages": [
+        "643"
+      ],
+      "reason": "Brak oryginału i wariantów w dostarczonym backupie; nie wstawiono zamiennika."
+    }
+  ],
+  "copiedNewFiles": [
+    "uploads/wordpress/00d3e8d45378663f47f93aed.jpg",
+    "uploads/wordpress/0282aaf52d53a5bac8a4be5a.jpg",
+    "uploads/wordpress/0639a111848e45ba0f687f45.png",
+    "uploads/wordpress/0700782ed57897c90ff54cdf.jpg",
+    "uploads/wordpress/09a511b44150a3b119e2e5d7.jpg",
+    "uploads/wordpress/0aeefe04dfa3a73a98f7dda7.jpg",
+    "uploads/wordpress/0c6ec0a0a1314b776e0b45c5.png",
+    "uploads/wordpress/154eab8389a016ed0beb7ca4.jpg",
+    "uploads/wordpress/1c6ab82b0b7cc4156efa0026.png",
+    "uploads/wordpress/22be6cb277c3085fff3c6969.jpg",
+    "uploads/wordpress/2437ab88aeee31746d9bc955.jpg",
+    "uploads/wordpress/27ed006080e7fd9533a61365.jpg",
+    "uploads/wordpress/287a1c166fdeef5e88362c42.jpg",
+    "uploads/wordpress/2c4111da4edc40f8303b3325.jpg",
+    "uploads/wordpress/3f2c0a008a83cd92db88a205.png",
+    "uploads/wordpress/3fc8617ad0d0e2437986695e.mp4",
+    "uploads/wordpress/437036ce24d05b976e345bcb.jpg",
+    "uploads/wordpress/4ae61db5c2cd576bb3e21532.jpg",
+    "uploads/wordpress/4e90677dd10caa5d14e2bf64.jpg",
+    "uploads/wordpress/51eed416ca796f53b2955002.jpg",
+    "uploads/wordpress/52693bad2cc0aaee996aad36.jpg",
+    "uploads/wordpress/5b6b9549464889bad55acbb3.jpg",
+    "uploads/wordpress/6201a38e3e39dea55e260dd4.png",
+    "uploads/wordpress/665e27e4de7c087e3d5ac448.jpg",
+    "uploads/wordpress/6685397d7aa2323e30c6bfb8.png",
+    "uploads/wordpress/66db515cb08e486ee0698f6f.jpeg",
+    "uploads/wordpress/66f44441c5a6d1cb4b981bf3.png",
+    "uploads/wordpress/676df98a5fbeb150f0223724.jpg",
+    "uploads/wordpress/6d2b059c662e1174c4530365.jpg",
+    "uploads/wordpress/6ea84b34a7a83a7bdb39b796.png",
+    "uploads/wordpress/707f479c2899a79a3055c1e2.png",
+    "uploads/wordpress/720478e24f7ba5caaf9052c6.jpg",
+    "uploads/wordpress/747072a35e48b202db860df6.mp4",
+    "uploads/wordpress/79acc5f018959cd1d2f00ef4.jpg",
+    "uploads/wordpress/7cc1ab5ffbc015e29d8bc684.jpg",
+    "uploads/wordpress/7cc81125de544981feb00930.jpg",
+    "uploads/wordpress/85ab07d4dc3727879913691b.jpg",
+    "uploads/wordpress/85acd6d7531bc7898aead94d.png",
+    "uploads/wordpress/86589411c363c1ea46f04c6a.jpg",
+    "uploads/wordpress/86a48a0e5385e659cd2484b5.jpg",
+    "uploads/wordpress/86b142ef9255c9d14f4e971a.jpg",
+    "uploads/wordpress/8754ae94a003d10074d489fc.jpg",
+    "uploads/wordpress/8a3ce2836bfe28cd29718234.jpg",
+    "uploads/wordpress/8b0643c47ac55484839c96d8.jpg",
+    "uploads/wordpress/8bd3590be41b89814373fa1e.jpg",
+    "uploads/wordpress/9076a4b04727ae598ce57f24.jpg",
+    "uploads/wordpress/947a4770995ae662292d8e54.jpg",
+    "uploads/wordpress/94b089ca47511027173c0d9f.jpg",
+    "uploads/wordpress/a192b528b12c954ba8e7a56c.jpg",
+    "uploads/wordpress/a44eba35777a39351996fb91.jpg",
+    "uploads/wordpress/a51151336721a9d154644797.jpg",
+    "uploads/wordpress/acb1500dd5a1d09057fd0349.jpg",
+    "uploads/wordpress/ad9e4fd8644398899caf8e04.jpg",
+    "uploads/wordpress/af27f55ac84b64bea6a59ab9.jpg",
+    "uploads/wordpress/b766c6d2db26a4a4c752493f.jpg",
+    "uploads/wordpress/b9626cbe6865aa3aed963d46.png",
+    "uploads/wordpress/bdd0663ac9880b17d474d924.jpg",
+    "uploads/wordpress/bf9b95e5d9e76207a685d14b.jpg",
+    "uploads/wordpress/c200421f320289cd2b986388.jpg",
+    "uploads/wordpress/caf1b0e9ad11e073deae487f.png",
+    "uploads/wordpress/cb0fd1038245dd467fd43114.jpg",
+    "uploads/wordpress/cb51e68a4db84a87a827148d.jpg",
+    "uploads/wordpress/cc999fc2e3aa4b7a5d073f0b.jpg",
+    "uploads/wordpress/d206710fc5c33f3778896414.jpg",
+    "uploads/wordpress/d7728ccbf219096b4776053e.jpg",
+    "uploads/wordpress/d86f944c2dedfd8a4fc9e679.jpg",
+    "uploads/wordpress/dc5737e48b5883bbf9693076.jpg",
+    "uploads/wordpress/e67b535997d483a02cdc209c.jpg",
+    "uploads/wordpress/e7bb68beffb56022b8e44f1c.jpg",
+    "uploads/wordpress/ec783c3a6caf8912cbd2f303.jpg",
+    "uploads/wordpress/f254c5b7ebd2f8e2ebae5738.jpg",
+    "uploads/wordpress/f28f802f18fd00ab7d031224.mp4",
+    "uploads/wordpress/f5c490c27ee56f47baa2286d.jpg",
+    "uploads/wordpress/f761057cf2b28556a9429b16.mp4"
+  ],
+  "reusedFiles": [
+    "uploads/site/20250218_110112-scaled.jpg",
+    "uploads/site/20250305_122423-scaled.jpg",
+    "uploads/site/20251004_103720-scaled.jpg",
+    "uploads/site/20251104_130814-scaled.jpg",
+    "uploads/site/20251122_144653-scaled.jpg",
+    "uploads/site/20251201_184610-scaled.jpg",
+    "uploads/site/20251202_113931-scaled.jpg",
+    "uploads/site/20251215_105448-scaled.jpg",
+    "uploads/site/20251215_105454-scaled.jpg",
+    "uploads/site/20251215_124727-scaled.jpg",
+    "uploads/site/20251215_143710-scaled.jpg"
+  ],
+  "galleryPhotos": 69,
+  "articleMedia": 17,
+  "videos": 4,
+  "includedPages": [
+    {
+      "sourceId": 640,
+      "title": "Strona Główna",
+      "slug": "lazer-oczyszczanie-laserowe",
+      "articles": [
+        "wp-uslugi"
+      ],
+      "characters": 2343
+    },
+    {
+      "sourceId": 642,
+      "title": "O nas",
+      "slug": "onas",
+      "articles": [
+        "wp-onas"
+      ],
+      "characters": 828
+    },
+    {
+      "sourceId": 643,
+      "title": "Galeria",
+      "slug": "galeria",
+      "articles": [
+        "wp-materialy-galerii"
+      ],
+      "characters": 0
+    },
+    {
+      "sourceId": 645,
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "articles": [
+        "wp-kontakt"
+      ],
+      "characters": 453
+    },
+    {
+      "sourceId": 1075,
+      "title": "Drewno",
+      "slug": "drewno",
+      "articles": [
+        "wp-drewno"
+      ],
+      "characters": 1354
+    },
+    {
+      "sourceId": 1125,
+      "title": "cegła",
+      "slug": "cegla",
+      "articles": [
+        "wp-cegla"
+      ],
+      "characters": 1410
+    },
+    {
+      "sourceId": 1157,
+      "title": "Kamień",
+      "slug": "kamien",
+      "articles": [
+        "wp-kamien"
+      ],
+      "characters": 1495
+    },
+    {
+      "sourceId": 1185,
+      "title": "Beton",
+      "slug": "beton",
+      "articles": [
+        "wp-beton"
+      ],
+      "characters": 1739
+    },
+    {
+      "sourceId": 1295,
+      "title": "Cennik",
+      "slug": "cennik",
+      "articles": [
+        "wp-cennik"
+      ],
+      "characters": 399
+    },
+    {
+      "sourceId": 1323,
+      "title": "Zastosowanie",
+      "slug": "zastosowanie",
+      "articles": [
+        "wp-zastosowanie-przemysl",
+        "wp-zastosowanie-budownictwo",
+        "wp-zastosowanie-rolnictwo",
+        "wp-zastosowanie-zabytki-sztuka",
+        "wp-zastosowanie-dom-ogrod",
+        "wp-zastosowanie-gastronomia-przemysl-spozywczy"
+      ],
+      "characters": 8473
+    }
+  ],
+  "excludedPages": [
+    {
+      "id": "9",
+      "title": "Oczyszczanie Laserowe",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    },
+    {
+      "id": "12",
+      "title": "Zestaw domyślny",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    },
+    {
+      "id": "177",
+      "title": "Default Kit",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    },
+    {
+      "id": "644",
+      "title": "Services",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    },
+    {
+      "id": "999",
+      "title": "Contact Form 1 - Contact Form 1",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    },
+    {
+      "id": "1439",
+      "title": "galeria",
+      "reason": "Pusta strona lub demonstracyjny szablon niezwiązany z usługami firmy."
+    }
+  ],
+  "excludedAttachments": [
+    {
+      "id": "15",
+      "source": "2026/01/miniaturka-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "182",
+      "source": "2025/01/Plus-Icon.svg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "183",
+      "source": "2025/01/Minus-Icon.svg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "236",
+      "source": "2025/01/BehanceLogo.svg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "652",
+      "source": "2026/01/miniaturka-1-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "655",
+      "source": "2026/01/cropped-miniaturka-1-1-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "779",
+      "source": "2026/02/miniaturka-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "781",
+      "source": "2026/02/minaturka-chatgpt.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "784",
+      "source": "2026/02/loga-v1-4.pdf",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "785",
+      "source": "2026/02/miniaturka-mniejsza-gpt.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "856",
+      "source": "2026/02/miniaturka-2.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1429",
+      "source": "2026/03/702f5f36-image-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1430",
+      "source": "2026/03/b051c770-image-4-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1431",
+      "source": "2026/03/Image-min-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1432",
+      "source": "2026/03/samantha-gades-gKjLLN1T8HQ-unsplash-1-min.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1433",
+      "source": "2026/03/8c457ee0-image-6-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1434",
+      "source": "2026/03/77047607-image-4-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1435",
+      "source": "2026/03/Image-1-min-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1436",
+      "source": "2026/03/2e7fe295-image-2-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1437",
+      "source": "2026/03/6c960c03-image-10-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1438",
+      "source": "2026/03/231ef5c5-image-3-min.jpg",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1480",
+      "source": "2026/03/galeria.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1484",
+      "source": "2026/03/co-mozemy.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1486",
+      "source": "2026/03/cfa4d482-6510-4dd6-affd-bc30d942d4dc.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1487",
+      "source": "2026/03/galeria-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1488",
+      "source": "2026/03/galeria-2.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1496",
+      "source": "2026/03/galeria-1-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1500",
+      "source": "2026/03/co-mozemy-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1504",
+      "source": "2026/03/zalety.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1508",
+      "source": "2026/03/efekty.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1512",
+      "source": "2026/03/dlaczegomy.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1516",
+      "source": "2026/03/galeria-3.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1520",
+      "source": "2026/03/zastosowanie.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1524",
+      "source": "2026/03/cennik.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1528",
+      "source": "2026/03/cennik-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1529",
+      "source": "2026/03/cennik-1-1.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1533",
+      "source": "2026/03/d8814835-f13d-404a-b655-362a56536075.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    },
+    {
+      "id": "1534",
+      "source": "2026/03/cennik-2.png",
+      "reason": "Nieużywany na opublikowanych stronach materiał biblioteki, wariant logo, dokument lub element szablonu demonstracyjnego."
+    }
+  ]
+}

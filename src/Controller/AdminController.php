@@ -8,6 +8,7 @@ use App\Content\AdminSession;
 use App\Content\BlockTypes;
 use App\Content\ContentValidator;
 use App\Content\ImageUploader;
+use App\Content\MediaUploader;
 use App\Content\SettingFields;
 use App\Entity\Block;
 use App\Entity\Setting;
@@ -23,7 +24,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class AdminController extends AbstractController
 {
-    public function __construct(private AdminSession $session, private ImageUploader $uploader)
+    public function __construct(private AdminSession $session, private ImageUploader $uploader, private MediaUploader $mediaUploader)
     {
     }
 
@@ -125,6 +126,14 @@ final class AdminController extends AbstractController
         if (!isset(BlockTypes::types()[$type])) {
             throw $this->createNotFoundException('Nieznana sekcja.');
         }
+        $types = BlockTypes::types();
+        if ($type === 'archiveMedia') {
+            $choices = [];
+            foreach ($repository->findByType('archiveArticle') as $article) {
+                $choices[$article->get('anchor')] = $article->get('title');
+            }
+            $types[$type]['fields'][1]['choices'] = $choices;
+        }
         $status = 200;
         $submitted = null;
         if ($request->isMethod('POST')) {
@@ -139,22 +148,46 @@ final class AdminController extends AbstractController
                     throw $this->createNotFoundException('Nie znaleziono elementu w tej sekcji.');
                 }
                 if ($action === 'add' || $action === 'edit') {
-                    $data = [];
+                    $data = array_intersect_key($block->getData(), ['_import_key' => true]);
                     $posted = $request->request->all('fields');
-                    foreach (BlockTypes::fields($type) as $field) {
+                    foreach ($types[$type]['fields'] as $field) {
                         $default = $field['type'] === 'number' ? ($field['min'] ?? 0) : '';
                         $data[$field['key']] = ContentValidator::field($field, $posted[$field['key']] ?? $default);
                     }
                     $files = $request->files->all('fields');
-                    foreach (BlockTypes::fields($type) as $field) {
+                    foreach ($types[$type]['fields'] as $field) {
                         if ($field['type'] === 'image') {
                             $data[$field['key']] = $this->uploader->upload($files[$field['key']] ?? null, $type) ?? $data[$field['key']];
+                        } elseif ($field['type'] === 'media') {
+                            $data[$field['key']] = $this->mediaUploader->upload($files[$field['key']] ?? null) ?? $data[$field['key']];
+                        }
+                    }
+                    if ($type === 'archiveArticle') {
+                        foreach ($repository->findByType('archiveArticle') as $article) {
+                            if ($article->getId() !== $block->getId() && $article->get('anchor') === $data['anchor']) {
+                                throw new \InvalidArgumentException('Inny opis używa już tego identyfikatora.');
+                            }
+                        }
+                        $oldAnchor = $block->get('anchor');
+                        if ($oldAnchor !== '' && $oldAnchor !== $data['anchor']) {
+                            foreach ($repository->findByType('archiveMedia') as $media) {
+                                if ($media->get('article') === $oldAnchor) {
+                                    $media->setData(array_replace($media->getData(), ['article' => $data['anchor']]));
+                                }
+                            }
                         }
                     }
                     $block->setData($data);
                     $em->persist($block);
                     $this->addFlash('ok', $action === 'add' ? 'Dodano element.' : 'Zapisano zmiany.');
                 } elseif ($action === 'delete') {
+                    if ($type === 'archiveArticle') {
+                        foreach ($repository->findByType('archiveMedia') as $media) {
+                            if ($media->get('article') === $block->get('anchor')) {
+                                throw new \InvalidArgumentException('Najpierw przenieś albo usuń powiązane filmy i grafiki w sekcji materiałów.');
+                            }
+                        }
+                    }
                     $em->remove($block);
                     $this->addFlash('ok', 'Usunięto element.');
                 } elseif (in_array($action, ['up', 'down'], true)) {
@@ -180,7 +213,7 @@ final class AdminController extends AbstractController
             }
         }
         return $this->render('admin/blocks.html.twig', [
-            'type' => $type, 'types' => BlockTypes::types(), 'blocks' => $repository->findByType($type), 'submitted' => $submitted,
+            'type' => $type, 'types' => $types, 'blocks' => $repository->findByType($type), 'submitted' => $submitted,
         ], new Response(status: $status));
     }
 }

@@ -58,7 +58,7 @@
   <div class="foot" style="margin-top:1.2rem;border-top:1px solid #1e293b;padding-top:1rem"><span>© {{ 'now'|date('Y') }} {{ s['footer.copyright'] }}</span><span><a href="#start">{{ s['ui.backTop'] }}</a> • <a href="{{ path('admin_login') }}">Panel admina</a></span></div>
 </div></footer>
 <button id="toTop" aria-label="Do góry">↑</button>
-<div class="mobile-cta"><a class="call" href="{{ s['contact.phoneHref']|safe_link }}">📞 {{ s['ui.call'] }}</a><a class="quote" href="#kontakt">{{ s['ui.quote'] }}</a></div>
+<nav class="mobile-cta" aria-label="Szybki kontakt" hidden><a class="call" href="{{ s['contact.phoneHref']|safe_link }}">📞 {{ s['ui.call'] }}</a><a class="quote" href="#kontakt">{{ s['ui.quote'] }}</a></nav>
 <dialog class="lightbox" id="lightbox" aria-label="Podgląd zdjęcia"><button type="button" aria-label="Zamknij podgląd">✕</button><img id="lbImg" alt=""></dialog>
 </body>
 </html>

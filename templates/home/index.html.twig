@@ -32,15 +32,15 @@
     <div class="grid3">{% for st in b['introStat']|default([]) %}<div class="card stat"><b data-count="{{ st.get('v') }}">{{ st.get('v') }}</b>{{ st.get('suffix') }}<br><span class="mini">{{ st.get('label') }}</span></div>{% endfor %}</div>
   </div>
   <div class="reveal">{% if s['intro.baBefore'] and s['intro.baAfter'] %}{% include 'blocks/comparison.html.twig' with {before:s['intro.baBefore'],after:s['intro.baAfter']} %}{% elseif s['intro.image'] %}{% include 'blocks/image.html.twig' with {imagePath:s['intro.image'],alt:s['intro.imageAlt'],imageClass:'rounded',sizes:'(max-width: 920px) 92vw, 580px'} only %}{% endif %}<p class="mini">{{ s['intro.baNote'] }}</p></div>
-</div></section>{% endif %}
+</div>{% include 'blocks/articles.html.twig' with {section:'intro'} %}</section>{% endif %}
 {% if s['section.oferta.visible'] %}
 <section id="oferta" class="tinted"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['offerHead.kicker'] }}</div><h2>{{ s['offerHead.title']|content_html }}</h2></div>
   <div class="offer-grid">{% for o in b['offer']|default([]) %}<article class="offer-card reveal">{% include 'blocks/image.html.twig' with {imagePath:o.get('img'),alt:o.get('img_alt'),imageClass:'ph',sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 280px'} only %}<div class="tx"><h3>{{ o.get('name') }}</h3><p class="mini">{{ o.get('desc') }}</p><a class="more" href="{{ (o.get('href') ?: '#kontakt')|safe_link }}">{{ o.get('link') }}</a></div></article>{% endfor %}</div>
   <div class="icon4 section-gap">{% for ic in b['icon']|default([]) %}<div class="card reveal"><div class="ico" aria-hidden="true">{{ ic.get('ico') }}</div><b>{{ ic.get('text') }}</b></div>{% endfor %}</div>
-</div></section>{% endif %}
+</div>{% include 'blocks/articles.html.twig' with {section:'oferta'} %}</section>{% endif %}
 {% if s['section.tech.visible'] %}
 <section id="tech"><div class="container grid2"><div class="reveal"><div class="kicker">{{ s['tech.kicker'] }}</div><h2>{{ s['tech.title']|content_html }}</h2><div class="prose">{{ s['tech.p1']|content_html }}</div><div class="prose">{{ s['tech.p2']|content_html }}</div><div class="card"><h3>{{ s['tech.benefitsTitle'] }}</h3><ul class="check">{% for ben in b['techBenefit']|default([]) %}<li>{{ ben.get('value') }}</li>{% endfor %}</ul></div></div>
-<div class="reveal">{% if s['tech.img'] %}{% include 'blocks/image.html.twig' with {imagePath:s['tech.img'],alt:s['tech.imgAlt'],imageClass:'rounded',sizes:'(max-width: 920px) 92vw, 580px'} only %}{% endif %}<div class="grid2 section-gap">{% for st in b['techStat']|default([]) %}<div class="card stat"><b>{{ st.get('big') }}</b><br><span class="mini">{{ st.get('small') }}</span></div>{% endfor %}</div></div></div></section>{% endif %}
+<div class="reveal">{% if s['tech.img'] %}{% include 'blocks/image.html.twig' with {imagePath:s['tech.img'],alt:s['tech.imgAlt'],imageClass:'rounded',sizes:'(max-width: 920px) 92vw, 580px'} only %}{% endif %}<div class="grid2 section-gap">{% for st in b['techStat']|default([]) %}<div class="card stat"><b>{{ st.get('big') }}</b><br><span class="mini">{{ st.get('small') }}</span></div>{% endfor %}</div></div></div>{% include 'blocks/articles.html.twig' with {section:'tech'} %}</section>{% endif %}
 {% if s['section.zastosowania.visible'] %}
 <section id="zastosowania" class="tinted">
   <div class="container">
@@ -56,6 +56,7 @@
     <p><a class="btn btn-ghost" href="{{ s['appsCtaHref']|safe_link }}">{{ s['appsCta'] }}</a></p>
     <div class="grid3">{% for am in b['appMore']|default([]) %}<div class="card reveal"><div class="ico">{{ am.get('ico') }}</div><h3>{{ am.get('name') }}</h3><p>{{ am.get('desc')|content_html }}</p></div>{% endfor %}</div>
   </div>
+  {% include 'blocks/articles.html.twig' with {section:'zastosowania'} %}
 </section>{% endif %}
 {% if s['section.proces.visible'] %}
 <section id="proces"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['stepsHead.kicker'] }}</div><h2>{{ s['stepsHead.title']|content_html }}</h2></div><ol class="steps">{% for st in b['step']|default([]) %}<li class="card reveal"><span class="step-num">{{ st.get('num') }}</span><h3>{{ st.get('title') }}</h3><div>{{ st.get('desc')|content_html }}</div></li>{% endfor %}</ol></div></section>{% endif %}
@@ -70,6 +71,7 @@
     <div class="mini prose">{{ s['pricingNote']|content_html }}</div>
     <div class="cta-row"><a class="btn btn-primary" href="{{ s['cennikCtaHref']|safe_link }}">{{ s['cennikCta'] }}</a></div>
   </div>
+  {% include 'blocks/articles.html.twig' with {section:'cennik'} %}
 </section>{% endif %}
 {% if s['section.comparison.visible'] and b['comparison']|default([]) %}
 <section id="comparison" class="tinted">
@@ -84,9 +86,9 @@
   </div>
 </section>{% endif %}
 {% if s['section.galeria.visible'] %}
-<section id="galeria"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['galeriaHead.kicker'] }}</div><h2>{{ s['galeriaHead.title']|content_html }}</h2><p>{{ s['galeriaHead.p'] }}</p></div><div class="gallery">{% for g in b['gallery']|default([]) %}<figure class="g-item reveal"><button type="button" class="gallery-open" aria-label="Powiększ: {{ g.get('alt') }}">{% include 'blocks/image.html.twig' with {imagePath:g.get('src'),alt:g.get('alt'),full:asset((g.get('full') ?: g.get('src'))|image_path),sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 380px'} only %}</button><figcaption>{{ g.get('cap') }}</figcaption></figure>{% endfor %}</div></div></section>{% endif %}
+<section id="galeria"><div class="container"><div class="sec-head reveal"><div class="kicker">{{ s['galeriaHead.kicker'] }}</div><h2>{{ s['galeriaHead.title']|content_html }}</h2><p>{{ s['galeriaHead.p'] }}</p></div><div class="gallery" data-gallery>{% for g in b['gallery']|default([]) %}<figure class="g-item reveal"><button type="button" class="gallery-open" aria-label="Powiększ: {{ g.get('alt') }}">{% include 'blocks/image.html.twig' with {imagePath:g.get('src'),alt:g.get('alt'),full:asset((g.get('full') ?: g.get('src'))|image_path),sizes:'(max-width: 560px) 92vw, (max-width: 920px) 46vw, 380px'} only %}</button>{% if g.get('cap') %}<figcaption>{{ g.get('cap') }}</figcaption>{% endif %}</figure>{% endfor %}</div><button type="button" class="btn btn-ghost section-gap" data-gallery-more hidden>{{ s['ui.galleryMore'] }}</button></div>{% include 'blocks/articles.html.twig' with {section:'galeria'} %}</section>{% endif %}
 {% if s['section.o-nas.visible'] %}
-<section id="o-nas" class="tinted"><div class="container grid2"><div class="reveal"><div class="kicker">{{ s['aboutHead.kicker'] }}</div><h2>{{ s['aboutHead.title']|content_html }}</h2><div class="prose">{{ s['aboutP']|content_html }}</div>{% for r in b['review']|default([]) %}<div class="card review"><span aria-label="{{ r.get('stars') }} na 5 gwiazdek">{% for i in 1..(r.get('stars','5')) %}⭐{% endfor %}</span><p>„{{ r.get('text')|striptags }}”</p><b>— {{ r.get('author') }}</b></div>{% endfor %}</div><div class="faq reveal"><div class="kicker">{{ s['faqHead.kicker'] }}</div><h2>{{ s['faqHead.title']|content_html }}</h2>{% for f in b['faq']|default([]) %}<details{% if f.get('open') %} open{% endif %}><summary>{{ f.get('q') }}</summary><div>{{ f.get('a')|content_html }}</div></details>{% endfor %}<div class="grid2 section-gap">{% for k in b['knowledge']|default([]) %}<div class="card"><b>{{ k.get('title') }}</b><p class="mini">{{ k.get('desc') }}</p></div>{% endfor %}</div></div></div></section>{% endif %}
+<section id="o-nas" class="tinted"><div class="container grid2"><div class="reveal"><div class="kicker">{{ s['aboutHead.kicker'] }}</div><h2>{{ s['aboutHead.title']|content_html }}</h2><div class="prose">{{ s['aboutP']|content_html }}</div>{% for r in b['review']|default([]) %}<div class="card review"><span aria-label="{{ r.get('stars') }} na 5 gwiazdek">{% for i in 1..(r.get('stars','5')) %}⭐{% endfor %}</span><p>„{{ r.get('text')|striptags }}”</p><b>— {{ r.get('author') }}</b></div>{% endfor %}</div><div class="faq reveal"><div class="kicker">{{ s['faqHead.kicker'] }}</div><h2>{{ s['faqHead.title']|content_html }}</h2>{% for f in b['faq']|default([]) %}<details{% if f.get('open') %} open{% endif %}><summary>{{ f.get('q') }}</summary><div>{{ f.get('a')|content_html }}</div></details>{% endfor %}<div class="grid2 section-gap">{% for k in b['knowledge']|default([]) %}<div class="card"><b>{{ k.get('title') }}</b><p class="mini">{{ k.get('desc') }}</p></div>{% endfor %}</div></div></div>{% include 'blocks/articles.html.twig' with {section:'o-nas'} %}</section>{% endif %}
 {% if s['section.kontakt.visible'] %}
 <section id="kontakt" class="contact-sec"><div class="container"><div class="sec-head light reveal"><div class="kicker">{{ s['contactHead.kicker'] }}</div><h2>{{ s['contactHead.title']|content_html }}</h2><p>{{ s['contactHead.p'] }}</p></div>
 <div class="triple">{% for c in b['contactCard']|default([]) %}<div class="card reveal"><div class="ico">{{ c.get('ico') }}</div><h3>{{ c.get('name') }}</h3>{% if c.get('kind') == 'mail' %}<p><a href="mailto:{{ s['contact.email'] }}">{{ s['contact.email'] }}</a></p><a class="btn btn-ghost btn-sm" href="mailto:{{ s['contact.email'] }}">{{ s['ui.write'] }}</a>{% elseif c.get('kind') == 'tel' %}<p><a href="{{ s['contact.phoneHref']|safe_link }}">{{ s['contact.phone'] }}</a></p><a class="btn btn-primary btn-sm" href="{{ s['contact.phoneHref']|safe_link }}">{{ s['ui.call'] }}</a>{% else %}<p class="mini">{{ s['ui.formHint'] }}</p><a class="btn btn-ghost btn-sm" href="#qform">{{ s['ui.openForm'] }}</a>{% endif %}</div>{% endfor %}</div>
@@ -101,5 +103,5 @@
   <div><label for="f-message">{{ s['ui.message'] }} *</label><textarea id="f-message" name="contact[message]" rows="4" required minlength="10" maxlength="5000" placeholder="{{ s['ui.messagePlaceholder'] }}">{{ contactValues.message|default('') }}</textarea></div>
   <label class="rodo"><input type="checkbox" name="contact[consent]" value="1" required{% if contactValues.consent|default('') == '1' %} checked{% endif %}> {{ s['ui.consent'] }} *</label>
   <small>{{ s['ui.required'] }}</small><button class="btn btn-primary" type="submit">{{ s['ui.submit'] }}</button>
-</form></div></div></section>{% endif %}
+</form></div></div>{% include 'blocks/articles.html.twig' with {section:'kontakt'} %}</section>{% endif %}
 {% endblock %}

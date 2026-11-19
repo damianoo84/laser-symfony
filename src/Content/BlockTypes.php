@@ -133,6 +133,26 @@ class BlockTypes
                     ['key' => 'cap', 'label' => 'Podpis na zdjęciu', 'type' => 'text'],
                 ],
             ],
+            'archiveArticle' => [
+                'label' => 'Pełne opisy usług i firmy',
+                'fields' => [
+                    ['key' => 'title', 'label' => 'Tytuł rozwijanego opisu', 'type' => 'text'],
+                    ['key' => 'section', 'label' => 'Sekcja na stronie', 'type' => 'select', 'choices' => ['intro' => 'Wprowadzenie', 'oferta' => 'Oferta', 'tech' => 'Technologia', 'zastosowania' => 'Zastosowania', 'cennik' => 'Cennik', 'galeria' => 'Galeria', 'o-nas' => 'O nas', 'kontakt' => 'Kontakt']],
+                    ['key' => 'anchor', 'label' => 'Identyfikator opisu', 'type' => 'anchor', 'required' => true, 'help' => 'Np. opis-drewna. Używaj prefiksu opis- lub wp-, małych liter bez polskich znaków i myślników.'],
+                    ['key' => 'body', 'label' => 'Pełna treść (akapity, listy, pogrubienia)', 'type' => 'textarea'],
+                ],
+            ],
+            'archiveMedia' => [
+                'label' => 'Filmy i grafiki przy opisach',
+                'fields' => [
+                    ['key' => 'title', 'label' => 'Nazwa materiału', 'type' => 'text'],
+                    ['key' => 'article', 'label' => 'Opis, przy którym pokazać materiał', 'type' => 'select', 'choices' => []],
+                    ['key' => 'file', 'label' => 'Zdjęcie lub film', 'type' => 'media'],
+                    ['key' => 'poster', 'label' => 'Okładka filmu (opcjonalnie)', 'type' => 'image'],
+                    ['key' => 'alt', 'label' => 'Opis zdjęcia', 'type' => 'text'],
+                    ['key' => 'caption', 'label' => 'Podpis pod materiałem (opcjonalnie)', 'type' => 'textarea'],
+                ],
+            ],
             'review' => [
                 'label' => 'Opinia klienta',
                 'fields' => [

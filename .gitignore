@@ -20,3 +20,4 @@
 /public/uploads/*
 !/public/uploads/.htaccess
 !/public/uploads/site/
+!/public/uploads/wordpress/

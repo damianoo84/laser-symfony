@@ -70,12 +70,20 @@ try {
     await evaluate(`(async () => {
       document.querySelectorAll('img[src]').forEach(img => img.loading='eager');
       await Promise.all(Array.from(document.querySelectorAll('img[src]')).map(img=>img.decode().catch(()=>{})));
+      await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,4000))]);
+      window.scrollTo({top:0,behavior:'instant'});
     })()`);
   };
   await send('Page.enable'); await send('Runtime.enable'); await send('Network.enable');
+  await send('Emulation.setFocusEmulationEnabled', { enabled: true });
   await send('Network.setCacheDisabled', { cacheDisabled: true });
-  for (const [name, width, height] of [['desktop', 1365, 900], ['mobile', 390, 844]]) {
-    await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: name === 'mobile' });
+  const settle = () => evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))');
+  const screenshot = async name => {
+    const image = await send('Page.captureScreenshot', { format: 'png' });
+    await writeFile(new URL(`${name}.png`, output), Buffer.from(image.data, 'base64'));
+  };
+  for (const [name, width, height] of [['desktop',1365,900],['mobile-320',320,568],['mobile-360',360,800],['mobile',390,844],['mobile-412',412,915],['landscape',560,320],['tablet',768,1024]]) {
+    await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: name !== 'desktop' });
     await navigate();
     const result = await evaluate(`({
       h1: document.querySelectorAll('h1').length,
@@ -110,8 +118,67 @@ try {
       Promise.all(Array.from(document.querySelectorAll('.slide.is-active h2, .slide.is-active .cta-row')).flatMap(element=>element.getAnimations().map(animation=>animation.finished.catch(()=>{})))),
       new Promise(resolve=>setTimeout(resolve,2500))
     ])`);
-    const screenshot = await send('Page.captureScreenshot', { format: 'png' });
-    await writeFile(new URL(`${name}.png`, output), Buffer.from(screenshot.data, 'base64'));
+    await screenshot(name);
+    const imported = await evaluate('document.querySelectorAll(".content-articles details").length');
+    if (imported && (name === 'desktop' || name === 'mobile')) {
+      assert(imported >= 15, `${name}: recovered descriptions are present`);
+      const gallery = await evaluate(`({total:document.querySelectorAll('.gallery .g-item').length,visible:document.querySelectorAll('.gallery .g-item:not([hidden])').length})`);
+      assert(gallery.total>=69&&gallery.visible===6, `${name}: all recovered photos exist but only six show initially`);
+      await evaluate('document.querySelector("[data-gallery-more]").click()');
+      assert(await evaluate('document.querySelectorAll(".gallery .g-item:not([hidden])").length===12'), `${name}: gallery reveals the next six images`);
+      await evaluate(`(()=>{const button=document.querySelector('[data-gallery-more]');while(!button.hidden)button.click();})()`);
+      assert(await evaluate('document.querySelectorAll(".gallery .g-item:not([hidden])").length===document.querySelectorAll(".gallery .g-item").length'), `${name}: every recovered photo can be revealed`);
+      await evaluate(`document.querySelector('a[href="#wp-drewno"]').click()`);
+      await settle();
+      assert(await evaluate('document.querySelector("#wp-drewno").open'), `${name}: offer link opens the full description`);
+      await evaluate('document.querySelector("#wp-drewno").scrollIntoView({block:"start",behavior:"instant"})');
+      await settle();
+      await screenshot(name+'-recovered-description');
+      await evaluate(`document.querySelector('#wp-drewno').open=false;document.querySelector('a[href="#wp-drewno"]').click()`);
+      assert(await evaluate('document.querySelector("#wp-drewno").open'), `${name}: repeated description link still opens a manually closed panel`);
+      const movies = await evaluate(`Promise.all(Array.from(document.querySelectorAll('.archive-media video')).map(video=>new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error('Video metadata timeout: '+video.querySelector('source').src)),15000);
+        video.addEventListener('loadedmetadata',()=>{clearTimeout(timer);resolve({width:video.videoWidth,height:video.videoHeight,duration:video.duration,controls:video.controls,autoplay:video.autoplay});},{once:true});
+        video.addEventListener('error',()=>{clearTimeout(timer);reject(new Error('Video decoding failed: '+video.querySelector('source').src));},{once:true});
+        video.preload='metadata';video.load();
+      })))`);
+      assert(movies.length===4&&movies.every(video=>video.width>0&&video.height>0&&video.duration>0&&video.controls&&!video.autoplay), `${name}: all four local videos decode and have manual controls`);
+      await evaluate('document.querySelectorAll(".content-articles details").forEach(details=>details.open=false);document.activeElement.blur();window.scrollTo({top:0,behavior:"instant"})');
+      await settle();
+    }
+    await settle();
+    assert(await evaluate('document.querySelector(".mobile-cta").hidden'), `${name}: contact bar does not overlap the hero`);
+    if (width <= 560 && height >= 420) {
+      await evaluate(`document.querySelector('.slide.is-active .cta-row').scrollIntoView({block:'center',behavior:'instant'})`);
+      await settle();
+      assert(await evaluate(`(()=>{const button=document.querySelector('.slide.is-active .cta-row a'),r=button.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return document.querySelector('.mobile-cta').hidden&&(hit===button||button.contains(hit));})()`), `${name}: hero action is visible and not covered by floating buttons`);
+      await screenshot(name+'-hero-actions');
+      await evaluate(`window.scrollTo({top:scrollY+document.querySelector('#heroSlider').getBoundingClientRect().bottom-document.querySelector('#siteHeader').getBoundingClientRect().bottom+24,behavior:'instant'})`);
+      await settle();
+      const bar=await evaluate(`(()=>{const bar=document.querySelector('.mobile-cta');return{visible:!bar.hidden,height:bar.getBoundingClientRect().height,buttons:Array.from(bar.querySelectorAll('a')).map(a=>({width:a.getBoundingClientRect().width,height:a.getBoundingClientRect().height,fit:a.scrollWidth<=a.clientWidth+1}))};})()`);
+      assert(bar.visible&&bar.height<=80&&bar.buttons.every(button=>button.height>=48&&button.fit), `${name}: compact contact bar appears after the hero with readable 48px tap targets`);
+      await screenshot(name+'-contact-bar');
+      await evaluate('document.querySelector("#burger").click()');
+      assert(await evaluate('document.querySelector(".mobile-cta").hidden'), `${name}: menu hides the contact bar`);
+      await evaluate('document.querySelector("#burger").click()');
+      assert(await evaluate('!document.querySelector(".mobile-cta").hidden'), `${name}: closing the menu restores the contact bar`);
+      await evaluate('document.querySelector(".gallery-open").click()');
+      assert(await evaluate('document.querySelector(".mobile-cta").hidden'), `${name}: gallery modal hides the contact bar`);
+      await evaluate(`new Promise(resolve=>{const dialog=document.querySelector('#lightbox');dialog.addEventListener('close',resolve,{once:true});dialog.querySelector('button').click();})`);
+      await settle();
+      assert(await evaluate('!document.querySelector(".mobile-cta").hidden'), `${name}: closing the gallery restores the contact bar`);
+      await evaluate('document.querySelector("#f-name").focus()');
+      await settle();
+      const editingState=await evaluate(`({hidden:document.querySelector('.mobile-cta').hidden,active:document.activeElement?.outerHTML,hero:document.querySelector('#heroSlider').getBoundingClientRect().bottom,viewport:window.visualViewport?.height})`);
+      assert(editingState.hidden, `${name}: editing the form hides the contact bar ${editingState.hidden?'':JSON.stringify(editingState)}`);
+      await evaluate('document.activeElement.blur();document.querySelector("#kontakt").scrollIntoView({block:"start",behavior:"instant"})');
+      await settle();
+      assert(await evaluate('document.querySelector(".mobile-cta").hidden'), `${name}: contact section has no floating overlay`);
+    } else {
+      await evaluate('document.querySelector("#intro").scrollIntoView({block:"start",behavior:"instant"})');
+      await settle();
+      assert(await evaluate('document.querySelector(".mobile-cta").hidden'), `${name}: no contact bar on wide or very short screens`);
+    }
   }
   await send('Network.setBlockedURLs', { urls: ['*.webp'] });
   await navigate();

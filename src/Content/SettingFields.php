@@ -141,6 +141,7 @@ class SettingFields
     {
         return [
             'ui.call' => 'Zadzwoń', 'ui.quote' => 'Wycena gratis', 'ui.materials' => 'Czyścimy m.in.:',
+            'ui.galleryMore' => 'Pokaż więcej zdjęć',
             'ui.before' => 'PRZED', 'ui.after' => 'PO', 'ui.priceName' => 'Materiał / usługa', 'ui.priceValue' => 'Cena',
             'ui.write' => 'Napisz →', 'ui.formHint' => 'Opisz powierzchnię, a przygotujemy wycenę.',
             'ui.openForm' => 'Przejdź do formularza →', 'ui.map' => 'Mapa dojazdu',
@@ -156,6 +157,7 @@ class SettingFields
     private static function interfaceFields(): array
     {
         $labels = ['ui.call' => 'Przycisk telefonu', 'ui.quote' => 'Przycisk wyceny', 'ui.materials' => 'Wstęp paska materiałów', 'ui.before' => 'Podpis PRZED', 'ui.after' => 'Podpis PO', 'ui.priceName' => 'Kolumna: usługa', 'ui.priceValue' => 'Kolumna: cena', 'ui.write' => 'Przycisk e-mail', 'ui.formHint' => 'Opis karty formularza', 'ui.openForm' => 'Przycisk otwarcia formularza', 'ui.map' => 'Przycisk mapy', 'ui.name' => 'Pole: imię', 'ui.phone' => 'Pole: telefon', 'ui.subject' => 'Pole: temat', 'ui.message' => 'Pole: wiadomość', 'ui.namePlaceholder' => 'Podpowiedź: imię', 'ui.phonePlaceholder' => 'Podpowiedź: telefon', 'ui.subjectPlaceholder' => 'Podpowiedź: temat', 'ui.messagePlaceholder' => 'Podpowiedź: wiadomość', 'ui.consent' => 'Treść zgody kontaktowej', 'ui.submit' => 'Przycisk wysyłania', 'ui.required' => 'Informacja o wymaganych polach', 'ui.footerLinks' => 'Tytuł linków stopki', 'ui.contact' => 'Tytuł kontaktu w stopce', 'ui.backTop' => 'Link do góry'];
+        $labels['ui.galleryMore'] = 'Przycisk kolejnych zdjęć galerii';
         return array_map(static fn (string $key, string $label): array => ['key' => $key, 'label' => $label, 'type' => 'text'], array_keys($labels), array_values($labels));
     }
 

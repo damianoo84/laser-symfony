@@ -1,0 +1,1581 @@
+{
+  "version": "wordpress-public-content-v1",
+  "sourcePages": [
+    {
+      "sourceId": 640,
+      "title": "Strona Główna",
+      "slug": "lazer-oczyszczanie-laserowe",
+      "articles": [
+        "wp-uslugi"
+      ],
+      "characters": 2343
+    },
+    {
+      "sourceId": 642,
+      "title": "O nas",
+      "slug": "onas",
+      "articles": [
+        "wp-onas"
+      ],
+      "characters": 828
+    },
+    {
+      "sourceId": 643,
+      "title": "Galeria",
+      "slug": "galeria",
+      "articles": [
+        "wp-materialy-galerii"
+      ],
+      "characters": 0
+    },
+    {
+      "sourceId": 645,
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "articles": [
+        "wp-kontakt"
+      ],
+      "characters": 453
+    },
+    {
+      "sourceId": 1075,
+      "title": "Drewno",
+      "slug": "drewno",
+      "articles": [
+        "wp-drewno"
+      ],
+      "characters": 1354
+    },
+    {
+      "sourceId": 1125,
+      "title": "cegła",
+      "slug": "cegla",
+      "articles": [
+        "wp-cegla"
+      ],
+      "characters": 1410
+    },
+    {
+      "sourceId": 1157,
+      "title": "Kamień",
+      "slug": "kamien",
+      "articles": [
+        "wp-kamien"
+      ],
+      "characters": 1495
+    },
+    {
+      "sourceId": 1185,
+      "title": "Beton",
+      "slug": "beton",
+      "articles": [
+        "wp-beton"
+      ],
+      "characters": 1739
+    },
+    {
+      "sourceId": 1295,
+      "title": "Cennik",
+      "slug": "cennik",
+      "articles": [
+        "wp-cennik"
+      ],
+      "characters": 399
+    },
+    {
+      "sourceId": 1323,
+      "title": "Zastosowanie",
+      "slug": "zastosowanie",
+      "articles": [
+        "wp-zastosowanie-przemysl",
+        "wp-zastosowanie-budownictwo",
+        "wp-zastosowanie-rolnictwo",
+        "wp-zastosowanie-zabytki-sztuka",
+        "wp-zastosowanie-dom-ogrod",
+        "wp-zastosowanie-gastronomia-przemysl-spozywczy"
+      ],
+      "characters": 8473
+    }
+  ],
+  "articles": [
+    {
+      "key": "wp-article-wp-uslugi",
+      "data": {
+        "section": "intro",
+        "anchor": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis",
+        "body": "<p><strong>Świadczymy usługi oczyszczania laserowego</strong></p>\n<p><strong>⚡ Precyzja bez uszkodzeń</strong></p>Usuwamy zabrudzenia, sadzę i powłoki bez naruszania struktury materiału – drewno, cegła, kamień, beton, metal.\n<p><strong>🌱 Bez chemii i odpadów</strong></p>Technologia laserowa to ekologiczne rozwiązanie – zero środków chemicznych, zero wtórnych zanieczyszczeń.\n<p><strong>🔥 Szybko i skutecznie</strong></p>Oszczędzasz czas i pieniądze – oczyszczanie laserowe działa tam, gdzie inne metody zawodzą.\n<p><strong>Oczyszczanie laserowe</strong> to nowoczesna i skuteczna metoda usuwania zabrudzeń z różnych powierzchni, między innymi : <strong>drewno, cegła, kamień i beton</strong>. Technologia ta pozwala dokładnie usuwać zanieczyszczenia bez użycia chemii, środków ściernych czy wody pod wysokim ciśnieniem. Dzięki temu powierzchnie pozostają nienaruszone, a efekt czyszczenia jest szybki i trwały.</p><p>Nasza firma oferuje kompleksowe <strong>usługi czyszczenia laserowego</strong>, przywracając estetyczny wygląd elewacjom, murom, elementom architektonicznym oraz powierzchniom przemysłowym.</p>\n<ul><li><p><strong>Bezinwazyjna metoda czyszczenia</strong> – powierzchnia materiału pozostaje nienaruszona, bez ryzyka mikrouszkodzeń.</p></li><li><p><strong>Bardzo wysoka skuteczność</strong> – usuwa farby, sadzę, naloty atmosferyczne, graffiti i inne trudne zabrudzenia.</p></li><li><p><strong>Brak chemii i środków ściernych</strong> – metoda bezpieczna dla materiału i środowiska.</p></li><li><p><strong>Precyzyjne czyszczenie powierzchni</strong> – skuteczne nawet w trudno dostępnych miejscach i przy elementach o nieregularnych kształtach.</p></li><li><p><strong>Ekologiczne rozwiązanie</strong> – brak pyłów i dużej ilości odpadów.</p></li><li><p><strong>Nowoczesna technologia</strong> – coraz częściej stosowana w budownictwie, renowacji i przemyśle.</p></li></ul>\n<ul><li><p><strong>Przywrócenie naturalnego wyglądu materiału</strong> – kolor i struktura powierzchni odzyskują pierwotny stan.</p></li><li><p><strong>Usunięcie trudnych zabrudzeń</strong> – farby, naloty, sadza i graffiti znikają bez śladu.</p></li><li><p><strong>Odświeżenie elewacji i powierzchni</strong> – budynki, mury i detale architektoniczne odzyskują estetyczny wygląd.</p></li><li><p><strong>Zachowanie struktury materiału</strong> – powierzchnia pozostaje nienaruszona, bez ryzyka ścierania lub uszkodzeń.</p></li><li><p><strong>Widoczna różnica przed i po</strong> – efekt czyszczenia jest spektakularny, szczególnie przy zdjęciach PRZED / PO.</p></li></ul>\n<ul><li><p>Profesjonalne podejście i doświadczenie w czyszczeniu laserowym różnych materiałów.</p></li><li><p>Wysoka skuteczność i precyzja działania.</p></li><li><p>Bezpieczna i ekologiczna technologia.</p></li><li><p>Szybka realizacja usług, również dla dużych powierzchni przemysłowych i budowlanych.</p></li><li>Darmowa wycena oraz dojazd do klienta na terenie całego kraju</li></ul>"
+      }
+    },
+    {
+      "key": "wp-article-wp-onas",
+      "data": {
+        "section": "o-nas",
+        "anchor": "wp-onas",
+        "title": "O firmie LAZER — pełny opis",
+        "body": "<p><strong><b>O nas</b></strong></p>\n<p><strong><b>Lazer - oczyszczanie laserowe</b></strong></p>\n<p>Firma <strong>LAZER</strong> pochodzi z Limanowej i od kilku lat świadczy profesjonalne usługi <strong>czyszczenia laserowego</strong> na najwyższym poziomie. Specjalizujemy się w oczyszczaniu m. in. drewna, cegły, metalu, kamienia oraz betonu, przywracając powierzchniom ich naturalny wygląd.</p>\n<p>Działamy głównie na terenie <strong>Małopolski, Śląska i Dolnego Śląska</strong>, ale nasze realizacje obejmują również <strong>cały kraj</strong>. Każde zlecenie traktujemy indywidualnie, dbając o precyzję, bezpieczeństwo materiału oraz zadowolenie klienta.</p>\n<p>Dzięki kilkuletniemu doświadczeniu na rynku możemy zagwarantować <strong>profesjonalne podejście do każdego projektu</strong>, szybkie terminy realizacji i skuteczne efekty czyszczenia laserowego. Nasza firma łączy nowoczesną technologię z ekologicznym podejściem, co sprawia, że jesteśmy partnerem, któremu warto zaufać.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-materialy-galerii",
+      "data": {
+        "section": "galeria",
+        "anchor": "wp-materialy-galerii",
+        "title": "Materiały graficzne galerii",
+        "body": ""
+      }
+    },
+    {
+      "key": "wp-article-wp-kontakt",
+      "data": {
+        "section": "kontakt",
+        "anchor": "wp-kontakt",
+        "title": "Dane firmy i informacje kontaktowe",
+        "body": "<p><strong>Kontakt</strong></p>\n<p><strong>LAZER Mateusz Śliwa</strong></p>Lipowe 182, 34-600 Limanowa<br>NIP 7372216875<br>\n<p><strong>Zadzwoń</strong></p>+48 501 965 485\n<p><strong>Napisz do nas</strong></p>lazer@oczyszczanielaserowe.pl\n<p>Formularz kontaktowy Imię Adres E-mail Temat Treść Wiadomości Oświadczam, że zapoznałem/am się z polityką prywatności i akceptuję jej postanowienia. Dobrowolnie wyrażam zgodę na przetwarzanie moich danych osobowych wskazanych w formularzu kontaktowym w celu odpowiedzi na moją wiadomość/zapytanie. Wyślij wiadomość</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-drewno",
+      "data": {
+        "section": "oferta",
+        "anchor": "wp-drewno",
+        "title": "Czyszczenie laserowe drewna",
+        "body": "<p><strong><strong>Zalety oczyszczania laserowego drewna</strong></strong></p><p><strong>1. Bezinwazyjna metoda czyszczenia</strong><br>Czyszczenie laserowe usuwa zanieczyszczenia z powierzchni drewna bez uszkadzania jego struktury. Laser działa bardzo precyzyjnie, dzięki czemu materiał pozostaje nienaruszony i zachowuje swój naturalny wygląd.</p><p><strong>2. Idealne do renowacji starego drewna</strong><br>Technologia laserowa doskonale sprawdza się przy odnawianiu starych elementów drewnianych, takich jak belki, drzwi, meble czy elementy konstrukcyjne. Skutecznie usuwa stare farby, lakiery, sadzę czy zabrudzenia.</p><p><strong>3. Brak chemii i materiałów ściernych</strong><br>Podczas czyszczenia laserowego nie używa się żadnych środków chemicznych ani piasku. Dzięki temu metoda jest ekologiczna i bezpieczna dla środowiska oraz dla samego materiału.</p><p><strong>4. Wysoka precyzja</strong><br>Laser pozwala bardzo dokładnie kontrolować proces czyszczenia. Możliwe jest usunięcie tylko wybranej warstwy zabrudzeń bez naruszania zdrowego drewna.</p><p><strong>5. Suchy i czysty proces</strong><br>W przeciwieństwie do wielu tradycyjnych metod, czyszczenie laserowe nie powoduje powstawania dużej ilości pyłu czy wilgoci. Powierzchnia jest gotowa do dalszej obróbki praktycznie od razu.</p><p><strong>6. Bezpieczne dla detali i rzeźbień</strong><br>Laser dociera do trudno dostępnych miejsc i świetnie sprawdza się przy czyszczeniu rzeźbionych elementów, zdobień czy detali architektonicznych.</p>\n<p><strong>Zainteresowanych zapraszamy do kontaktu !</strong></p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-cegla",
+      "data": {
+        "section": "oferta",
+        "anchor": "wp-cegla",
+        "title": "Czyszczenie laserowe cegły",
+        "body": "<p><strong><strong>Zalety oczyszczania laserowego cegły</strong></strong></p><p><strong>1. Skuteczne usuwanie zabrudzeń</strong><br>Czyszczenie laserowe pozwala skutecznie usuwać z powierzchni cegły różnego rodzaju zanieczyszczenia, takie jak sadza, naloty atmosferyczne, stare farby, graffiti czy zabrudzenia powstałe na przestrzeni lat.</p><p><strong>2. Bez uszkadzania powierzchni cegły</strong><br>Laser działa bardzo precyzyjnie i usuwa tylko warstwę zanieczyszczeń, dzięki czemu nie narusza struktury cegły ani jej naturalnej faktury. Jest to szczególnie ważne w przypadku starych murów i obiektów zabytkowych.</p><p><strong>3. Idealne do renowacji elewacji i zabytków</strong><br>Technologia laserowa świetnie sprawdza się przy odnawianiu cegły na elewacjach budynków, kamienic, murów czy obiektów zabytkowych. Pozwala przywrócić cegle jej pierwotny wygląd bez ryzyka uszkodzeń.</p><p><strong>4. Brak chemii i środków ściernych</strong><br>Podczas czyszczenia laserowego nie stosuje się agresywnych środków chemicznych ani materiałów ściernych, takich jak piasek. Dzięki temu metoda jest bezpieczna dla cegły oraz przyjazna dla środowiska.</p><p><strong>5. Wysoka precyzja czyszczenia</strong><br>Laser umożliwia bardzo dokładne usunięcie zabrudzeń nawet z trudno dostępnych miejsc, szczelin i nierówności w strukturze cegły.</p><p><strong>6. Szybki i czysty proces</strong><br>Czyszczenie laserowe jest stosunkowo szybkie i nie powoduje powstawania dużej ilości odpadów czy wilgoci, dzięki czemu powierzchnia po czyszczeniu jest gotowa do dalszych prac.</p>\n<p><strong>Zainteresowanych zapraszamy do kontaktu !</strong></p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-kamien",
+      "data": {
+        "section": "oferta",
+        "anchor": "wp-kamien",
+        "title": "Czyszczenie laserowe kamienia",
+        "body": "<p><strong><strong>Zalety oczyszczania laserowego kamienia</strong></strong></p><p><strong>1. Skuteczne usuwanie zabrudzeń</strong><br>Czyszczenie laserowe pozwala efektywnie usuwać z powierzchni kamienia różnego rodzaju zanieczyszczenia, takie jak sadza, naloty atmosferyczne, stare powłoki malarskie, osady czy zabrudzenia powstałe na przestrzeni wielu lat.</p><p><strong>2. Bez uszkadzania struktury kamienia</strong><br>Laser działa bardzo precyzyjnie, dzięki czemu usuwa jedynie warstwę zanieczyszczeń, nie naruszając struktury ani naturalnej faktury kamienia. Jest to szczególnie ważne przy czyszczeniu kamienia naturalnego oraz elementów zabytkowych.</p><p><strong>3. Idealne do renowacji elewacji i zabytków</strong><br>Technologia laserowa doskonale sprawdza się przy odnawianiu elewacji kamiennych, pomników, murów, ogrodzeń czy elementów architektury wykonanych z kamienia. Pozwala przywrócić materiałowi jego naturalny wygląd.</p><p><strong>4. Brak chemii i materiałów ściernych</strong><br>Podczas czyszczenia laserowego nie stosuje się agresywnych środków chemicznych ani materiałów ściernych. Dzięki temu metoda jest bezpieczna dla kamienia oraz przyjazna dla środowiska.</p><p><strong>5. Wysoka precyzja czyszczenia</strong><br>Laser umożliwia dokładne usuwanie zabrudzeń nawet z trudno dostępnych miejsc, szczelin oraz nierówności, które często występują w strukturze kamienia.</p><p><strong>6. Czysty i nowoczesny proces</strong><br>Czyszczenie laserowe jest procesem suchym i nie powoduje powstawania dużej ilości odpadów ani wilgoci. Po zakończeniu prac powierzchnia kamienia jest gotowa do dalszej konserwacji lub użytkowania.</p>\n<p><strong>Zainteresowanych zapraszamy do kontaktu!</strong></p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-beton",
+      "data": {
+        "section": "oferta",
+        "anchor": "wp-beton",
+        "title": "Czyszczenie laserowe betonu",
+        "body": "<p><strong><strong>Zalety czyszczenia laserowego betonu</strong></strong></p><p><strong>1. Bezinwazyjne czyszczenie powierzchni</strong><br>Czyszczenie laserowe umożliwia usuwanie zabrudzeń z betonu bez ingerencji w jego strukturę. Wiązka lasera działa bardzo precyzyjnie i usuwa jedynie niepożądane warstwy, dzięki czemu powierzchnia betonu pozostaje nienaruszona.</p><p><strong>2. Wysoka skuteczność usuwania zabrudzeń</strong><br>Technologia laserowa pozwala skutecznie usuwać różnego rodzaju zanieczyszczenia, takie jak farby, graffiti, sadza po pożarach, naloty atmosferyczne czy inne trudne zabrudzenia powstałe w trakcie eksploatacji powierzchni betonowych.</p><p><strong>3. Brak chemii i środków ściernych</strong><br>Podczas czyszczenia laserowego nie stosuje się agresywnych środków chemicznych ani materiałów ściernych. Dzięki temu metoda ta jest bezpieczna dla czyszczonego materiału oraz przyjazna dla środowiska.</p><p><strong>4. Bardzo duża precyzja czyszczenia</strong><br>Laser umożliwia dokładne oczyszczanie nawet trudno dostępnych miejsc oraz powierzchni o nieregularnych kształtach. Pozwala to zachować naturalną strukturę betonu oraz jego detale.</p><p><strong>5. Ekologiczna metoda czyszczenia</strong><br>Czyszczenie laserowe jest rozwiązaniem przyjaznym dla środowiska. W trakcie procesu nie powstają duże ilości odpadów ani pyłów, które występują przy tradycyjnych metodach czyszczenia, takich jak piaskowanie.</p><p><strong>6. Bezpieczna metoda renowacji</strong><br>Technologia laserowa doskonale sprawdza się podczas renowacji powierzchni betonowych, ponieważ umożliwia przywrócenie ich estetycznego wyglądu bez ryzyka uszkodzenia materiału.</p><p><strong>7. Nowoczesna i efektywna technologia</strong><br>Czyszczenie laserowe betonu to nowoczesna metoda, która coraz częściej zastępuje tradycyjne sposoby oczyszczania. Zapewnia wysoką skuteczność, dokładność oraz trwały efekt wizualny.</p>\n<p><strong>Zainteresowanych zapraszamy do kontaktu !</strong></p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-cennik",
+      "data": {
+        "section": "cennik",
+        "anchor": "wp-cennik",
+        "title": "Szczegóły wyceny i cennika",
+        "body": "<p>\r\n       Materiał\r\n       Cena\r\n    </p>\r\n  \r\n  \r\n    <p>\r\n       Stal węglowa\r\n       od 45 zł/m²\r\n    </p>\r\n    <p>\r\n       Stal nierdzewna\r\n       od 110 zł/m²\r\n    </p>\r\n    <p>\r\n       Aluminium\r\n       od 100 zł/m²\r\n    </p>\r\n    <p>\r\n       Drewno\r\n       od 60 zł/m²\r\n    </p>\r\n    <p>\r\n       Kamień\r\n       od 70 zł/m²\r\n    </p>\r\n    <p>\r\n       Cegła\r\n       od 50 zł/m²\r\n    </p>\r\n    <p>\r\n       Beton\r\n       od 80 zł/m²\r\n    </p>\n<p>Podane ceny mają charakter orientacyjny. W celu otrzymania spersonalizowanej oferty prosimy o kontakt.</p><p><strong>Cena roboczogodziny 200 - 400 zł</strong> w zależności od rodzaju i charakterystyki zlecenia.<br>Do każdego zlecenia podchodzimy indywidualnie.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-przemysl",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-przemysl",
+        "title": "Przemysł",
+        "body": "<p><strong><b>Przemysł</b></strong></p><p>Oferujemy profesjonalne czyszczenie laserowe dla zakładów przemysłowych i produkcyjnych. Technologia ta umożliwia skuteczne usuwanie rdzy, starych powłok lakierniczych, farb, nagarów oraz innych zanieczyszczeń technologicznych z powierzchni metalowych, bez ryzyka uszkodzenia materiału.</p><p>Czyszczenie laserowe doskonale sprawdza się przy konserwacji maszyn produkcyjnych, konstrukcji stalowych, form przemysłowych oraz elementów linii technologicznych. Dzięki dużej precyzji możliwe jest oczyszczanie nawet skomplikowanych części i miejsc trudno dostępnych bez konieczności demontażu urządzeń, co znacząco skraca czas przestoju w produkcji.</p><p>Metoda laserowa jest procesem bezkontaktowym i nie wymaga stosowania środków chemicznych ani materiałów ściernych. Dzięki temu czyszczenie odbywa się w sposób czysty i bezpieczny dla otoczenia, bez powstawania odpadów wymagających utylizacji. Dodatkowo dokładne przygotowanie powierzchni poprawia przyczepność nowych powłok ochronnych oraz wydłuża żywotność elementów przemysłowych.</p><p>Nasze usługi pomagają utrzymać maszyny i urządzenia w dobrym stanie technicznym, a także przygotować elementy do dalszej obróbki, konserwacji lub malowania.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-budownictwo",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-budownictwo",
+        "title": "Budownictwo",
+        "body": "<p><strong><b>Budownictwo</b></strong></p><p>Świadczymy usługi czyszczenia laserowego przeznaczone dla branży budowlanej. Wykorzystujemy nowoczesną technologię, która pozwala skutecznie usuwać rdzę, utlenienia oraz różnego rodzaju powłoki ochronne i lakiernicze, w tym również powłoki PVD. Metoda ta umożliwia dokładne oczyszczanie powierzchni wykonanych z metalu, betonu, drewna oraz kamienia, bez naruszania struktury materiału.</p><p>Technologia laserowa pozwala na usuwanie starych farb, lakierów, powłok proszkowych, smarów, olejów, wosków, politur, teflonu oraz innych warstw technologicznych. Dzięki temu powierzchnia zostaje odpowiednio przygotowana do dalszych prac takich jak renowacja, konserwacja czy ponowne malowanie.</p><p>Zajmujemy się również czyszczeniem elementów konstrukcyjnych oraz sprzętu budowlanego. Oczyszczamy konstrukcje stalowe, części maszyn oraz różnego rodzaju elementy metalowe, usuwając z nich rdzę i stare powłoki przed nałożeniem nowych zabezpieczeń ochronnych.</p><p>Proces czyszczenia laserowego jest precyzyjny i selektywny – usuwa wyłącznie niepożądane warstwy, pozostawiając materiał bazowy nienaruszony. Dodatkową zaletą jest brak konieczności stosowania chemii oraz materiałów ściernych, co sprawia, że metoda ta jest bezpieczna dla otoczenia i nie generuje odpadów wymagających utylizacji.</p><p>Zapewniamy wysoką jakość usług oraz skuteczne przygotowanie powierzchni do dalszych prac budowlanych i renowacyjnych. </p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-rolnictwo",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-rolnictwo",
+        "title": "Rolnictwo",
+        "body": "<p><strong><b>Rolnictwo</b></strong></p><p>Oferujemy profesjonalne usługi czyszczenia laserowego dla branży rolniczej. Technologia ta doskonale sprawdza się przy oczyszczaniu elementów maszyn rolniczych, szczególnie w miejscach trudno dostępnych, gdzie tradycyjne metody są mało skuteczne lub wymagają demontażu części.</p><p>Laser pozwala na dokładne usuwanie rdzy, starych powłok lakierniczych, nagarów oraz zanieczyszczeń technologicznych z elementów takich jak przeguby, tłoki, rozdzielnie czy inne podzespoły maszyn. Dzięki wysokiej precyzji możliwe jest oczyszczanie wielu elementów bez konieczności ich rozbierania, co znacząco skraca czas serwisowania sprzętu.</p><p>Czyszczenie laserowe jest procesem bezkontaktowym, który nie wymaga stosowania środków chemicznych ani materiałów ściernych. Dzięki temu cały proces jest czysty, bezpieczny dla otoczenia oraz nie generuje odpadów wymagających kosztownej utylizacji. Dodatkowo dokładne przygotowanie powierzchni wpływa na lepszą przyczepność powłok ochronnych i wydłuża trwałość konserwacji elementów maszyn.</p><p>Nasze usługi pomagają utrzymać maszyny rolnicze w doskonałym stanie technicznym oraz przygotować je do dalszej eksploatacji, konserwacji lub malowania.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-zabytki-sztuka",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-zabytki-sztuka",
+        "title": "Zabytki / Sztuka",
+        "body": "<p><strong><b>Zabytki / Sztuka</b> </strong></p><p>Specjalizujemy się w profesjonalnym czyszczeniu oraz wsparciu renowacji i restauracji zabytków oraz dzieł sztuki. Oferujemy kompleksowe usługi obejmujące różne materiały i powierzchnie – od kamienia naturalnego, cegły, piaskowca i drewna, po metale szlachetne i inne materiały wymagające precyzyjnego podejścia.</p><p>Nasze prace obejmują renowację i konserwację rzeźb, płaskorzeźb, portali, okien, elementów architektonicznych, a także mebli i innych elementów wyposażenia zabytkowego. Przywracamy pierwotne piękno polichromii, pigmentów i detali, dbając o zachowanie historycznego charakteru obiektów.</p><p>Jako doświadczeni specjaliści w pracy z obiektami chronionymi przez konserwatora zabytków, stosujemy metody, które są selektywne i bezpieczne dla materiału. Czyścimy również przedmioty wykonane z metali – srebra, mosiądzu i innych stopów – przywracając im estetyczny wygląd bez ryzyka uszkodzeń.</p><p>Najczęściej realizowane zlecenia obejmują:</p><ul><li><p>usuwanie powłok takich jak wosk, politura, lakier czy farba z ołtarzy, ławek, mebli i elementów wyposażenia sakralnego oraz zabytkowego,</p></li><li><p>czyszczenie złocenia, szlagmetalu i innych dekoracyjnych powłok,</p></li><li><p>renowację ornamentów, figur i rzeźb bez konieczności demontażu,</p></li><li><p>czyszczenie pomników oraz elewacji budynków.</p></li></ul><p>Dzięki naszej precyzji i doświadczeniu każda powierzchnia zostaje oczyszczona skutecznie i bezpiecznie, zachowując swoje historyczne i artystyczne walory. Zapewniamy najwyższą jakość usług, profesjonalne podejście oraz trwałe efekty renowacji i restauracji.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-dom-ogrod",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-dom-ogrod",
+        "title": "Dom / Ogród",
+        "body": "<p><strong>Dom / Ogród</strong></p><p><strong>Czyste elewacje i powierzchnie zewnętrzne</strong><br>Oferujemy kompleksowe czyszczenie elewacji i powierzchni zewnętrznych przy użyciu nowoczesnej technologii laserowej. Usuwamy graffiti, stare powłoki malarskie, osady atmosferyczne, plamy oleju oraz rdzę z elewacji wykonanych z cegły, klinkieru, kamienia czy betonu. Czyszczenie obejmuje także kostkę brukową, podjazdy i tarasy, przywracając im estetyczny i schludny wygląd bez stosowania chemii czy materiałów ściernych.</p><p><strong>Meble i elementy ogrodowe</strong><br>Specjalizujemy się w czyszczeniu różnego rodzaju mebli ogrodowych – drewnianych, betonowych, rattanowych, wiklinowych, a także altan, pergoli i balustrad. Laser pozwala dokładnie oczyścić powierzchnie z powłok lakierniczych i zabrudzeń technologicznych, przywracając naturalny wygląd i kolor materiału.</p><p><strong>Podłogi, tarasy i powierzchnie użytkowe</strong><br>Zapewniamy precyzyjne czyszczenie tarasów, podłóg drewnianych, ceramicznych, kamiennych oraz betonowych. Dzięki technologii laserowej można usuwać zabrudzenia i stare powłoki, zachowując strukturę materiału i estetyczny efekt wykończenia.</p><p><strong>Sprzęt i urządzenia domowe</strong><br>Oferujemy również czyszczenie pieców, kotłów, grilli oraz innych urządzeń codziennego użytku. Laser pozwala usunąć przypalenia, stare powłoki i zanieczyszczenia technologiczne, przywracając sprzętom ich pierwotny wygląd i funkcjonalność.</p><p><strong>Pasja i renowacja przedmiotów kolekcjonerskich</strong><br>Technologia laserowa sprawdza się także przy renowacji przedmiotów kolekcjonerskich, modeli, figurek i innych elementów pasji. Precyzyjne czyszczenie pozwala przywrócić im estetyczny wygląd bez ryzyka uszkodzenia detali i materiału.</p><p>Odkryj nowe piękno swojego domu, ogrodu i ulubionych przedmiotów dzięki profesjonalnym usługom czyszczenia laserowego. Precyzja, skuteczność i bezpieczeństwo materiału to nasze priorytety w każdej realizacji.</p>"
+      }
+    },
+    {
+      "key": "wp-article-wp-zastosowanie-gastronomia-przemysl-spozywczy",
+      "data": {
+        "section": "zastosowania",
+        "anchor": "wp-zastosowanie-gastronomia-przemysl-spozywczy",
+        "title": "Gastronomia / Przemysł spożywczy",
+        "body": "<p><strong>Gastronomia / Przemysł spożywczy</strong></p>\n<p>Oferujemy kompleksowe i skuteczne usługi czyszczenia oraz konserwacji maszyn, urządzeń i powierzchni w gastronomii oraz branży spożywczej. Specjalizujemy się w oczyszczaniu blach, form do wypiekania, taśm produkcyjnych, zbiorników, maszyn przemysłowych, urządzeń i naczyń wykorzystywanych w produkcji żywności.</p>\n<p>Nasze usługi obejmują również czyszczenie stołów roboczych, wózków gastronomicznych oraz powierzchni wykonanych z drewna, ceramiki, szamotu, kamienia i stali nierdzewnej. Dzięki precyzyjnej technologii laserowej możliwe jest skuteczne usuwanie przypaleń, nagarów oraz osadów technologicznych bez uszkodzenia materiału.</p>\n<p>Wykorzystujemy nowoczesne technologie w połączeniu z doświadczeniem naszego zespołu, aby zapewnić najwyższą jakość usług. Nasze metody pozwalają utrzymać higienę na najwyższym poziomie, jednocześnie minimalizując czas przestojów w produkcji. Dokładne przygotowanie powierzchni wpływa na lepszą trwałość urządzeń, form i linii produkcyjnych.</p>\n<p>Dzięki naszym usługom Twój zakład gastronomiczny lub przemysłowy może funkcjonować sprawnie, zachowując pełną higienę oraz wydajność sprzętu. Czyszczenie laserowe jest bezpieczne dla urządzeń, nie wymaga stosowania agresywnych środków chemicznych ani ścierniwa, co czyni proces przyjaznym dla środowiska i personelu.</p>\n<p><strong><b>Serdecznie zapraszamy do kontaktu !</b></strong></p>"
+      }
+    }
+  ],
+  "media": [
+    {
+      "key": "wp-media-wp-uslugi-b9626cbe6865",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/b9626cbe6865aa3aed963d46.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe logo",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-6201a38e3e39",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/6201a38e3e39dea55e260dd4.png",
+        "poster": "",
+        "alt": "Usługi oczyszczania laserowego — pełny opis",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-6ea84b34a7a8",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/6ea84b34a7a83a7bdb39b796.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe drewna",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-66f44441c5a6",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/66f44441c5a6d1cb4b981bf3.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe kamienia",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-707f479c2899",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/707f479c2899a79a3055c1e2.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe cegły",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-1c6ab82b0b7c",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/1c6ab82b0b7cc4156efa0026.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe betonu",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-6685397d7aa2",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/6685397d7aa2323e30c6bfb8.png",
+        "poster": "",
+        "alt": "Usługi oczyszczania laserowego — pełny opis",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-3f2c0a008a83",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/3f2c0a008a83cd92db88a205.png",
+        "poster": "",
+        "alt": "Usługi oczyszczania laserowego — pełny opis",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-uslugi-0c6ec0a0a131",
+      "data": {
+        "article": "wp-uslugi",
+        "title": "Usługi oczyszczania laserowego — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/0c6ec0a0a1314b776e0b45c5.png",
+        "poster": "",
+        "alt": "Usługi oczyszczania laserowego — pełny opis",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-onas-b9626cbe6865",
+      "data": {
+        "article": "wp-onas",
+        "title": "O firmie LAZER — pełny opis — materiał graficzny",
+        "file": "uploads/wordpress/b9626cbe6865aa3aed963d46.png",
+        "poster": "",
+        "alt": "oczyszczanie laserowe logo",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-materialy-galerii-caf1b0e9ad11",
+      "data": {
+        "article": "wp-materialy-galerii",
+        "title": "Materiały graficzne galerii — materiał graficzny",
+        "file": "uploads/wordpress/caf1b0e9ad11e073deae487f.png",
+        "poster": "",
+        "alt": "Materiały graficzne galerii",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-drewno-3fc8617ad0d0",
+      "data": {
+        "article": "wp-drewno",
+        "title": "Czyszczenie laserowe drewna — film",
+        "file": "uploads/wordpress/3fc8617ad0d0e2437986695e.mp4",
+        "poster": "",
+        "alt": "Czyszczenie laserowe drewna",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-cegla-747072a35e48",
+      "data": {
+        "article": "wp-cegla",
+        "title": "Czyszczenie laserowe cegły — film",
+        "file": "uploads/wordpress/747072a35e48b202db860df6.mp4",
+        "poster": "",
+        "alt": "Czyszczenie laserowe cegły",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-kamien-f28f802f18fd",
+      "data": {
+        "article": "wp-kamien",
+        "title": "Czyszczenie laserowe kamienia — film",
+        "file": "uploads/wordpress/f28f802f18fd00ab7d031224.mp4",
+        "poster": "",
+        "alt": "Czyszczenie laserowe kamienia",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-beton-f761057cf2b2",
+      "data": {
+        "article": "wp-beton",
+        "title": "Czyszczenie laserowe betonu — film",
+        "file": "uploads/wordpress/f761057cf2b28556a9429b16.mp4",
+        "poster": "",
+        "alt": "Czyszczenie laserowe betonu",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-cennik-0639a111848e",
+      "data": {
+        "article": "wp-cennik",
+        "title": "Szczegóły wyceny i cennika — materiał graficzny",
+        "file": "uploads/wordpress/0639a111848e45ba0f687f45.png",
+        "poster": "",
+        "alt": "Szczegóły wyceny i cennika",
+        "caption": ""
+      }
+    },
+    {
+      "key": "wp-media-wp-zastosowanie-85acd6d7531b",
+      "data": {
+        "article": "wp-zastosowanie-przemysl",
+        "title": "Zastosowania czyszczenia laserowego — materiał graficzny",
+        "file": "uploads/wordpress/85acd6d7531bc7898aead94d.png",
+        "poster": "",
+        "alt": "Zastosowania czyszczenia laserowego",
+        "caption": ""
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "key": "wp-photo-63496d91bf918c25939acdf7",
+      "data": {
+        "src": "uploads/site/20251215_143710-scaled.jpg",
+        "full": "uploads/site/20251215_143710-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-09a511b44150a3b119e2e5d7",
+      "data": {
+        "src": "uploads/wordpress/09a511b44150a3b119e2e5d7.jpg",
+        "full": "uploads/wordpress/09a511b44150a3b119e2e5d7.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-0e52c20d7ad524e111eee798",
+      "data": {
+        "src": "uploads/site/20251215_105448-scaled.jpg",
+        "full": "uploads/site/20251215_105448-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-c93584c0239eae607ca58e2d",
+      "data": {
+        "src": "uploads/site/20251215_105454-scaled.jpg",
+        "full": "uploads/site/20251215_105454-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-2c53a0fa1749bf3833e6437e",
+      "data": {
+        "src": "uploads/site/20251215_124727-scaled.jpg",
+        "full": "uploads/site/20251215_124727-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-154eab8389a016ed0beb7ca4",
+      "data": {
+        "src": "uploads/wordpress/154eab8389a016ed0beb7ca4.jpg",
+        "full": "uploads/wordpress/154eab8389a016ed0beb7ca4.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-437036ce24d05b976e345bcb",
+      "data": {
+        "src": "uploads/wordpress/437036ce24d05b976e345bcb.jpg",
+        "full": "uploads/wordpress/437036ce24d05b976e345bcb.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-a192b528b12c954ba8e7a56c",
+      "data": {
+        "src": "uploads/wordpress/a192b528b12c954ba8e7a56c.jpg",
+        "full": "uploads/wordpress/a192b528b12c954ba8e7a56c.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-2950f71b9e5b27f7a50e5726",
+      "data": {
+        "src": "uploads/site/20251202_113931-scaled.jpg",
+        "full": "uploads/site/20251202_113931-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-27f8d9cc93a0a981678cd021",
+      "data": {
+        "src": "uploads/site/20251201_184610-scaled.jpg",
+        "full": "uploads/site/20251201_184610-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-76a344a6e4f46b290a50653f",
+      "data": {
+        "src": "uploads/site/20251122_144653-scaled.jpg",
+        "full": "uploads/site/20251122_144653-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-a44eba35777a39351996fb91",
+      "data": {
+        "src": "uploads/wordpress/a44eba35777a39351996fb91.jpg",
+        "full": "uploads/wordpress/a44eba35777a39351996fb91.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-ec783c3a6caf8912cbd2f303",
+      "data": {
+        "src": "uploads/wordpress/ec783c3a6caf8912cbd2f303.jpg",
+        "full": "uploads/wordpress/ec783c3a6caf8912cbd2f303.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-cb0fd1038245dd467fd43114",
+      "data": {
+        "src": "uploads/wordpress/cb0fd1038245dd467fd43114.jpg",
+        "full": "uploads/wordpress/cb0fd1038245dd467fd43114.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-d86f944c2dedfd8a4fc9e679",
+      "data": {
+        "src": "uploads/wordpress/d86f944c2dedfd8a4fc9e679.jpg",
+        "full": "uploads/wordpress/d86f944c2dedfd8a4fc9e679.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-51eed416ca796f53b2955002",
+      "data": {
+        "src": "uploads/wordpress/51eed416ca796f53b2955002.jpg",
+        "full": "uploads/wordpress/51eed416ca796f53b2955002.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-acb1500dd5a1d09057fd0349",
+      "data": {
+        "src": "uploads/wordpress/acb1500dd5a1d09057fd0349.jpg",
+        "full": "uploads/wordpress/acb1500dd5a1d09057fd0349.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-4e90677dd10caa5d14e2bf64",
+      "data": {
+        "src": "uploads/wordpress/4e90677dd10caa5d14e2bf64.jpg",
+        "full": "uploads/wordpress/4e90677dd10caa5d14e2bf64.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-bf9b95e5d9e76207a685d14b",
+      "data": {
+        "src": "uploads/wordpress/bf9b95e5d9e76207a685d14b.jpg",
+        "full": "uploads/wordpress/bf9b95e5d9e76207a685d14b.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-a7806283f178ac3d101dfeb2",
+      "data": {
+        "src": "uploads/site/20251104_130814-scaled.jpg",
+        "full": "uploads/site/20251104_130814-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-cc999fc2e3aa4b7a5d073f0b",
+      "data": {
+        "src": "uploads/wordpress/cc999fc2e3aa4b7a5d073f0b.jpg",
+        "full": "uploads/wordpress/cc999fc2e3aa4b7a5d073f0b.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-85ab07d4dc3727879913691b",
+      "data": {
+        "src": "uploads/wordpress/85ab07d4dc3727879913691b.jpg",
+        "full": "uploads/wordpress/85ab07d4dc3727879913691b.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-dc5737e48b5883bbf9693076",
+      "data": {
+        "src": "uploads/wordpress/dc5737e48b5883bbf9693076.jpg",
+        "full": "uploads/wordpress/dc5737e48b5883bbf9693076.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-c200421f320289cd2b986388",
+      "data": {
+        "src": "uploads/wordpress/c200421f320289cd2b986388.jpg",
+        "full": "uploads/wordpress/c200421f320289cd2b986388.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-e67b535997d483a02cdc209c",
+      "data": {
+        "src": "uploads/wordpress/e67b535997d483a02cdc209c.jpg",
+        "full": "uploads/wordpress/e67b535997d483a02cdc209c.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-665e27e4de7c087e3d5ac448",
+      "data": {
+        "src": "uploads/wordpress/665e27e4de7c087e3d5ac448.jpg",
+        "full": "uploads/wordpress/665e27e4de7c087e3d5ac448.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-aa051f7dd8a03a4403904fb7",
+      "data": {
+        "src": "uploads/site/20251004_103720-scaled.jpg",
+        "full": "uploads/site/20251004_103720-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-ad9e4fd8644398899caf8e04",
+      "data": {
+        "src": "uploads/wordpress/ad9e4fd8644398899caf8e04.jpg",
+        "full": "uploads/wordpress/ad9e4fd8644398899caf8e04.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-af27f55ac84b64bea6a59ab9",
+      "data": {
+        "src": "uploads/wordpress/af27f55ac84b64bea6a59ab9.jpg",
+        "full": "uploads/wordpress/af27f55ac84b64bea6a59ab9.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-5b6b9549464889bad55acbb3",
+      "data": {
+        "src": "uploads/wordpress/5b6b9549464889bad55acbb3.jpg",
+        "full": "uploads/wordpress/5b6b9549464889bad55acbb3.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-0aeefe04dfa3a73a98f7dda7",
+      "data": {
+        "src": "uploads/wordpress/0aeefe04dfa3a73a98f7dda7.jpg",
+        "full": "uploads/wordpress/0aeefe04dfa3a73a98f7dda7.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-8754ae94a003d10074d489fc",
+      "data": {
+        "src": "uploads/wordpress/8754ae94a003d10074d489fc.jpg",
+        "full": "uploads/wordpress/8754ae94a003d10074d489fc.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-d206710fc5c33f3778896414",
+      "data": {
+        "src": "uploads/wordpress/d206710fc5c33f3778896414.jpg",
+        "full": "uploads/wordpress/d206710fc5c33f3778896414.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-2c4111da4edc40f8303b3325",
+      "data": {
+        "src": "uploads/wordpress/2c4111da4edc40f8303b3325.jpg",
+        "full": "uploads/wordpress/2c4111da4edc40f8303b3325.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-d7728ccbf219096b4776053e",
+      "data": {
+        "src": "uploads/wordpress/d7728ccbf219096b4776053e.jpg",
+        "full": "uploads/wordpress/d7728ccbf219096b4776053e.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-0700782ed57897c90ff54cdf",
+      "data": {
+        "src": "uploads/wordpress/0700782ed57897c90ff54cdf.jpg",
+        "full": "uploads/wordpress/0700782ed57897c90ff54cdf.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-9076a4b04727ae598ce57f24",
+      "data": {
+        "src": "uploads/wordpress/9076a4b04727ae598ce57f24.jpg",
+        "full": "uploads/wordpress/9076a4b04727ae598ce57f24.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-7cc81125de544981feb00930",
+      "data": {
+        "src": "uploads/wordpress/7cc81125de544981feb00930.jpg",
+        "full": "uploads/wordpress/7cc81125de544981feb00930.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-b66623a3a23a3f70c25933f4",
+      "data": {
+        "src": "uploads/site/20250305_122423-scaled.jpg",
+        "full": "uploads/site/20250305_122423-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-a51151336721a9d154644797",
+      "data": {
+        "src": "uploads/wordpress/a51151336721a9d154644797.jpg",
+        "full": "uploads/wordpress/a51151336721a9d154644797.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-86589411c363c1ea46f04c6a",
+      "data": {
+        "src": "uploads/wordpress/86589411c363c1ea46f04c6a.jpg",
+        "full": "uploads/wordpress/86589411c363c1ea46f04c6a.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-720478e24f7ba5caaf9052c6",
+      "data": {
+        "src": "uploads/wordpress/720478e24f7ba5caaf9052c6.jpg",
+        "full": "uploads/wordpress/720478e24f7ba5caaf9052c6.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-b202ee19f5846b7fe772683d",
+      "data": {
+        "src": "uploads/site/20250218_110112-scaled.jpg",
+        "full": "uploads/site/20250218_110112-scaled.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-f5c490c27ee56f47baa2286d",
+      "data": {
+        "src": "uploads/wordpress/f5c490c27ee56f47baa2286d.jpg",
+        "full": "uploads/wordpress/f5c490c27ee56f47baa2286d.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-00d3e8d45378663f47f93aed",
+      "data": {
+        "src": "uploads/wordpress/00d3e8d45378663f47f93aed.jpg",
+        "full": "uploads/wordpress/00d3e8d45378663f47f93aed.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-4ae61db5c2cd576bb3e21532",
+      "data": {
+        "src": "uploads/wordpress/4ae61db5c2cd576bb3e21532.jpg",
+        "full": "uploads/wordpress/4ae61db5c2cd576bb3e21532.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-0282aaf52d53a5bac8a4be5a",
+      "data": {
+        "src": "uploads/wordpress/0282aaf52d53a5bac8a4be5a.jpg",
+        "full": "uploads/wordpress/0282aaf52d53a5bac8a4be5a.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-947a4770995ae662292d8e54",
+      "data": {
+        "src": "uploads/wordpress/947a4770995ae662292d8e54.jpg",
+        "full": "uploads/wordpress/947a4770995ae662292d8e54.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-bdd0663ac9880b17d474d924",
+      "data": {
+        "src": "uploads/wordpress/bdd0663ac9880b17d474d924.jpg",
+        "full": "uploads/wordpress/bdd0663ac9880b17d474d924.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-79acc5f018959cd1d2f00ef4",
+      "data": {
+        "src": "uploads/wordpress/79acc5f018959cd1d2f00ef4.jpg",
+        "full": "uploads/wordpress/79acc5f018959cd1d2f00ef4.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-8a3ce2836bfe28cd29718234",
+      "data": {
+        "src": "uploads/wordpress/8a3ce2836bfe28cd29718234.jpg",
+        "full": "uploads/wordpress/8a3ce2836bfe28cd29718234.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-2437ab88aeee31746d9bc955",
+      "data": {
+        "src": "uploads/wordpress/2437ab88aeee31746d9bc955.jpg",
+        "full": "uploads/wordpress/2437ab88aeee31746d9bc955.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-287a1c166fdeef5e88362c42",
+      "data": {
+        "src": "uploads/wordpress/287a1c166fdeef5e88362c42.jpg",
+        "full": "uploads/wordpress/287a1c166fdeef5e88362c42.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-cb51e68a4db84a87a827148d",
+      "data": {
+        "src": "uploads/wordpress/cb51e68a4db84a87a827148d.jpg",
+        "full": "uploads/wordpress/cb51e68a4db84a87a827148d.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-27ed006080e7fd9533a61365",
+      "data": {
+        "src": "uploads/wordpress/27ed006080e7fd9533a61365.jpg",
+        "full": "uploads/wordpress/27ed006080e7fd9533a61365.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-66db515cb08e486ee0698f6f",
+      "data": {
+        "src": "uploads/wordpress/66db515cb08e486ee0698f6f.jpeg",
+        "full": "uploads/wordpress/66db515cb08e486ee0698f6f.jpeg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-8bd3590be41b89814373fa1e",
+      "data": {
+        "src": "uploads/wordpress/8bd3590be41b89814373fa1e.jpg",
+        "full": "uploads/wordpress/8bd3590be41b89814373fa1e.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-6d2b059c662e1174c4530365",
+      "data": {
+        "src": "uploads/wordpress/6d2b059c662e1174c4530365.jpg",
+        "full": "uploads/wordpress/6d2b059c662e1174c4530365.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-8b0643c47ac55484839c96d8",
+      "data": {
+        "src": "uploads/wordpress/8b0643c47ac55484839c96d8.jpg",
+        "full": "uploads/wordpress/8b0643c47ac55484839c96d8.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-f254c5b7ebd2f8e2ebae5738",
+      "data": {
+        "src": "uploads/wordpress/f254c5b7ebd2f8e2ebae5738.jpg",
+        "full": "uploads/wordpress/f254c5b7ebd2f8e2ebae5738.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-86a48a0e5385e659cd2484b5",
+      "data": {
+        "src": "uploads/wordpress/86a48a0e5385e659cd2484b5.jpg",
+        "full": "uploads/wordpress/86a48a0e5385e659cd2484b5.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-52693bad2cc0aaee996aad36",
+      "data": {
+        "src": "uploads/wordpress/52693bad2cc0aaee996aad36.jpg",
+        "full": "uploads/wordpress/52693bad2cc0aaee996aad36.jpg",
+        "alt": "oczyszczanie laserowe betonu",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-86b142ef9255c9d14f4e971a",
+      "data": {
+        "src": "uploads/wordpress/86b142ef9255c9d14f4e971a.jpg",
+        "full": "uploads/wordpress/86b142ef9255c9d14f4e971a.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-94b089ca47511027173c0d9f",
+      "data": {
+        "src": "uploads/wordpress/94b089ca47511027173c0d9f.jpg",
+        "full": "uploads/wordpress/94b089ca47511027173c0d9f.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-b766c6d2db26a4a4c752493f",
+      "data": {
+        "src": "uploads/wordpress/b766c6d2db26a4a4c752493f.jpg",
+        "full": "uploads/wordpress/b766c6d2db26a4a4c752493f.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-676df98a5fbeb150f0223724",
+      "data": {
+        "src": "uploads/wordpress/676df98a5fbeb150f0223724.jpg",
+        "full": "uploads/wordpress/676df98a5fbeb150f0223724.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-22be6cb277c3085fff3c6969",
+      "data": {
+        "src": "uploads/wordpress/22be6cb277c3085fff3c6969.jpg",
+        "full": "uploads/wordpress/22be6cb277c3085fff3c6969.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-7cc1ab5ffbc015e29d8bc684",
+      "data": {
+        "src": "uploads/wordpress/7cc1ab5ffbc015e29d8bc684.jpg",
+        "full": "uploads/wordpress/7cc1ab5ffbc015e29d8bc684.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    },
+    {
+      "key": "wp-photo-e7bb68beffb56022b8e44f1c",
+      "data": {
+        "src": "uploads/wordpress/e7bb68beffb56022b8e44f1c.jpg",
+        "full": "uploads/wordpress/e7bb68beffb56022b8e44f1c.jpg",
+        "alt": "Zdjęcie z archiwum realizacji firmy LAZER",
+        "cap": ""
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "uploads/site/20250218_110112-scaled.jpg",
+      "sha256": "b202ee19f5846b7fe772683d624aface41a9d777b94678a4572286f4dc007256",
+      "bytes": 500096,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20250305_122423-scaled.jpg",
+      "sha256": "b66623a3a23a3f70c25933f40fc29b0a7030b221ba6f2450cd613415c6cb469e",
+      "bytes": 514092,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251004_103720-scaled.jpg",
+      "sha256": "aa051f7dd8a03a4403904fb7ebd651f69317f00aa3ab8e29bc534d16abbfaa25",
+      "bytes": 802269,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251104_130814-scaled.jpg",
+      "sha256": "a7806283f178ac3d101dfeb2eabe72ea5e1b2d8513e778f34deff069e7005cea",
+      "bytes": 1091498,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251122_144653-scaled.jpg",
+      "sha256": "76a344a6e4f46b290a50653fe9aa494320bfe5c49435bfc1c59a6fc8ecd313b1",
+      "bytes": 870751,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251201_184610-scaled.jpg",
+      "sha256": "27f8d9cc93a0a981678cd0215b19654e16157b702e01a8cf10cbae42e730bfe7",
+      "bytes": 546019,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251202_113931-scaled.jpg",
+      "sha256": "2950f71b9e5b27f7a50e5726ba42025af5439e3273b0f91037d37d62af120c1d",
+      "bytes": 776472,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251215_105448-scaled.jpg",
+      "sha256": "0e52c20d7ad524e111eee798c9875d329f7ce663feecba5f656646c8a963a2a9",
+      "bytes": 650523,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251215_105454-scaled.jpg",
+      "sha256": "c93584c0239eae607ca58e2dace3b5be7afec652a619131d1f103792a9306ab6",
+      "bytes": 775298,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251215_124727-scaled.jpg",
+      "sha256": "2c53a0fa1749bf3833e6437e6aa91b921bf616264f804c1eb53980f65adaa7b2",
+      "bytes": 617564,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/site/20251215_143710-scaled.jpg",
+      "sha256": "63496d91bf918c25939acdf7863641d0cb88598066e7bfc23035150fcb1b4c1c",
+      "bytes": 855893,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/00d3e8d45378663f47f93aed.jpg",
+      "sha256": "00d3e8d45378663f47f93aeda70ea836ef3950c5d883741df9ebabda643d63bc",
+      "bytes": 531123,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/0282aaf52d53a5bac8a4be5a.jpg",
+      "sha256": "0282aaf52d53a5bac8a4be5abc91ae78c7b29452ecd4ddf93b6b9472aafa1045",
+      "bytes": 717551,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/0639a111848e45ba0f687f45.png",
+      "sha256": "0639a111848e45ba0f687f456cfbe85c0238e11080db824c41ba5a5edb44869f",
+      "bytes": 41534,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/0700782ed57897c90ff54cdf.jpg",
+      "sha256": "0700782ed57897c90ff54cdf1242cae72b88a3da23221cfd1fe79305496b9aad",
+      "bytes": 730892,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/09a511b44150a3b119e2e5d7.jpg",
+      "sha256": "09a511b44150a3b119e2e5d769a9388e7fe7138524bf19b674889e5dee1b197c",
+      "bytes": 816949,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/0aeefe04dfa3a73a98f7dda7.jpg",
+      "sha256": "0aeefe04dfa3a73a98f7dda7e117b85ee8ae24e5e690fc7fadf8401889b4e18d",
+      "bytes": 575665,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/0c6ec0a0a1314b776e0b45c5.png",
+      "sha256": "0c6ec0a0a1314b776e0b45c53bf549a4ad30fe5362fe908a69b4165c5ca9d455",
+      "bytes": 43745,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/154eab8389a016ed0beb7ca4.jpg",
+      "sha256": "154eab8389a016ed0beb7ca4dcd5cf1bc1f0af1fa5213e31e025e3e6226cafcf",
+      "bytes": 837796,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/1c6ab82b0b7cc4156efa0026.png",
+      "sha256": "1c6ab82b0b7cc4156efa0026eacf4959e2ec288fc8953c1fc613c11c092e8e40",
+      "bytes": 4239119,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/22be6cb277c3085fff3c6969.jpg",
+      "sha256": "22be6cb277c3085fff3c6969f0cbc0aead46d4908c828eb430c6bd8cbabd20f1",
+      "bytes": 892471,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/2437ab88aeee31746d9bc955.jpg",
+      "sha256": "2437ab88aeee31746d9bc955002f97533730138a0a19a26fbd8eb5c9bde748d4",
+      "bytes": 673199,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/27ed006080e7fd9533a61365.jpg",
+      "sha256": "27ed006080e7fd9533a613651304237ac1815f465e36ea14aa68977469c3498c",
+      "bytes": 848771,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/287a1c166fdeef5e88362c42.jpg",
+      "sha256": "287a1c166fdeef5e88362c4256d4dd1178b3f30052d5e7ccd4e0b732705021ee",
+      "bytes": 721234,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/2c4111da4edc40f8303b3325.jpg",
+      "sha256": "2c4111da4edc40f8303b3325f3cdd4d9e6d0907efadb22db9054b4d31db55f41",
+      "bytes": 728841,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/3f2c0a008a83cd92db88a205.png",
+      "sha256": "3f2c0a008a83cd92db88a205c30732528f07c79eae11922f0df7a6ebc007df9c",
+      "bytes": 42621,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/3fc8617ad0d0e2437986695e.mp4",
+      "sha256": "3fc8617ad0d0e2437986695ec1ce458438d692899c1ace4d4280f5c3d5e74690",
+      "bytes": 4907061,
+      "kind": "video"
+    },
+    {
+      "path": "uploads/wordpress/437036ce24d05b976e345bcb.jpg",
+      "sha256": "437036ce24d05b976e345bcb5650f0a470f948b35405c6356db8fd82be29cd9c",
+      "bytes": 770724,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/4ae61db5c2cd576bb3e21532.jpg",
+      "sha256": "4ae61db5c2cd576bb3e21532419d9b6813b350acd303a5031f344eb66be085f0",
+      "bytes": 685831,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/4e90677dd10caa5d14e2bf64.jpg",
+      "sha256": "4e90677dd10caa5d14e2bf642e897cdd4e5967836ce9d2f5d34f2c1f94a39223",
+      "bytes": 868559,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/51eed416ca796f53b2955002.jpg",
+      "sha256": "51eed416ca796f53b29550026538f429d1fd8960f41cea489bd1becce3525c68",
+      "bytes": 938291,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/52693bad2cc0aaee996aad36.jpg",
+      "sha256": "52693bad2cc0aaee996aad365b7069a52f438fdb9d4b87843ce65c12566e2520",
+      "bytes": 1389065,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/5b6b9549464889bad55acbb3.jpg",
+      "sha256": "5b6b9549464889bad55acbb3b0d767c3cd0133f7a00d1b9aa02987b3059cc3ad",
+      "bytes": 632951,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/6201a38e3e39dea55e260dd4.png",
+      "sha256": "6201a38e3e39dea55e260dd45f073ddc77de074637d9e90b446fdcd97c3546aa",
+      "bytes": 41230,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/665e27e4de7c087e3d5ac448.jpg",
+      "sha256": "665e27e4de7c087e3d5ac4482917d72852efd1535e586ecdff3aea5cf65c1796",
+      "bytes": 1055719,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/6685397d7aa2323e30c6bfb8.png",
+      "sha256": "6685397d7aa2323e30c6bfb8ab335dfb161600444d1e533e0bd8b3bd5825b8c6",
+      "bytes": 42225,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/66db515cb08e486ee0698f6f.jpeg",
+      "sha256": "66db515cb08e486ee0698f6fb05419f3db0cc452865dda13f74dbdfaca64dff4",
+      "bytes": 174754,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/66f44441c5a6d1cb4b981bf3.png",
+      "sha256": "66f44441c5a6d1cb4b981bf37402d211f9781ed822d8278920aeb7558261676e",
+      "bytes": 4298963,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/676df98a5fbeb150f0223724.jpg",
+      "sha256": "676df98a5fbeb150f0223724c55691be3a249f4db2dedf0064efadc5373ed768",
+      "bytes": 951432,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/6d2b059c662e1174c4530365.jpg",
+      "sha256": "6d2b059c662e1174c4530365140eaa36d13c8e87efa90e5b1a19abeab93e6e1f",
+      "bytes": 633493,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/6ea84b34a7a83a7bdb39b796.png",
+      "sha256": "6ea84b34a7a83a7bdb39b796505743221348df0eba491517e1ce9fddc3e9b289",
+      "bytes": 4368095,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/707f479c2899a79a3055c1e2.png",
+      "sha256": "707f479c2899a79a3055c1e2378860ec46d64ddcbfdf5d606473fac4d04d303b",
+      "bytes": 4691195,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/720478e24f7ba5caaf9052c6.jpg",
+      "sha256": "720478e24f7ba5caaf9052c63e3556d9fdffc178765a38eefc76e8a8970f3fcf",
+      "bytes": 555053,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/747072a35e48b202db860df6.mp4",
+      "sha256": "747072a35e48b202db860df61a74d825cb48b28c222413acece8d274dff85189",
+      "bytes": 5404451,
+      "kind": "video"
+    },
+    {
+      "path": "uploads/wordpress/79acc5f018959cd1d2f00ef4.jpg",
+      "sha256": "79acc5f018959cd1d2f00ef409ad13efc42effe0e8099a60b0c41030865c7ed2",
+      "bytes": 1313610,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/7cc1ab5ffbc015e29d8bc684.jpg",
+      "sha256": "7cc1ab5ffbc015e29d8bc684d35cc94db52b6fb5c77321ea460a4bda389045d7",
+      "bytes": 642217,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/7cc81125de544981feb00930.jpg",
+      "sha256": "7cc81125de544981feb009305aa9556ea5e8c406c495d092cad898bb66f0ea5c",
+      "bytes": 638102,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/85ab07d4dc3727879913691b.jpg",
+      "sha256": "85ab07d4dc3727879913691b642ab8eef4594844d3545744ab50eba75033a981",
+      "bytes": 1043476,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/85acd6d7531bc7898aead94d.png",
+      "sha256": "85acd6d7531bc7898aead94d16df8da759440092e018a2cfeb52e88f7bd01703",
+      "bytes": 44932,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/86589411c363c1ea46f04c6a.jpg",
+      "sha256": "86589411c363c1ea46f04c6a74b33329b6672c6082711c9d132501a6bd039b9d",
+      "bytes": 494351,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/86a48a0e5385e659cd2484b5.jpg",
+      "sha256": "86a48a0e5385e659cd2484b52541ed2a08e525c90eb13fe3ef1eef14232cd9d5",
+      "bytes": 910587,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/86b142ef9255c9d14f4e971a.jpg",
+      "sha256": "86b142ef9255c9d14f4e971ab439d32bcc08e085143614a9e1f873b2cfaa2c28",
+      "bytes": 702444,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/8754ae94a003d10074d489fc.jpg",
+      "sha256": "8754ae94a003d10074d489fc88c222c92283bad5d6d46b713297af840fdc2562",
+      "bytes": 431048,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/8a3ce2836bfe28cd29718234.jpg",
+      "sha256": "8a3ce2836bfe28cd297182349cf9a31788cd0d04d2301f5759a6a546dd70c46a",
+      "bytes": 709941,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/8b0643c47ac55484839c96d8.jpg",
+      "sha256": "8b0643c47ac55484839c96d8b45f344f14fcb5e8d034dd1055ee5d5ed3e6671c",
+      "bytes": 387274,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/8bd3590be41b89814373fa1e.jpg",
+      "sha256": "8bd3590be41b89814373fa1e0b75af6d717e7cb5ab43b5ca558242f7affbf078",
+      "bytes": 641857,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/9076a4b04727ae598ce57f24.jpg",
+      "sha256": "9076a4b04727ae598ce57f24eeca3e9d52c02d13a79f64360feaf8a898f8b765",
+      "bytes": 546753,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/947a4770995ae662292d8e54.jpg",
+      "sha256": "947a4770995ae662292d8e54db0e1fe7197575b2b3c5257241be1ea6bc26c009",
+      "bytes": 455833,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/94b089ca47511027173c0d9f.jpg",
+      "sha256": "94b089ca47511027173c0d9fa56fc488a415c3f7f1473fff333dce4c9674f619",
+      "bytes": 1027494,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/a192b528b12c954ba8e7a56c.jpg",
+      "sha256": "a192b528b12c954ba8e7a56c59fca6698e2b8f141efb1536bfc97343e6f04dbb",
+      "bytes": 721692,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/a44eba35777a39351996fb91.jpg",
+      "sha256": "a44eba35777a39351996fb91182a074adad12a8f4d25505530029a219796e724",
+      "bytes": 714549,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/a51151336721a9d154644797.jpg",
+      "sha256": "a51151336721a9d1546447979a0dbc88877b177cc91b58b0b74bc373bc4fabb4",
+      "bytes": 675969,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/acb1500dd5a1d09057fd0349.jpg",
+      "sha256": "acb1500dd5a1d09057fd0349517a791e079718fdb06ccbc0318f7261897b02ac",
+      "bytes": 897616,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/ad9e4fd8644398899caf8e04.jpg",
+      "sha256": "ad9e4fd8644398899caf8e04a6997a3f5c55977e9beda43144385a8fa2909819",
+      "bytes": 877172,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/af27f55ac84b64bea6a59ab9.jpg",
+      "sha256": "af27f55ac84b64bea6a59ab9b3e30bbf51c60a08bf724a5f6e7fec9eb7adf3c0",
+      "bytes": 583733,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/b766c6d2db26a4a4c752493f.jpg",
+      "sha256": "b766c6d2db26a4a4c752493ff1704fa42b34a7d10dc105359435b24d2017f8f8",
+      "bytes": 558899,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/b9626cbe6865aa3aed963d46.png",
+      "sha256": "b9626cbe6865aa3aed963d46e05253ecfc3d135888133da58e84408eb4c11b76",
+      "bytes": 452458,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/bdd0663ac9880b17d474d924.jpg",
+      "sha256": "bdd0663ac9880b17d474d924868db14e915404b525892feb967f73066b98814a",
+      "bytes": 678268,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/bf9b95e5d9e76207a685d14b.jpg",
+      "sha256": "bf9b95e5d9e76207a685d14bc854e51ef9d82c9bd242686e40d023b6c7fab20f",
+      "bytes": 1417548,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/c200421f320289cd2b986388.jpg",
+      "sha256": "c200421f320289cd2b986388a21d649d7e66000907f993d98d3dc6e5529c7f10",
+      "bytes": 597031,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/caf1b0e9ad11e073deae487f.png",
+      "sha256": "caf1b0e9ad11e073deae487f3d7b5bd3b75c54c2e0984d5abcab9753a820b6ba",
+      "bytes": 24042,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/cb0fd1038245dd467fd43114.jpg",
+      "sha256": "cb0fd1038245dd467fd4311494fe1cf830c6fe9d22f11db6703495f7b5b0f808",
+      "bytes": 1025862,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/cb51e68a4db84a87a827148d.jpg",
+      "sha256": "cb51e68a4db84a87a827148d5527e1bf1bd8388592e2aa32fee45673a5c1a328",
+      "bytes": 820453,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/cc999fc2e3aa4b7a5d073f0b.jpg",
+      "sha256": "cc999fc2e3aa4b7a5d073f0bbe600a3e01bf408b887ad1dd96da2befc4fcf779",
+      "bytes": 848924,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/d206710fc5c33f3778896414.jpg",
+      "sha256": "d206710fc5c33f377889641407b3be0daec278e0a08868b1131fde6bf7fc027f",
+      "bytes": 746293,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/d7728ccbf219096b4776053e.jpg",
+      "sha256": "d7728ccbf219096b4776053e962c2cafad1d1f18a74249a4b954403e016cd5f9",
+      "bytes": 429740,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/d86f944c2dedfd8a4fc9e679.jpg",
+      "sha256": "d86f944c2dedfd8a4fc9e6794111a9db76d2f4e0ac6fc01201006cd0e9140125",
+      "bytes": 842600,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/dc5737e48b5883bbf9693076.jpg",
+      "sha256": "dc5737e48b5883bbf96930762b533af1cb5072dabd686a6bd1078910eded557b",
+      "bytes": 519739,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/e67b535997d483a02cdc209c.jpg",
+      "sha256": "e67b535997d483a02cdc209c03615fd7fb3fef6761a6c418e98ba17632c46ed4",
+      "bytes": 943439,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/e7bb68beffb56022b8e44f1c.jpg",
+      "sha256": "e7bb68beffb56022b8e44f1cb9e8652917e6886ff70ee1f35f2103ff4e7ee199",
+      "bytes": 690551,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/ec783c3a6caf8912cbd2f303.jpg",
+      "sha256": "ec783c3a6caf8912cbd2f3034e16db42cbb77b94f58fff033feea5d453326160",
+      "bytes": 636186,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/f254c5b7ebd2f8e2ebae5738.jpg",
+      "sha256": "f254c5b7ebd2f8e2ebae57388f8e99e2535d1d8971aca6d09d97c9950f58addb",
+      "bytes": 818741,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/f28f802f18fd00ab7d031224.mp4",
+      "sha256": "f28f802f18fd00ab7d03122401dc44db7729dd2208d3b738da7d37a5ff6685c4",
+      "bytes": 5764362,
+      "kind": "video"
+    },
+    {
+      "path": "uploads/wordpress/f5c490c27ee56f47baa2286d.jpg",
+      "sha256": "f5c490c27ee56f47baa2286d942f3452ce620a495524a89e34948b43bcd4575b",
+      "bytes": 498194,
+      "kind": "image"
+    },
+    {
+      "path": "uploads/wordpress/f761057cf2b28556a9429b16.mp4",
+      "sha256": "f761057cf2b28556a9429b165a2dba8e0a0384ac7088ca84c33593256f004062",
+      "bytes": 2869548,
+      "kind": "video"
+    }
+  ],
+  "offerAnchors": {
+    "DREWNO": "wp-drewno",
+    "KAMIEŃ": "wp-kamien",
+    "CEGŁA I BETON": "wp-cegla",
+    "METAL": "wp-zastosowanie-przemysl"
+  },
+  "redirects": {
+    "onas": "wp-onas",
+    "drewno": "wp-drewno",
+    "cegla": "wp-cegla",
+    "kamien": "wp-kamien",
+    "beton": "wp-beton",
+    "cennik": "cennik",
+    "zastosowanie": "zastosowania",
+    "kontakt": "kontakt",
+    "galeria": "galeria",
+    "galeria-2": "galeria",
+    "lazer-oczyszczanie-laserowe": "start",
+    "oczyszczanie-laserowe": "start"
+  }
+}

@@ -18,8 +18,15 @@
     <label class="help" for="{{ id }}_upload">Wgraj nowe zdjęcie (zastąpi podany adres)</label>
     <input type="file" id="{{ id }}_upload" name="{{ prefix }}[{{ f.key }}]" accept="image/jpeg,image/png,image/webp,image/gif" data-image-upload>
     <small class="help">JPG, PNG, WebP, GIF. Maks. 5 MB lub limit PHP. Aby usunąć zdjęcie, wyczyść adres.</small>
+  {% elseif f.type == 'media' %}
+    {% set media = value|media_path %}
+    {% if media %}<div class="img-prev">{% if media matches '/\\.(mp4|webm)$/i' %}<video controls preload="none" src="{{ asset(media) }}"></video>{% else %}<img src="{{ asset(media) }}" alt="{{ f.label }}" loading="lazy">{% endif %}</div>{% endif %}
+    <input type="text" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" placeholder="uploads/… lub wgraj plik poniżej">
+    <label class="help" for="{{ id }}_upload">Wgraj zdjęcie lub film</label>
+    <input type="file" id="{{ id }}_upload" name="{{ prefix }}[{{ f.key }}]" accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm">
+    <small class="help">Zdjęcia do 5 MB, filmy MP4/WebM do 50 MB lub limit PHP.</small>
   {% else %}
-    <input type="{{ f.type == 'email' ? 'email' : 'text' }}" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" maxlength="20000"{% if f.type == 'url' %} placeholder="https://… lub #sekcja"{% endif %}>
+    <input type="{{ f.type == 'email' ? 'email' : 'text' }}" id="{{ id }}" name="{{ prefix }}[{{ f.key }}]" value="{{ value }}" maxlength="20000"{% if f.type == 'url' %} placeholder="https://… lub #sekcja"{% endif %}{% if f.required|default(false) %} required{% endif %}>
   {% endif %}
 {% endif %}
 {% if f.help|default('') %}<small class="help">{{ f.help }}</small>{% endif %}

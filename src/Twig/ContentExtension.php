@@ -40,6 +40,13 @@ final class ContentExtension extends AbstractExtension
             new TwigFilter('content_html', [ContentValidator::class, 'html'], ['is_safe' => ['html']]),
             new TwigFilter('safe_link', fn (string $value): string => $this->safeUrl($value, false)),
             new TwigFilter('image_path', fn (string $value): string => $this->safeUrl($value, true)),
+            new TwigFilter('media_path', static function (string $value): string {
+                try {
+                    return ContentValidator::media($value);
+                } catch (\InvalidArgumentException) {
+                    return '';
+                }
+            }),
         ];
     }
 

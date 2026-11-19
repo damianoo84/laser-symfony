@@ -47,6 +47,23 @@ final class ContentValidator
         throw new \InvalidArgumentException($image ? 'Zdjęcie: podaj adres HTTPS/HTTP lub wgraj plik.' : 'Podaj bezpieczny link (https://, #sekcja, /ścieżka, tel: lub mailto:).');
     }
 
+    public static function media(string $value): string
+    {
+        $value = trim($value);
+        if ($value === '' || preg_match('~^uploads/[a-zA-Z0-9/_-]+\.(?:jpe?g|png|webp|gif|mp4|webm)$~i', $value)) {
+            return $value;
+        }
+        throw new \InvalidArgumentException('Materiał musi być lokalnym zdjęciem lub filmem MP4/WebM w katalogu uploads.');
+    }
+
+    private static function anchor(string $value, bool $required): string
+    {
+        if ((!$required && $value === '') || (strlen($value) <= 80 && preg_match('/^(?:wp|opis)-[a-z0-9]+(?:-[a-z0-9]+)*$/', $value))) {
+            return $value;
+        }
+        throw new \InvalidArgumentException('Identyfikator: prefiks opis- lub wp-, małe litery a–z, cyfry i myślniki (maks. 80 znaków).');
+    }
+
     public static function field(array $field, mixed $value): string|int|bool
     {
         if (!is_scalar($value) && $value !== null) {
@@ -61,6 +78,8 @@ final class ContentValidator
             'number' => self::number($field, $text),
             'textarea' => self::html($text),
             'image' => self::url($text, true),
+            'media' => self::media($text),
+            'anchor' => self::anchor($text, $field['required'] ?? false),
             'url' => self::url($text),
             'email' => $text === '' || filter_var($text, FILTER_VALIDATE_EMAIL) ? $text : throw new \InvalidArgumentException('Podaj poprawny adres e-mail.'),
             'emails' => $text === '' ? '' : implode(', ', self::emails($text)),
